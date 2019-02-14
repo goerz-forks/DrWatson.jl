@@ -77,7 +77,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Project Setup",
     "title": "src vs scripts",
     "category": "section",
-    "text": "Seems like src and scripts folders have pretty similar functionality. However there is a distinction between these two. You can follow these mental rules to know where to put file.jl:If upon include(\"file.jl\") there is anything being produced, be it data files, plots or even output to the console, then it should be in scripts.\nIf it is functionality used across multiple files or pipelines, it should be in src.\nsrc should only contain files the define functions or modules but not output anything."
+    "text": "Seems like src and scripts folders have pretty similar functionality. However there is a distinction between these two. You can follow these mental rules to know where to put file.jl:If upon include(\"file.jl\") there is anything being produced, be it data files, plots or even output to the console, then it should be in scripts.\nIf it is functionality used across multiple files or pipelines, it should be in src.\nsrc should only contain files the define functions or modules but not output anything. You can also organize src to be a Julia package, or contain multiple Julia packages."
 },
 
 {
@@ -85,7 +85,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Project Setup",
     "title": "DrWatson.initialize_project",
     "category": "function",
-    "text": "initialize_project(path [, name]; kwargs...)\n\nInitialize a scientific project expected by DrWatson inside the given path. If its name is not given, it is assumed to be the folder\'s name.\n\nThe new project remains activated for you to immidiately add packages.\n\nKeywords\n\nreadme = true : adds a README.md file.\nauthors = nothing : if a string or container of strings, adds the authors in the Project.toml file.\nforce = false : If the path is not empty then throw an error. If however force is true then recursively delete everything in the path and create the project.\n\n\n\n\n\n"
+    "text": "initialize_project(path [, name]; kwargs...)\n\nInitialize a scientific project expected by DrWatson inside the given path. If its name is not given, it is assumed to be the folder\'s name.\n\nThe new project remains activated for you to immidiately add packages.\n\nKeywords\n\nreadme = true : adds a README.md file.\nauthors = nothing : if a string or container of strings, adds the authors in the Project.toml file.\nforce = false : If the path is not empty then throw an error. If however force is true then recursively delete everything in the path and create the project.\ngit = true : Make the project a Git repository.\n\n\n\n\n\n"
 },
 
 {
@@ -181,13 +181,13 @@ var documenterSearchIndex = {"docs": [
     "page": "Handling Simulations",
     "title": "Naming Schemes",
     "category": "section",
-    "text": "A robust naming scheme allows you to create quick names for simulations, create lists of simulations, check existing simulations, etc. savename\n@dict\nDrWatson.allaccess\nDrWatson.accessNotice that the naming scheme integrates perfectly with Parameters.jl."
+    "text": "A robust naming scheme allows you to create quick names for simulations, create lists of simulations, check existing simulations, etc.savename\n@dict\nDrWatson.allaccess\nDrWatson.accessNotice that the naming scheme integrates perfectly with Parameters.jl."
 },
 
 {
-    "location": "savenames/#Adding-Runs-1",
+    "location": "savenames/#Creating-Run-Tables-1",
     "page": "Handling Simulations",
-    "title": "Adding Runs",
+    "title": "Creating Run Tables",
     "category": "section",
     "text": "WIP. (Adding simulation runs to a table/csv/dataframe)"
 },
