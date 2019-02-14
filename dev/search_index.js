@@ -61,7 +61,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Project Setup",
     "title": "Project Setup",
     "category": "section",
-    "text": "Part of the functionality of DrWatson is creating and navigating through a project setup consistently. This works even if you move your project to a different location/computer and in addition the navigation process is identical across any project that uses DrWatson.For this to work, you only need to follow these rules:Your science project is also a Julia project defined by a Project.toml file.\nYou first activate this project environment before running any code. This can be done in multiple ways:\nby doing Pkg.activate(\"path/to/project\") programmatically\nby using the startup flag --project path when starting Julia\nby setting the JULIA_PROJECT environment variable\nYou do using DrWatson and use the functions scriptdir, datadir, etc. (see Navigating the Project"
+    "text": "Part of the functionality of DrWatson is creating and navigating through a project setup consistently. This works even if you move your project to a different location/computer and in addition the navigation process is identical across any project that uses DrWatson.For this to work, you only need to follow these rules:Your science project is also a Julia project defined by a Project.toml file.\nYou first activate this project environment before running any code. This can be done in multiple ways:\nby doing Pkg.activate(\"path/to/project\") programmatically\nby using the startup flag --project path when starting Julia\nby setting the JULIA_PROJECT environment variable\nYou use the functions scriptdir, datadir, etc. from DrWatson (see Navigating the Project)"
 },
 
 {
@@ -137,6 +137,14 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "savenames/#Handling-Simulations-1",
+    "page": "Handling Simulations",
+    "title": "Handling Simulations",
+    "category": "section",
+    "text": ""
+},
+
+{
     "location": "savenames/#DrWatson.savename",
     "page": "Handling Simulations",
     "title": "DrWatson.savename",
@@ -169,11 +177,19 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "savenames/#Handling-Simulations-1",
+    "location": "savenames/#Naming-Schemes-1",
     "page": "Handling Simulations",
-    "title": "Handling Simulations",
+    "title": "Naming Schemes",
     "category": "section",
-    "text": "Docstrings:Pages = [\"savenames.md\"]savename\n@dict\nDrWatson.allaccess\nDrWatson.access"
+    "text": "A robust naming scheme allows you to create quick names for simulations, create lists of simulations, check existing simulations, etc. savename\n@dict\nDrWatson.allaccess\nDrWatson.accessNotice that the naming scheme integrates perfectly with Parameters.jl."
+},
+
+{
+    "location": "savenames/#Adding-Runs-1",
+    "page": "Handling Simulations",
+    "title": "Adding Runs",
+    "category": "section",
+    "text": "WIP. (Adding simulation runs to a table/csv/dataframe)"
 },
 
 ]}
