@@ -149,7 +149,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Handling Simulations",
     "title": "DrWatson.savename",
     "category": "function",
-    "text": "savename(d; kwargs...)\n\nCreate a shorthand name, commonly used for saving a file, based on the parameters in the container d (Dict, NamedTuple or any other Julia composite type, e.g. created with Parameters.jl).\n\nThe function chains keys and values into a string of the form:\n\nkey1=val1_key2=val2_key3=val3....\n\nwhile the keys are always sorted alphabetically.\n\nsavename can be very conveniently combined with @dict.\n\nKeywords\n\nallowedtypes = (Real, String, Symbol)\n\nOnly values of type subtyping allowedtypes are used in the name.\n\naccesses = allaccess(d)\n\nYou can also specify which specific keys you want to use with the keyword accesses. By default this is all possible keys d can be accessed with, see allaccess.\n\ndigits = 3\n\nFloating point values are rounded to digits. In addition if the following holds:\n\nround(val; digits = digits) == round(Int, val)\n\nthen the integer value is used in the name instead.\n\nconnector = \"_\" : string used to connect the various entries.\n\nExamples\n\njulia> d = (a = 0.153456453, b = 5.0, mode = \"double\")\n(a = 0.153456453, b = 5.0, mode = \"double\")\n\njulia> savename(d; digits = 4)\n\"a=0.1535_b=5_mode=double\"\n\njulia> savename(d, (String,))\n\"mode=double\"\n\njulia> rick = (never = \"gonna\", give = \"you\", up = \"!\");\n\njulia> savename(rick) # keys are always sorted\n  \"give=you_never=gonna_up=!\"\n\n\n\n\n\n"
+    "text": "savename(d; kwargs...)\n\nCreate a shorthand name, commonly used for saving a file, based on the parameters in the container d (Dict, NamedTuple or any other Julia composite type, e.g. created with Parameters.jl).\n\nThe function chains keys and values into a string of the form:\n\nkey1=val1_key2=val2_key3=val3...\n\nwhile the keys are always sorted alphabetically.\n\nsavename can be very conveniently combined with @dict or @ntuple.\n\nKeywords\n\nallowedtypes = (Real, String, Symbol)\n\nOnly values of type subtyping allowedtypes are used in the name.\n\naccesses = allaccess(d)\n\nYou can also specify which specific keys you want to use with the keyword accesses. By default this is all possible keys d can be accessed with, see allaccess.\n\ndigits = 3\n\nFloating point values are rounded to digits. In addition if the following holds:\n\nround(val; digits = digits) == round(Int, val)\n\nthen the integer value is used in the name instead.\n\nconnector = \"_\" : string used to connect the various entries.\n\nExamples\n\njulia> d = (a = 0.153456453, b = 5.0, mode = \"double\")\n(a = 0.153456453, b = 5.0, mode = \"double\")\n\njulia> savename(d; digits = 4)\n\"a=0.1535_b=5_mode=double\"\n\njulia> savename(d, (String,))\n\"mode=double\"\n\njulia> rick = (never = \"gonna\", give = \"you\", up = \"!\");\n\njulia> savename(rick) # keys are always sorted\n  \"give=you_never=gonna_up=!\"\n\n\n\n\n\n"
 },
 
 {
@@ -158,6 +158,22 @@ var documenterSearchIndex = {"docs": [
     "title": "DrWatson.@dict",
     "category": "macro",
     "text": "@dict vars...\n\nCreate a dictionary out of the given variables that has as keys the variable names (as strings) and as values their values.\n\nExamples\n\njulia> ω = 5; χ = \"test\"; ζ = π/3;\n\njulia> @dict ω χ ζ\nDict{String,Any} with 3 entries:\n  \"ω\" => 5\n  \"χ\" => \"test\"\n  \"ζ\" => 1.0472\n\n\n\n\n\n"
+},
+
+{
+    "location": "savenames/#DrWatson.@ntuple",
+    "page": "Handling Simulations",
+    "title": "DrWatson.@ntuple",
+    "category": "macro",
+    "text": "@ntuple vars...\n\nCreate a NamedTuple out of the given variables that has as keys the variable names and as values their values.\n\nExamples\n\njulia> ω = 5; χ = \"test\"; ζ = 3.14;\n\njulia> @ntuple ω χ ζ\n(ω = 5, χ = \"test\", ζ = 3.14)\n\n\n\n\n\n"
+},
+
+{
+    "location": "savenames/#Naming-Schemes-1",
+    "page": "Handling Simulations",
+    "title": "Naming Schemes",
+    "category": "section",
+    "text": "A robust naming scheme allows you to create quick names for simulations, create lists of simulations, check existing simulations, etc.savename\n@dict\n@ntupleNotice that the naming scheme integrates perfectly with Parameters.jl."
 },
 
 {
@@ -177,11 +193,11 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "savenames/#Naming-Schemes-1",
+    "location": "savenames/#Customizing-savename-1",
     "page": "Handling Simulations",
-    "title": "Naming Schemes",
+    "title": "Customizing savename",
     "category": "section",
-    "text": "A robust naming scheme allows you to create quick names for simulations, create lists of simulations, check existing simulations, etc.savename\n@dict\nDrWatson.allaccess\nDrWatson.accessNotice that the naming scheme integrates perfectly with Parameters.jl."
+    "text": "You can customize savename for your own Types. For example you could make it so that it only uses some specific keys instead of all of them, or you could make it access data in a different way (maybe even loading files!).To do that you need to extend the following two functions:DrWatson.allaccess\nDrWatson.access"
 },
 
 {
@@ -190,6 +206,14 @@ var documenterSearchIndex = {"docs": [
     "title": "Creating Run Tables",
     "category": "section",
     "text": "WIP. (Adding simulation runs to a table/csv/dataframe)"
+},
+
+{
+    "location": "savenames/#Produce-or-Load-1",
+    "page": "Handling Simulations",
+    "title": "Produce or Load",
+    "category": "section",
+    "text": "WIP. (loading a simulation or producing it if it doesn\'t exist)"
 },
 
 ]}
