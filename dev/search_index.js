@@ -13,7 +13,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Introduction",
     "title": "DrWatson",
     "category": "section",
-    "text": "The perfect sidekick to your scientific inquiriesDrWatson is a Julia package created to help people \"deal\" with their simulations, simulation parameters, where are files saved, experimental data, scripts, existing simulations, project source code and in general their scientific projects.DrWatson is currently in beta and under development!"
+    "text": "The perfect sidekick to your scientific inquiriesDrWatson is a Julia package created to help people \"deal\" with their simulations, simulation parameters, where are files saved, experimental data, scripts, existing simulations, project source code and in general their scientific projects.DrWatson is currently in alpha and under development!"
 },
 
 {
@@ -77,7 +77,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Project Setup",
     "title": "src vs scripts",
     "category": "section",
-    "text": "Seems like src and scripts folders have pretty similar functionality. However there is a distinction between these two. You can follow these mental rules to know where to put file.jl:If upon include(\"file.jl\") there is anything being produced, be it data files, plots or even output to the console, then it should be in scripts.\nIf it is functionality used across multiple files or pipelines, it should be in src.\nsrc should only contain files the define functions or modules but not output anything. You can also organize src to be a Julia package, or contain multiple Julia packages."
+    "text": "Seems like src and scripts folders have pretty similar functionality. However there is a distinction between these two. You can follow these mental rules to know where to put file.jl:If upon include(\"file.jl\") there is anything being produced, be it data files, plots or even output to the console, then it should be in scripts.\nIf it is functionality used across multiple files or pipelines, it should be in src.\nsrc should only contain files that define functions or types but not output anything. You can also organize src to be a Julia package, or contain multiple Julia packages."
 },
 
 {
@@ -149,7 +149,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Handling Simulations",
     "title": "DrWatson.savename",
     "category": "function",
-    "text": "savename(d; kwargs...)\n\nCreate a shorthand name, commonly used for saving a file, based on the parameters in the container d (Dict, NamedTuple or any other Julia composite type, e.g. created with Parameters.jl).\n\nThe function chains keys and values into a string of the form:\n\nkey1=val1_key2=val2_key3=val3...\n\nwhile the keys are always sorted alphabetically.\n\nsavename can be very conveniently combined with @dict or @ntuple.\n\nKeywords\n\nallowedtypes = (Real, String, Symbol) : Only values of type subtyping anything in allowedtypes are used in the name.\naccesses = allaccess(d) : You can also specify which specific keys you want to use with the keyword accesses. By default this is all possible keys d can be accessed with, see allaccess.\ndigits = 3 : Floating point values are rounded to digits. In addition if the following holds:\nround(val; digits = digits) == round(Int, val)\nthen the integer value is used in the name instead.\nconnector = \"_\" : string used to connect the various entries.\n\nExamples\n\njulia> d = (a = 0.153456453, b = 5.0, mode = \"double\")\n(a = 0.153456453, b = 5.0, mode = \"double\")\n\njulia> savename(d; digits = 4)\n\"a=0.1535_b=5_mode=double\"\n\njulia> savename(d, (String,))\n\"mode=double\"\n\njulia> rick = (never = \"gonna\", give = \"you\", up = \"!\");\n\njulia> savename(rick) # keys are always sorted\n  \"give=you_never=gonna_up=!\"\n\n\n\n\n\n"
+    "text": "savename([prefix,], c [, suffix]; kwargs...)\n\nCreate a shorthand name, commonly used for saving a file, based on the parameters in the container c (Dict, NamedTuple or any other Julia composite type, e.g. created with Parameters.jl). If provided use the prefix and end the name with .suffix (i.e. you don\'t have to include the . in your suffix).\n\nThe function chains keys and values into a string of the form:\n\nkey1=val1_key2=val2_key3=val3\n\nwhile the keys are always sorted alphabetically. If you provide the prefix/suffix the function will do:\n\nprefix_key1=val1_key2=val2_key3=val3.suffix\n\n(assuming you chose the default connector, see below)\n\nsavename can be very conveniently combined with @dict or @ntuple.\n\nKeywords\n\nallowedtypes = (Real, String, Symbol) : Only values of type subtyping anything in allowedtypes are used in the name.\naccesses = allaccess(c) : You can also specify which specific keys you want to use with the keyword accesses. By default this is all possible keys c can be accessed with, see allaccess.\ndigits = 3 : Floating point values are rounded to digits. In addition if the following holds:\nround(val; digits = digits) == round(Int, val)\nthen the integer value is used in the name instead.\nconnector = \"_\" : string used to connect the various entries.\n\nExamples\n\njulia> c = (a = 0.153456453, b = 5.0, mode = \"double\")\n(a = 0.153456453, b = 5.0, mode = \"double\")\n\njulia> savename(c; digits = 4)\n\"a=0.1535_b=5_mode=double\"\n\njulia> savename(c, (String,))\n\"mode=double\"\n\njulia> rick = (never = \"gonna\", give = \"you\", up = \"!\");\n\njulia> savename(rick) # keys are always sorted\n  \"give=you_never=gonna_up=!\"\n\n\n\n\n\n"
 },
 
 {
@@ -157,7 +157,15 @@ var documenterSearchIndex = {"docs": [
     "page": "Handling Simulations",
     "title": "DrWatson.@dict",
     "category": "macro",
-    "text": "@dict vars...\n\nCreate a dictionary out of the given variables that has as keys the variable names (as strings) and as values their values.\n\nExamples\n\njulia> ω = 5; χ = \"test\"; ζ = π/3;\n\njulia> @dict ω χ ζ\nDict{String,Any} with 3 entries:\n  \"ω\" => 5\n  \"χ\" => \"test\"\n  \"ζ\" => 1.0472\n\n\n\n\n\n"
+    "text": "@dict vars...\n\nCreate a dictionary out of the given variables that has as keys the variable names and as values their values.\n\nExamples\n\njulia> ω = 5; χ = \"test\"; ζ = π/3;\n\njulia> @dict ω χ ζ\nDict{Symbol,Any} with 3 entries:\n  :ω => 5\n  :χ => \"test\"\n  :ζ => 1.0472\n\n\n\n\n\n"
+},
+
+{
+    "location": "savenames/#DrWatson.@strdict",
+    "page": "Handling Simulations",
+    "title": "DrWatson.@strdict",
+    "category": "macro",
+    "text": "@strdict vars...\n\nSame as @dict but the key type is String.\n\n\n\n\n\n"
 },
 
 {
@@ -173,7 +181,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Handling Simulations",
     "title": "Naming Schemes",
     "category": "section",
-    "text": "A robust naming scheme allows you to create quick names for simulations, create lists of simulations, check existing simulations, etc.savename\n@dict\n@ntupleNotice that this naming scheme integrates perfectly with Parameters.jl.Two convenience functions are also provided to easily switch between named tuples and dictionaries:ntupled2dict\ndict2ntuple"
+    "text": "A robust naming scheme allows you to create quick names for simulations, create lists of simulations, check existing simulations, etc.savename\n@dict\n@strdict\n@ntupleNotice that this naming scheme integrates perfectly with Parameters.jl.Two convenience functions are also provided to easily switch between named tuples and dictionaries:ntupled2dict\ndict2ntuple"
 },
 
 {
@@ -181,7 +189,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Handling Simulations",
     "title": "DrWatson.allaccess",
     "category": "function",
-    "text": "allaccess(d)\n\nReturn all the keys d can be accessed using access. For dictionaries/named tuples this is keys(d), for everything else it is fieldnames(typeof(d)).\n\n\n\n\n\n"
+    "text": "allaccess(c)\n\nReturn all the keys c can be accessed using access. For dictionaries/named tuples this is keys(c), for everything else it is fieldnames(typeof(c)).\n\n\n\n\n\n"
 },
 
 {
@@ -189,7 +197,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Handling Simulations",
     "title": "DrWatson.access",
     "category": "function",
-    "text": "access(d, key)\n\nAccess d with given key. For AbstractDict this is getindex, for anything else it is getproperty.\n\n\n\n\n\n"
+    "text": "access(c, key)\n\nAccess c with given key. For AbstractDict this is getindex, for anything else it is getproperty.\n\n\n\n\n\n"
 },
 
 {
