@@ -5,7 +5,7 @@
 ├── _research        &lt;- folder for WIP scripts, code, notes, comments,
 |                       to-dos and anything in an alpha state
 │
-├── data             &lt;- Folder that contains all data. **immutable and add-only!**
+├── data             &lt;- Folder that contains all data. **Immutable and add-only!**
 │   ├── simulations  &lt;- Data resulting directly from simulations
 │   ├── exp_pro      &lt;- Data from processing experiments
 │   └── exp_raw      &lt;- Raw experimental data
@@ -28,8 +28,9 @@
 │
 |
 ├── README.md        &lt;- Optional top-level README for anyone using this project.
-├── .gitignore       &lt;- by default ignores data, plots, videos, notebooks, _research,
-|                        Manifest.toml, latex-compilation related files.
+├── .gitignore       &lt;- by default ignores _research, data, plots, videos,
+|                       notebooks and latex-compilation related files.
+|
 ├── Manifest.toml    &lt;- Contains full list of exact package versions used currently.
 └── Project.toml     &lt;- Main project file, allows activation and installation.
                         Includes DrWatson by default.</code></pre></div><h3><a class="nav-anchor" id="src-vs-scripts-1" href="#src-vs-scripts-1"><code>src</code> vs <code>scripts</code></a></h3><p>Seems like <code>src</code> and <code>scripts</code> folders have pretty similar functionality. However there is a distinction between these two. You can follow these mental rules to know where to put <code>file.jl</code>:</p><ol><li>If upon <code>include(&quot;file.jl&quot;)</code> there is <em>anything</em> being produced, be it data files, plots or even output to the console, then it should be in <code>scripts</code>.</li><li>If it is functionality used across multiple files or pipelines, it should be in <code>src</code>.</li><li><code>src</code> should only contain files that define functions or types but not output anything. You can also organize <code>src</code> to be a Julia package, or contain multiple Julia packages.</li></ol><h2><a class="nav-anchor" id="Initializing-a-Project-1" href="#Initializing-a-Project-1">Initializing a Project</a></h2><p>To initialize a project as described in the <a href="#Default-Project-Setup-1">Default Project Setup</a> section, we provide the following function:</p><section class="docstring"><div class="docstring-header"><a class="docstring-binding" id="DrWatson.initialize_project" href="#DrWatson.initialize_project"><code>DrWatson.initialize_project</code></a> — <span class="docstring-category">Function</span>.</div><div><div><pre><code class="language-none">initialize_project(path [, name]; kwargs...)</code></pre><p>Initialize a scientific project expected by <code>DrWatson</code> inside the given <code>path</code>. If its <code>name</code> is not given, it is assumed to be the folder&#39;s name.</p><p>The new project remains activated for you to immidiately add packages.</p><p><strong>Keywords</strong></p><ul><li><code>readme = true</code> : adds a README.md file.</li><li><code>authors = nothing</code> : if a string or container of strings, adds the authors in the Project.toml file.</li><li><code>force = false</code> : If the <code>path</code> is <em>not</em> empty then throw an error. If however <code>force</code> is <code>true</code> then recursively delete everything in the path and create the project.</li><li><code>git = true</code> : Make the project a Git repository.</li></ul></div></div></section><h2><a class="nav-anchor" id="Navigating-the-Project-1" href="#Navigating-the-Project-1">Navigating the Project</a></h2><p>To be able to navigate the project consistently, DrWatson provides the following functions:</p><pre><code class="language-julia">datadir() = projectdir()*&quot;data/&quot;
