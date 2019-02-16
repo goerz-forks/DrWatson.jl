@@ -173,7 +173,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Handling Simulations",
     "title": "Naming Schemes",
     "category": "section",
-    "text": "A robust naming scheme allows you to create quick names for simulations, create lists of simulations, check existing simulations, etc.savename\n@dict\n@ntupleNotice that the naming scheme integrates perfectly with Parameters.jl."
+    "text": "A robust naming scheme allows you to create quick names for simulations, create lists of simulations, check existing simulations, etc.savename\n@dict\n@ntupleNotice that this naming scheme integrates perfectly with Parameters.jl.Two convenience functions are also provided to easily switch between named tuples and dictionaries:ntupled2dict\ndict2ntuple"
 },
 
 {
