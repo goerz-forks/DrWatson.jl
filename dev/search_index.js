@@ -113,11 +113,19 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "project/#DrWatson.projectname",
+    "page": "Project Setup",
+    "title": "DrWatson.projectname",
+    "category": "function",
+    "text": "projectname()\n\nReturn the name of the currently active project.\n\n\n\n\n\n"
+},
+
+{
     "location": "project/#Activating-a-Project-1",
     "page": "Project Setup",
     "title": "Activating a Project",
     "category": "section",
-    "text": "This part of DrWatson\'s functionality requires you to have your scientific project (and as a consequence, the Julia project) activated. This can be done in multiple ways:doing Pkg.activate(\"path/to/project\") programmatically\nusing the startup flag --project path when starting Julia\nby setting the JULIA_PROJECT environment variable\nusing the functions quickctivate and findproject offered by DrWatson.We highly recommend the fourth approach. Here is how it works: the function quickactivate activates a project given some path by recursively searching the path and its parents for a valid Project.toml file. Typically you put this function in your script files like so:using DrWatson # and any other package you use\nquickactivate(@__DIR__)\n# or\nquickactivate(@__DIR__, \"Best project in the WORLLDD\")where the second optional argument can assert if the activated project matches the name you provided, see below for more.quickactivate\nfindproject"
+    "text": "This part of DrWatson\'s functionality requires you to have your scientific project (and as a consequence, the Julia project) activated. This can be done in multiple ways:doing Pkg.activate(\"path/to/project\") programmatically\nusing the startup flag --project path when starting Julia\nby setting the JULIA_PROJECT environment variable\nusing the functions quickctivate and findproject offered by DrWatson.We highly recommend the fourth approach. Here is how it works: the function quickactivate activates a project given some path by recursively searching the path and its parents for a valid Project.toml file. Typically you put this function in your script files like so:using DrWatson # and any other package you use\nquickactivate(@__DIR__)\n# or\nquickactivate(@__DIR__, \"Best project in the WORLLDD\")where the second optional argument can assert if the activated project matches the name you provided, see below for more.quickactivate\nfindprojectNotice that to get the current project\'s name you can use:projectname"
 },
 
 {
@@ -129,19 +137,11 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "project/#DrWatson.projectname",
-    "page": "Project Setup",
-    "title": "DrWatson.projectname",
-    "category": "function",
-    "text": "projectname()\n\nReturn the name of the currently active project.\n\n\n\n\n\n"
-},
-
-{
     "location": "project/#Navigating-a-Project-1",
     "page": "Project Setup",
     "title": "Navigating a Project",
     "category": "section",
-    "text": "To be able to navigate the project consistently, DrWatson provides the following functions:datadir() = projectdir()*\"data/\"\nsrcdir() = projectdir()*\"src/\"\nplotsdir() = projectdir()*\"plots/\"\nscriptdir() = projectdir()*\"scripts/\"while as you can see all of them use projectdir:projectdir\nprojectnameIn addition, all these functions end with / by default. This means that you can directly chain them with a file name. E.g. you could dousing DrWatson, FileIO\nfile = makesimulation()\nFileIO.save(datadir()*\"simulations/test.jld2\", file)"
+    "text": "To be able to navigate the project consistently, DrWatson provides the following functions:datadir() = projectdir()*\"data/\"\nsrcdir() = projectdir()*\"src/\"\nplotsdir() = projectdir()*\"plots/\"\nscriptdir() = projectdir()*\"scripts/\"while as you can see all of them use projectdir:projectdirIn addition, all these functions end with / by default. This means that you can directly chain them with a file name. E.g. you could dousing DrWatson, BSON\nfile = makesimulation()\nBSON.bson(datadir()*\"simulations/test.bson\", file)"
 },
 
 {
