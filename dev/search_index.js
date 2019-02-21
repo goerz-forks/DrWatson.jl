@@ -141,7 +141,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Project Setup",
     "title": "Navigating a Project",
     "category": "section",
-    "text": "To be able to navigate the project consistently, DrWatson provides the following functions:datadir() = projectdir()*\"data/\"\nsrcdir() = projectdir()*\"src/\"\nplotsdir() = projectdir()*\"plots/\"\nscriptdir() = projectdir()*\"scripts/\"while as you can see all of them use projectdir:projectdirIn addition, all these functions end with / by default. This means that you can directly chain them with a file name. E.g. you could dousing DrWatson, BSON\nfile = makesimulation()\nBSON.bson(datadir()*\"simulations/test.bson\", file)"
+    "text": "To be able to navigate the project consistently, DrWatson provides the following functions:datadir() = projectdir()*\"data/\"\nsrcdir() = projectdir()*\"src/\"\nplotsdir() = projectdir()*\"plots/\"\nscriptdir() = projectdir()*\"scripts/\"\npapersdir() = projectdir()*\"papers/\"\nvideosdir() = projectdir()*\"videos/\"while as you can see all of them use projectdir:projectdirIn addition, all these functions end with / by default. This means that you can directly chain them with a file name. E.g. you could dousing DrWatson, BSON\nfile = makesimulation()\nBSON.bson(datadir()*\"sims/test.bson\", file)"
 },
 
 {
@@ -246,6 +246,22 @@ var documenterSearchIndex = {"docs": [
     "title": "Produce or Load",
     "category": "section",
     "text": "WIP. (loading a simulation or producing it if it doesn\'t exist)"
+},
+
+{
+    "location": "real_world/#",
+    "page": "Real Wolrd Examples",
+    "title": "Real Wolrd Examples",
+    "category": "page",
+    "text": ""
+},
+
+{
+    "location": "real_world/#Real-World-Examples-1",
+    "page": "Real Wolrd Examples",
+    "title": "Real World Examples",
+    "category": "section",
+    "text": "Coming soon."
 },
 
 ]}
