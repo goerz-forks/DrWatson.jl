@@ -37,7 +37,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Introduction",
     "title": "Functionality",
     "category": "section",
-    "text": "The functionality of DrWatson is composed of the following core parts, each being independent from each other:Project Setup : A universal project structure and functions that allow you to consistently and robustly navigate through your project, no matter where it is located on your hard drive.\nHandling Simulations : A robust scheme for saving your data, naming files, finding out if a simulation already exists, producing tables of existing simulations/data."
+    "text": "The functionality of DrWatson is composed of the following core parts, each being independent from each other:Project Setup : A universal project structure and functions that allow you to consistently and robustly navigate through your project, no matter where it is located on your hard drive.\nHandling Simulations : A robust scheme for saving your data, naming files, finding out if a simulation already exists, producing tables of existing simulations/data.This core functionality is also demonstrated in the Real World Examples page in various examples. All of these examples are directly copied from code of real scientific projects that use DrWatson."
 },
 
 {
@@ -165,7 +165,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Handling Simulations",
     "title": "Handling Simulations",
     "category": "section",
-    "text": ""
+    "text": "This page discusses numerous tools that make life easier for handling simulations. Most (if not all) of these tools are also used in the examples demonstrated in the Real World Examples page. After reading the proper documentation here it might be worth it to have a look there as well!"
 },
 
 {
@@ -205,7 +205,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Handling Simulations",
     "title": "Naming Schemes",
     "category": "section",
-    "text": "A robust naming scheme allows you to create quick names for simulations, create lists of simulations, check existing simulations, etc.savename\n@dict\n@strdict\n@ntupleNotice that this naming scheme integrates perfectly with Parameters.jl.Two convenience functions are also provided to easily switch between named tuples and dictionaries:ntupled2dict\ndict2ntuple"
+    "text": "A robust naming scheme allows you to create quick names for simulations, create lists of simulations, check existing simulations, etc. More importantly it allows you to easily read and write simulations using a consistent naming scheme.savename\n@dict\n@strdict\n@ntupleNotice that this naming scheme integrates perfectly with Parameters.jl.Two convenience functions are also provided to easily switch between named tuples and dictionaries:ntupled2dict\ndict2ntuple"
 },
 
 {
@@ -233,9 +233,65 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "savenames/#Creating-Run-Tables-1",
+    "location": "savenames/#DrWatson.current_commit",
     "page": "Handling Simulations",
-    "title": "Creating Run Tables",
+    "title": "DrWatson.current_commit",
+    "category": "function",
+    "text": "current_commit(path = projectdir()) -> commit\n\nReturn the current active commit id of the Git repository present in path, which by default is the project path. If the repository is dirty when this function is called the string will end with \"_dirty\".\n\nSee also tag!.\n\nExamples\n\njulia> current_commit()\n\"96df587e45b29e7a46348a3d780db1f85f41de04\"\n\njulia> current_commit(path_to_dirty_repo)\n\"3bf684c6a115e3dce484b7f200b66d3ced8b0832_dirty\"\n\n\n\n\n\n"
+},
+
+{
+    "location": "savenames/#DrWatson.tag!",
+    "page": "Handling Simulations",
+    "title": "DrWatson.tag!",
+    "category": "function",
+    "text": "tag!(d::Dict, path = projectdir()) -> d\n\nTag d by adding an extra field commit which will have as value the current_commit of the repository at path (by default the project\'s path). Does not operate if a key commit already exists.\n\nNotice that if String is not a subtype of the value type of d then a new dictionary is created and returned. Otherwise the operation is inplace (and the dictionary is returned again).\n\nExamples\n\njulia> d = Dict(:x => 3, :y => 4)\nDict{Symbol,Int64} with 2 entries:\n  :y => 4\n  :x => 3\n\njulia> tag!(d)\nDict{Symbol,Any} with 3 entries:\n  :y      => 4\n  :commit => \"96df587e45b29e7a46348a3d780db1f85f41de04\"\n  :x      => 3\n\n\n\n\n\n"
+},
+
+{
+    "location": "savenames/#Tagging-a-run-using-Git-1",
+    "page": "Handling Simulations",
+    "title": "Tagging a run using Git",
+    "category": "section",
+    "text": "For reproducibility reasons (and also to not go insane when asking \"HOW DID I GET THOSE RESUUUULTS\") it is useful to \"tag!\" any simulation/result/process with the Git commit of the repository.To this end there are two functions that can be used to ensure reproducibility:current_commit\ntag!Please notice that tag! will operate in place only when possible. If not possible then a new dictionary is returned. Also (importantly) these functions will never error as they are most commonly used when saving simulations and this could risk data not being saved."
+},
+
+{
+    "location": "savenames/#Automatic-Tagging-during-Saving-1",
+    "page": "Handling Simulations",
+    "title": "Automatic Tagging during Saving",
+    "category": "section",
+    "text": "WIP. (adding the tag! functionality automatically with a save call)"
+},
+
+{
+    "location": "savenames/#DrWatson.dict_list",
+    "page": "Handling Simulations",
+    "title": "DrWatson.dict_list",
+    "category": "function",
+    "text": "dict_list(c)\n\nExpand the dictionary c into a vector of dictionaries. Each entry has a unique combination from the product of the Vector values of the dictionary while the non-Vector values are kept constant for all possibilities. The keys of the entries are the same.\n\nWhether the values of c are iterable or not is of no concern; the function considers as \"iterable\" only subtypes of Vector.\n\nUse the function dict_list_count to get an estimate of how many dictionaries will dict_list produce.\n\nExamples\n\njulia> c = Dict(:a => [1, 2], :b => 4);\n\njulia> dict_list(c) 3-element Array{Dict{Symbol,Int64},1}:  Dict(:a=>1,:b=>4)  Dict(:a=>2,:b=>4)\n\njulia> c[:model] = \"linear\"; c[:mode] = [\"bi\", \"tri\"];\n\njulia> dict_list(c) 4-element Array{Dict{Symbol,Any},1}:  Dict(:a=>1,:b=>4,:mode=>\"bi\",:model=>\"linear\")  Dict(:a=>2,:b=>4,:mode=>\"bi\",:model=>\"linear\")  Dict(:a=>1,:b=>4,:mode=>\"tri\",:model=>\"linear\")  Dict(:a=>2,:b=>4,:mode=>\"tri\",:model=>\"linear\")\n\njulia> c[:e] = [[1, 2], [3, 5]];\n\njulia> dict_list(c) 8-element Array{Dict{Symbol,Any},1}:  Dict(:a=>1,:b=>4,:mode=>\"bi\",:e=>[1, 2],:model=>\"linear\")  Dict(:a=>2,:b=>4,:mode=>\"bi\",:e=>[1, 2],:model=>\"linear\")  Dict(:a=>1,:b=>4,:mode=>\"tri\",:e=>[1, 2],:model=>\"linear\")  Dict(:a=>2,:b=>4,:mode=>\"tri\",:e=>[1, 2],:model=>\"linear\")  Dict(:a=>1,:b=>4,:mode=>\"bi\",:e=>[3, 5],:model=>\"linear\")  Dict(:a=>2,:b=>4,:mode=>\"bi\",:e=>[3, 5],:model=>\"linear\")  Dict(:a=>1,:b=>4,:mode=>\"tri\",:e=>[3, 5],:model=>\"linear\")  Dict(:a=>2,:b=>4,:mode=>\"tri\",:e=>[3, 5],:model=>\"linear\")\n\n\n\n\n\n"
+},
+
+{
+    "location": "savenames/#DrWatson.dict_list_count",
+    "page": "Handling Simulations",
+    "title": "DrWatson.dict_list_count",
+    "category": "function",
+    "text": "dict_list_count(c) -> N\n\nReturn the number of dictionaries that will be created by calling dict_list(c).\n\n\n\n\n\n"
+},
+
+{
+    "location": "savenames/#Preparing-Simulation-Runs-1",
+    "page": "Handling Simulations",
+    "title": "Preparing Simulation Runs",
+    "category": "section",
+    "text": "It is very often the case that you want to run \"batch simulations\", i.e. just submit a bunch of different simulations, all using same algorithms and code but just different parameters. This scenario always requires the user to prepare a set of simulation parameter containers which are then passed into some kind of \"main\" function that starts the simulation.To make the preparation part simpler we provide the following functionality:dict_list\ndict_list_countUsing the above function means that you can write your \"preparation\" step into a single dictionary and then let it automatically expand into many parameter containers. This keeps the code cleaner but also consistent, provided that it follows one rule: Anything that is a Vector has many parameters, otherwise it is one parameter. dict_list considers this true irrespectively of what the Vector contains. This allows users to use any iterable custom type as a single \"parameter\" of a simulation.See the Real World Examples for a very convenient application!"
+},
+
+{
+    "location": "savenames/#Simulation-Tables-1",
+    "page": "Handling Simulations",
+    "title": "Simulation Tables",
     "category": "section",
     "text": "WIP. (Adding simulation runs to a table/csv/dataframe)"
 },
