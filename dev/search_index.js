@@ -133,7 +133,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Project Setup",
     "title": "DrWatson.projectdir",
     "category": "function",
-    "text": "projectdir()\n\nReturn the directory of the currently active project. Ends with \"/\".\n\n\n\n\n\n"
+    "text": "projectdir()\n\nReturn the directory of the currently active project. Ends with \"/\".\n\nprojectdir(folder::String) = joinpath(projectdir(), folder)*\"/\"\n\nReturn the directory of the folder in the active project.\n\n\n\n\n\n"
 },
 
 {
@@ -141,7 +141,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Project Setup",
     "title": "Navigating a Project",
     "category": "section",
-    "text": "To be able to navigate the project consistently, DrWatson provides the following functions:datadir() = projectdir()*\"data/\"\nsrcdir() = projectdir()*\"src/\"\nplotsdir() = projectdir()*\"plots/\"\nscriptdir() = projectdir()*\"scripts/\"\npapersdir() = projectdir()*\"papers/\"\nvideosdir() = projectdir()*\"videos/\"while as you can see all of them use projectdir:projectdirIn addition, all these functions end with / by default. This means that you can directly chain them with a file name. E.g. you could dousing DrWatson, BSON\nfile = makesimulation()\nBSON.bson(datadir()*\"sims/test.bson\", file)"
+    "text": "To be able to navigate the project consistently, DrWatson provides the core functionprojectdirBesides the above, the shortcut functions:datadir()\nsrcdir()\nplotsdir()\nscriptdir()\npapersdir()immediately return the appropriate subdirectory. These are also defined due to the frequent use of these subdirectories.In addition, all these functions end with / by default. This means that you can directly chain them with a file name. E.g. you could dousing DrWatson, BSON\nfile = makesimulation()\nBSON.bson(datadir()*\"sims/test.bson\", file)"
 },
 
 {
@@ -149,7 +149,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Project Setup",
     "title": "Reproducibility",
     "category": "section",
-    "text": "This project setup approach that DrWatson suggests has a very big side-benefit: it is fully reproducible firstly because it uses Julia\'s suggested project structure, secondly because the navigation only uses local directories and lastly because it is a Git repository.If you send your entire project folder to a colleague, they only need to do:julia> cd(\"path/to/project\")\npkg> activate .\npkg> instantiateAll required packages and dependencies will be installed and then any script that was running in your computer will also be running in their computer in the same way!In addition, with DrWatson you have the possibility of \"tagging\" each simulation created with the commit id, see the discussion around current_commit and tag!.Notice that for full reproducibility it is advised to never add Manifest.toml to your .gitignore file! "
+    "text": "This project setup approach that DrWatson suggests has a very big side-benefit: it is fully reproducible firstly because it uses Julia\'s suggested project structure, secondly because the navigation only uses local directories and lastly because it is a Git repository.If you send your entire project folder to a colleague, they only need to do:julia> cd(\"path/to/project\")\npkg> activate .\npkg> instantiateAll required packages and dependencies will be installed and then any script that was running in your computer will also be running in their computer in the same way!In addition, with DrWatson you have the possibility of \"tagging\" each simulation created with the commit id, see the discussion around current_commit and tag!.Notice that for full reproducibility it is advised to never add Manifest.toml to your .gitignore file!"
 },
 
 {
