@@ -141,7 +141,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Project Setup",
     "title": "Navigating a Project",
     "category": "section",
-    "text": "To be able to navigate the project consistently, DrWatson provides the core functionprojectdirBesides the above, the shortcut functions:datadir()\nsrcdir()\nplotsdir()\nscriptdir()\npapersdir()immediately return the appropriate subdirectory. These are also defined due to the frequent use of these subdirectories.In addition, all these functions end with / by default. This means that you can directly chain them with a file name. E.g. you could dousing DrWatson, BSON\nfile = makesimulation()\nBSON.bson(datadir()*\"sims/test.bson\", file)"
+    "text": "To be able to navigate the project consistently, DrWatson provides the core functionprojectdirBesides the above, the shortcut functions:datadir()\nsrcdir()\nplotsdir()\nscriptdir()\npapersdir()immediately return the appropriate subdirectory. These are also defined due to the frequent use of these subdirectories.In addition all these functions end with /. This means that you can directly chain them with a file name using just *. E.g. you could dousing DrWatson, BSON\nfile = makesimulation()\nBSON.bson(datadir()*\"sims/test.bson\", file)"
 },
 
 {

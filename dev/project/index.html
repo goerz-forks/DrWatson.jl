@@ -40,7 +40,7 @@ quickactivate(@__DIR__, &quot;Best project in the WORLLDD&quot;)</code></pre><p>
 srcdir()
 plotsdir()
 scriptdir()
-papersdir()</code></pre><p>immediately return the appropriate subdirectory. These are also defined due to the frequent use of these subdirectories.</p><p>In addition, all these functions end with <code>/</code> by default. This means that you can directly chain them with a file name. E.g. you could do</p><pre><code class="language-julia">using DrWatson, BSON
+papersdir()</code></pre><p>immediately return the appropriate subdirectory. These are also defined due to the frequent use of these subdirectories.</p><p>In addition all these functions end with <code>/</code>. This means that you can directly chain them with a file name using just <code>*</code>. E.g. you could do</p><pre><code class="language-julia">using DrWatson, BSON
 file = makesimulation()
 BSON.bson(datadir()*&quot;sims/test.bson&quot;, file)</code></pre><h2><a class="nav-anchor" id="Reproducibility-1" href="#Reproducibility-1">Reproducibility</a></h2><p>This project setup approach that DrWatson suggests has a very big side-benefit: it is fully reproducible firstly because it uses Julia&#39;s suggested project structure, secondly because the navigation only uses local directories and lastly because it is a Git repository.</p><p>If you send your entire project folder to a colleague, they only need to do:</p><pre><code class="language-julia">julia&gt; cd(&quot;path/to/project&quot;)
 pkg&gt; activate .
