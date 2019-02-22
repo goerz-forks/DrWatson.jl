@@ -149,7 +149,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Project Setup",
     "title": "Reproducibility",
     "category": "section",
-    "text": "This project setup approach that DrWatson suggests has a very big side-benefit: it is fully reproducible firstly because it uses Julia\'s suggested project structure, secondly because the navigation only uses local directories and lastly because it is a Git repository.If you send your entire project folder to a colleague, they only need to do:julia> cd(\"path/to/project\")\npkg> activate .\npkg> instantiateAll required packages and dependencies will be installed and then any script that was running in your computer will also be running in their computer in the same way!In addition, with DrWatson you have the possibility of \"tagging\" each simulation created with the commit id, see the discussion around current_commit and tag!."
+    "text": "This project setup approach that DrWatson suggests has a very big side-benefit: it is fully reproducible firstly because it uses Julia\'s suggested project structure, secondly because the navigation only uses local directories and lastly because it is a Git repository.If you send your entire project folder to a colleague, they only need to do:julia> cd(\"path/to/project\")\npkg> activate .\npkg> instantiateAll required packages and dependencies will be installed and then any script that was running in your computer will also be running in their computer in the same way!In addition, with DrWatson you have the possibility of \"tagging\" each simulation created with the commit id, see the discussion around current_commit and tag!.Notice that for full reproducibility it is advised to never add Manifest.toml to your .gitignore file! "
 },
 
 {
@@ -173,7 +173,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Handling Simulations",
     "title": "DrWatson.savename",
     "category": "function",
-    "text": "savename([prefix,], c [, suffix]; kwargs...)\n\nCreate a shorthand name, commonly used for saving a file, based on the parameters in the container c (Dict, NamedTuple or any other Julia composite type, e.g. created with Parameters.jl). If provided use the prefix and end the name with .suffix (i.e. you don\'t have to include the . in your suffix).\n\nThe function chains keys and values into a string of the form:\n\nkey1=val1_key2=val2_key3=val3\n\nwhile the keys are always sorted alphabetically. If you provide the prefix/suffix the function will do:\n\nprefix_key1=val1_key2=val2_key3=val3.suffix\n\nassuming you chose the default connector, see below. Notice that if prefix can be any path and in addition if it ends as a path (/ or \\) then the connector is ommited.\n\nsavename can be very conveniently combined with @dict or @ntuple.\n\nKeywords\n\nallowedtypes = (Real, String, Symbol) : Only values of type subtyping anything in allowedtypes are used in the name.\naccesses = allaccess(c) : You can also specify which specific keys you want to use with the keyword accesses. By default this is all possible keys c can be accessed with, see allaccess.\ndigits = 3 : Floating point values are rounded to digits. In addition if the following holds:\nround(val; digits = digits) == round(Int, val)\nthen the integer value is used in the name instead.\nconnector = \"_\" : string used to connect the various entries.\n\nExamples\n\nd = (a = 0.153456453, b = 5.0, mode = \"double\")\nsavename(d; digits = 4) == \"a=0.1535_b=5_mode=double\"\nsavename(\"n\", d) == \"n_a=0.153_b=5_mode=double\"\nsavename(\"n/\", d) == \"n/a=0.153_b=5_mode=double\"\nsavename(d, \"n\") == \"a=0.153_b=5_mode=double.n\"\nsavename(\"data/n\", d, \"n\") == \"data/n_a=0.153_b=5_mode=double.n\"\nsavename(\"n\", d, \"n\"; connector = \"-\") == \"n-a=0.153-b=5-mode=double.n\"\nsavename(d, allowedtypes = (String,)) == \"mode=double\"\n\nrick = (never = \"gonna\", give = \"you\", up = \"!\");\nsavename(rick) == \"give=you_never=gonna_up=!\" # keys are sorted!\n\n\n\n\n\n"
+    "text": "savename([prefix,], c [, suffix]; kwargs...)\n\nCreate a shorthand name, commonly used for saving a file, based on the parameters in the container c (Dict, NamedTuple or any other Julia composite type, e.g. created with Parameters.jl). If provided use the prefix and end the name with .suffix (i.e. you don\'t have to include the . in your suffix).\n\nThe function chains keys and values into a string of the form:\n\nkey1=val1_key2=val2_key3=val3\n\nwhile the keys are always sorted alphabetically. If you provide the prefix/suffix the function will do:\n\nprefix_key1=val1_key2=val2_key3=val3.suffix\n\nassuming you chose the default connector, see below. Notice that if prefix can be any path and in addition if it ends as a path (/ or \\) then the connector is ommited.\n\nsavename can be very conveniently combined with @dict or @ntuple.\n\nKeywords\n\nallowedtypes = default_allowed(c) : Only values of type subtyping anything in allowedtypes are used in the name. By default this is (Real, String, Symbol).\naccesses = allaccess(c) : You can also specify which specific keys you want to use with the keyword accesses. By default this is all possible keys c can be accessed with, see allaccess.\ndigits = 3 : Floating point values are rounded to digits. In addition if the following holds:\nround(val; digits = digits) == round(Int, val)\nthen the integer value is used in the name instead.\nconnector = \"_\" : string used to connect the various entries.\n\nExamples\n\nd = (a = 0.153456453, b = 5.0, mode = \"double\")\nsavename(d; digits = 4) == \"a=0.1535_b=5_mode=double\"\nsavename(\"n\", d) == \"n_a=0.153_b=5_mode=double\"\nsavename(\"n/\", d) == \"n/a=0.153_b=5_mode=double\"\nsavename(d, \"n\") == \"a=0.153_b=5_mode=double.n\"\nsavename(\"data/n\", d, \"n\") == \"data/n_a=0.153_b=5_mode=double.n\"\nsavename(\"n\", d, \"n\"; connector = \"-\") == \"n-a=0.153-b=5-mode=double.n\"\nsavename(d, allowedtypes = (String,)) == \"mode=double\"\n\nrick = (never = \"gonna\", give = \"you\", up = \"!\");\nsavename(rick) == \"give=you_never=gonna_up=!\" # keys are sorted!\n\n\n\n\n\n"
 },
 
 {
@@ -225,11 +225,19 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "savenames/#DrWatson.default_allowed",
+    "page": "Handling Simulations",
+    "title": "DrWatson.default_allowed",
+    "category": "function",
+    "text": "default_allowed(c) = (Real, String, Symbol)\n\nReturn the (super-)Types that will be used as allowedtypes in savename or other similar functions.\n\n\n\n\n\n"
+},
+
+{
     "location": "savenames/#Customizing-savename-1",
     "page": "Handling Simulations",
     "title": "Customizing savename",
     "category": "section",
-    "text": "You can customize savename for your own Types. For example you could make it so that it only uses some specific keys instead of all of them, or you could make it access data in a different way (maybe even loading files!).To do that you need to extend the following two functions:DrWatson.allaccess\nDrWatson.access"
+    "text": "You can customize savename for your own Types. For example you could make it so that it only uses some specific keys instead of all of them, only specific types, or you could make it access data in a different way (maybe even loading files!).To do that you need to extend the following functions:DrWatson.allaccess\nDrWatson.access\nDrWatson.default_allowed"
 },
 
 {
