@@ -269,7 +269,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Handling Simulations",
     "title": "DrWatson.dict_list",
     "category": "function",
-    "text": "dict_list(c)\n\nExpand the dictionary c into a vector of dictionaries. Each entry has a unique combination from the product of the Vector values of the dictionary while the non-Vector values are kept constant for all possibilities. The keys of the entries are the same.\n\nWhether the values of c are iterable or not is of no concern; the function considers as \"iterable\" only subtypes of Vector.\n\nUse the function dict_list_count to get an estimate of how many dictionaries will dict_list produce.\n\nExamples\n\njulia> c = Dict(:a => [1, 2], :b => 4);\n\njulia> dict_list(c) 3-element Array{Dict{Symbol,Int64},1}:  Dict(:a=>1,:b=>4)  Dict(:a=>2,:b=>4)\n\njulia> c[:model] = \"linear\"; c[:mode] = [\"bi\", \"tri\"];\n\njulia> dict_list(c) 4-element Array{Dict{Symbol,Any},1}:  Dict(:a=>1,:b=>4,:mode=>\"bi\",:model=>\"linear\")  Dict(:a=>2,:b=>4,:mode=>\"bi\",:model=>\"linear\")  Dict(:a=>1,:b=>4,:mode=>\"tri\",:model=>\"linear\")  Dict(:a=>2,:b=>4,:mode=>\"tri\",:model=>\"linear\")\n\njulia> c[:e] = [[1, 2], [3, 5]];\n\njulia> dict_list(c) 8-element Array{Dict{Symbol,Any},1}:  Dict(:a=>1,:b=>4,:mode=>\"bi\",:e=>[1, 2],:model=>\"linear\")  Dict(:a=>2,:b=>4,:mode=>\"bi\",:e=>[1, 2],:model=>\"linear\")  Dict(:a=>1,:b=>4,:mode=>\"tri\",:e=>[1, 2],:model=>\"linear\")  Dict(:a=>2,:b=>4,:mode=>\"tri\",:e=>[1, 2],:model=>\"linear\")  Dict(:a=>1,:b=>4,:mode=>\"bi\",:e=>[3, 5],:model=>\"linear\")  Dict(:a=>2,:b=>4,:mode=>\"bi\",:e=>[3, 5],:model=>\"linear\")  Dict(:a=>1,:b=>4,:mode=>\"tri\",:e=>[3, 5],:model=>\"linear\")  Dict(:a=>2,:b=>4,:mode=>\"tri\",:e=>[3, 5],:model=>\"linear\")\n\n\n\n\n\n"
+    "text": "dict_list(c)\n\nExpand the dictionary c into a vector of dictionaries. Each entry has a unique combination from the product of the Vector values of the dictionary while the non-Vector values are kept constant for all possibilities. The keys of the entries are the same.\n\nWhether the values of c are iterable or not is of no concern; the function considers as \"iterable\" only subtypes of Vector.\n\nUse the function dict_list_count to get an estimate of how many dictionaries will dict_list produce.\n\nExamples\n\njulia> c = Dict(:a => [1, 2], :b => 4);\n\njulia> dict_list(c)\n3-element Array{Dict{Symbol,Int64},1}:\n Dict(:a=>1,:b=>4)\n Dict(:a=>2,:b=>4)\n\njulia> c[:model] = \"linear\"; c[:mode] = [\"bi\", \"tri\"];\n\njulia> dict_list(c)\n4-element Array{Dict{Symbol,Any},1}:\n Dict(:a=>1,:b=>4,:mode=>\"bi\",:model=>\"linear\")\n Dict(:a=>2,:b=>4,:mode=>\"bi\",:model=>\"linear\")\n Dict(:a=>1,:b=>4,:mode=>\"tri\",:model=>\"linear\")\n Dict(:a=>2,:b=>4,:mode=>\"tri\",:model=>\"linear\")\n\njulia> c[:e] = [[1, 2], [3, 5]];\n\njulia> dict_list(c)\n8-element Array{Dict{Symbol,Any},1}:\n Dict(:a=>1,:b=>4,:mode=>\"bi\",:e=>[1, 2],:model=>\"linear\")\n Dict(:a=>2,:b=>4,:mode=>\"bi\",:e=>[1, 2],:model=>\"linear\")\n Dict(:a=>1,:b=>4,:mode=>\"tri\",:e=>[1, 2],:model=>\"linear\")\n Dict(:a=>2,:b=>4,:mode=>\"tri\",:e=>[1, 2],:model=>\"linear\")\n Dict(:a=>1,:b=>4,:mode=>\"bi\",:e=>[3, 5],:model=>\"linear\")\n Dict(:a=>2,:b=>4,:mode=>\"bi\",:e=>[3, 5],:model=>\"linear\")\n Dict(:a=>1,:b=>4,:mode=>\"tri\",:e=>[3, 5],:model=>\"linear\")\n Dict(:a=>2,:b=>4,:mode=>\"tri\",:e=>[3, 5],:model=>\"linear\")\n\n\n\n\n\n"
 },
 
 {
@@ -306,15 +306,15 @@ var documenterSearchIndex = {"docs": [
 
 {
     "location": "real_world/#",
-    "page": "Real Wolrd Examples",
-    "title": "Real Wolrd Examples",
+    "page": "Real World Examples",
+    "title": "Real World Examples",
     "category": "page",
     "text": ""
 },
 
 {
     "location": "real_world/#Real-World-Examples-1",
-    "page": "Real Wolrd Examples",
+    "page": "Real World Examples",
     "title": "Real World Examples",
     "category": "section",
     "text": "Coming soon."
