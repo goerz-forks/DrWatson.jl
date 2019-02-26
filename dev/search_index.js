@@ -101,7 +101,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Project Setup",
     "title": "DrWatson.quickactivate",
     "category": "function",
-    "text": "quickactivate(path [, name::String])\n\nActivate the project found by findproject of the path. Optionally check if name is the same as the activated project\'s name. If it is not, throw an error.\n\nThis function is first activating the project and then checking if it matches the name.\n\n\n\n\n\n"
+    "text": "quickactivate(path [, name::String])\n\nActivate the project found by findproject of the path. Optionally check if name is the same as the activated project\'s name. If it is not, throw an error.\n\nThis function is first activating the project and then checking if it matches the name.\n\nwarning: Warning\nNote that to access quickactivate you need to be using DrWatson. For this to be possible DrWatson must be already in added in the existing global environment. The version of DrWatson loaded therefore will be the one of the global environment, and not of the activated project. Therefore take care so that these two versions coincide, to not encounter unexpected behavior.In addition please be very careful to not write:using DrWatson, Package1, Package2\nquickactivate(@__DIR__)\n# do stuffbut instead load packages after activating the project:using DrWatson\nquickactivate(@__DIR__)\nusing Package1, Package2\n# do stuffThis ensures that the packages you use will all have the versions dictated by your activated project (besides DrWatson, since this is impossible to do using quickactivate).\n\n\n\n\n\n"
 },
 
 {
