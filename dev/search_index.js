@@ -109,7 +109,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Project Setup",
     "title": "DrWatson.findproject",
     "category": "function",
-    "text": "findproject(path = pwd()) -> project_path\n\nRecursively search path and its parents for a valid Julia project file. If it is found return its path, otherwise issue a warning and return nothing.\n\nThe function stops searching if it hits either the home directory or the root directory.\n\n\n\n\n\n"
+    "text": "findproject(path = pwd()) -> project_path\n\nRecursively search path and its parents for a valid Julia project file (anything in Base.project_names). If it is found return its path, otherwise issue a warning and return nothing.\n\nThe function stops searching if it hits either the home directory or the root directory.\n\n\n\n\n\n"
 },
 
 {
