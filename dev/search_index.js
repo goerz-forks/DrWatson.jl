@@ -29,7 +29,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Introduction",
     "title": "Description of DrWatson",
     "category": "section",
-    "text": "DrWatson follows these simple principles:Basic. The functionality offered is something simple, a baseline from where you handle your project as you wish.\nConsistent. The functionality is identical across all projects and DrWatson offers (and parts of it assume) a universal base project structure.\nAllows increments. You didn\'t plan your project well enough? Want to add more folders, more files, more variables to your simulations? It\'s fine.\nHelpful. DrWatson has been beta tested in real-world scientific projects and has matured based on feedback from scientists.\nReproducible. DrWatson aims to make your projects fully reproducible using Git, Julia\'s package manager and consistent naming schemes."
+    "text": "DrWatson follows these simple principles:Basic. The functionality offered is something simple, a baseline from where you handle your project as you wish.\nConsistent. The functionality is identical across all projects and DrWatson offers (and parts of it assume) a universal base project structure.\nAllows increments. You didn\'t plan your project well enough? Want to add more folders, more files, more variables to your simulations? It\'s fine.\nHelpful. DrWatson has been beta tested in real-world scientific projects and has matured based on feedback from scientists. The entirety of DrWatson\'s functionality comes from answering questions of the type \"This would be helpful for my science project\".\nReproducible. DrWatson aims to make your projects fully reproducible using Git, Julia\'s package manager and consistent naming schemes."
 },
 
 {
