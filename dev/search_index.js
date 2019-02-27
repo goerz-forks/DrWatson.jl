@@ -173,7 +173,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Handling Simulations",
     "title": "DrWatson.savename",
     "category": "function",
-    "text": "savename([prefix,], c [, suffix]; kwargs...)\n\nCreate a shorthand name, commonly used for saving a file, based on the parameters in the container c (Dict, NamedTuple or any other Julia composite type, e.g. created with Parameters.jl). If provided use the prefix and end the name with .suffix (i.e. you don\'t have to include the . in your suffix).\n\nThe function chains keys and values into a string of the form:\n\nkey1=val1_key2=val2_key3=val3\n\nwhile the keys are always sorted alphabetically. If you provide the prefix/suffix the function will do:\n\nprefix_key1=val1_key2=val2_key3=val3.suffix\n\nassuming you chose the default connector, see below. Notice that if prefix can be any path and in addition if it ends as a path (/ or \\) then the connector is ommited.\n\nsavename can be very conveniently combined with @dict or @ntuple.\n\nKeywords\n\nallowedtypes = default_allowed(c) : Only values of type subtyping anything in allowedtypes are used in the name. By default this is (Real, String, Symbol).\naccesses = allaccess(c) : You can also specify which specific keys you want to use with the keyword accesses. By default this is all possible keys c can be accessed with, see allaccess.\ndigits = 3 : Floating point values are rounded to digits. In addition if the following holds:\nround(val; digits = digits) == round(Int, val)\nthen the integer value is used in the name instead.\nconnector = \"_\" : string used to connect the various entries.\n\nExamples\n\nd = (a = 0.153456453, b = 5.0, mode = \"double\")\nsavename(d; digits = 4) == \"a=0.1535_b=5_mode=double\"\nsavename(\"n\", d) == \"n_a=0.153_b=5_mode=double\"\nsavename(\"n/\", d) == \"n/a=0.153_b=5_mode=double\"\nsavename(d, \"n\") == \"a=0.153_b=5_mode=double.n\"\nsavename(\"data/n\", d, \"n\") == \"data/n_a=0.153_b=5_mode=double.n\"\nsavename(\"n\", d, \"n\"; connector = \"-\") == \"n-a=0.153-b=5-mode=double.n\"\nsavename(d, allowedtypes = (String,)) == \"mode=double\"\n\nrick = (never = \"gonna\", give = \"you\", up = \"!\");\nsavename(rick) == \"give=you_never=gonna_up=!\" # keys are sorted!\n\n\n\n\n\n"
+    "text": "savename([prefix,], c [, suffix]; kwargs...)\n\nCreate a shorthand name, commonly used for saving a file, based on the parameters in the container c (Dict, NamedTuple or any other Julia composite type, e.g. created with Parameters.jl). If provided use the prefix and end the name with .suffix (i.e. you don\'t have to include the . in your suffix).\n\nThe function chains keys and values into a string of the form:\n\nkey1=val1_key2=val2_key3=val3\n\nwhile the keys are always sorted alphabetically. If you provide the prefix/suffix the function will do:\n\nprefix_key1=val1_key2=val2_key3=val3.suffix\n\nassuming you chose the default connector, see below. Notice that prefix can be any path and in addition if it ends as a path (/ or \\) then the connector is ommited.\n\nsavename can be very conveniently combined with @dict or @ntuple.\n\nKeywords\n\nallowedtypes = default_allowed(c) : Only values of type subtyping anything in allowedtypes are used in the name. By default this is (Real, String, Symbol).\naccesses = allaccess(c) : You can also specify which specific keys you want to use with the keyword accesses. By default this is all possible keys c can be accessed with, see allaccess.\ndigits = 3 : Floating point values are rounded to digits. In addition if the following holds:\nround(val; digits = digits) == round(Int, val)\nthen the integer value is used in the name instead.\nconnector = \"_\" : string used to connect the various entries.\n\nExamples\n\nd = (a = 0.153456453, b = 5.0, mode = \"double\")\nsavename(d; digits = 4) == \"a=0.1535_b=5_mode=double\"\nsavename(\"n\", d) == \"n_a=0.153_b=5_mode=double\"\nsavename(\"n/\", d) == \"n/a=0.153_b=5_mode=double\"\nsavename(d, \"n\") == \"a=0.153_b=5_mode=double.n\"\nsavename(\"data/n\", d, \"n\") == \"data/n_a=0.153_b=5_mode=double.n\"\nsavename(\"n\", d, \"n\"; connector = \"-\") == \"n-a=0.153-b=5-mode=double.n\"\nsavename(d, allowedtypes = (String,)) == \"mode=double\"\n\nrick = (never = \"gonna\", give = \"you\", up = \"!\");\nsavename(rick) == \"give=you_never=gonna_up=!\" # keys are sorted!\n\n\n\n\n\n"
 },
 
 {
@@ -221,7 +221,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Handling Simulations",
     "title": "DrWatson.access",
     "category": "function",
-    "text": "access(c, key)\n\nAccess c with given key. For AbstractDict this is getindex, for anything else it is getproperty.\n\n\n\n\n\n"
+    "text": "access(c, key)\n\nAccess c with given key. For AbstractDict this is getindex, for anything else it is getproperty.\n\naccess(c, keys...)\n\nWhen given multiple keys, access is called recursively, i.e. access(c, key1, key2) = access(access(c, key1), key2) and so on. For example, if c is a NamedTuple then access(c, k1, k2) == ntuple.k1.k2.\n\nnote: Note\nPlease only extend the single key method when customizing access for your own Types.\n\n\n\n\n\n"
 },
 
 {
@@ -233,11 +233,19 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "savenames/#DrWatson.default_prefix",
+    "page": "Handling Simulations",
+    "title": "DrWatson.default_prefix",
+    "category": "function",
+    "text": "default_prefix(c) = \"\"\n\nReturn the prefix that will be used by default in savename or other similar functions.\n\n\n\n\n\n"
+},
+
+{
     "location": "savenames/#Customizing-savename-1",
     "page": "Handling Simulations",
     "title": "Customizing savename",
     "category": "section",
-    "text": "You can customize savename for your own Types. For example you could make it so that it only uses some specific keys instead of all of them, only specific types, or you could make it access data in a different way (maybe even loading files!).To do that you need to extend the following functions:DrWatson.allaccess\nDrWatson.access\nDrWatson.default_allowed"
+    "text": "You can customize savename for your own Types. For example you could make it so that it only uses some specific keys instead of all of them, only specific types, or you could make it access data in a different way (maybe even loading files!). You can even make it have a custom prefix!To do that you may extend the following functions:DrWatson.allaccess\nDrWatson.access\nDrWatson.default_allowed\nDrWatson.default_prefix"
 },
 
 {
