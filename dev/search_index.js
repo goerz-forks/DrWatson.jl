@@ -201,11 +201,27 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "savenames/#DrWatson.ntuple2dict",
+    "page": "Handling Simulations",
+    "title": "DrWatson.ntuple2dict",
+    "category": "function",
+    "text": "ntuple2dict(nt) -> dict\n\nConvert a NamedTuple to a dictionary.\n\n\n\n\n\n"
+},
+
+{
+    "location": "savenames/#DrWatson.dict2ntuple",
+    "page": "Handling Simulations",
+    "title": "DrWatson.dict2ntuple",
+    "category": "function",
+    "text": "dict2ntuple(dict) -> ntuple\n\nConvert a dictionary (with Symbol or String as key type) to a NamedTuple.\n\n\n\n\n\n"
+},
+
+{
     "location": "savenames/#Naming-Schemes-1",
     "page": "Handling Simulations",
     "title": "Naming Schemes",
     "category": "section",
-    "text": "A robust naming scheme allows you to create quick names for simulations, create lists of simulations, check existing simulations, etc. More importantly it allows you to easily read and write simulations using a consistent naming scheme.savename\n@dict\n@strdict\n@ntupleNotice that this naming scheme integrates perfectly with Parameters.jl.Two convenience functions are also provided to easily switch between named tuples and dictionaries:ntupled2dict\ndict2ntuple"
+    "text": "A robust naming scheme allows you to create quick names for simulations, create lists of simulations, check existing simulations, etc. More importantly it allows you to easily read and write simulations using a consistent naming scheme.savename\n@dict\n@strdict\n@ntupleNotice that this naming scheme integrates perfectly with Parameters.jl.Two convenience functions are also provided to easily switch between named tuples and dictionaries:ntuple2dict\ndict2ntuple"
 },
 
 {
