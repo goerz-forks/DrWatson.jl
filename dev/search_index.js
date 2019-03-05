@@ -5,15 +5,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Introduction",
     "title": "Introduction",
     "category": "page",
-    "text": ""
-},
-
-{
-    "location": "#DrWatson-1",
-    "page": "Introduction",
-    "title": "DrWatson",
-    "category": "section",
-    "text": "The perfect sidekick to your scientific inquiriesDrWatson is a Julia package created to help people \"deal\" with their simulations, simulation parameters, where are files saved, experimental data, scripts, existing simulations, project source code and in general their scientific projects.DrWatson is currently in alpha and under development!"
+    "text": "(Image: DrWatson)DrWatson is a Julia package created to help people \"deal\" with their simulations, simulation parameters, where are files saved, experimental data, scripts, existing simulations, project source code and in general their scientific projects.DrWatson is currently in alpha and under development!"
 },
 
 {
