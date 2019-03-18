@@ -21,7 +21,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Introduction",
     "title": "Description of DrWatson",
     "category": "section",
-    "text": "DrWatson follows these simple principles:Basic. The functionality offered is something simple, a baseline from where you handle your project as you wish.\nConsistent. The functionality is identical across all projects and DrWatson offers (and parts of it assume) a universal base project structure.\nAllows increments. You didn\'t plan your project well enough? Want to add more folders, more files, more variables to your simulations? It\'s fine.\nHelpful. DrWatson has been beta tested in real-world scientific projects and has matured based on feedback from scientists. The entirety of DrWatson\'s functionality comes from answering questions of the type \"This would be helpful for my science project\".\nReproducible. DrWatson aims to make your projects fully reproducible using Git, Julia\'s package manager and consistent naming schemes."
+    "text": "DrWatson follows these simple principles:Basic. The functionality offered is something simple, a baseline from where you handle your project as you wish.\nConsistent. The functionality is identical across all projects and DrWatson offers (and parts of it assume) a universal base project structure.\nAllows increments. You didn\'t plan your project well enough? Want to add more folders, more files, more variables to your simulations? It\'s fine.\nHelpful. DrWatson has been beta tested in real-world scientific projects and has matured based on feedback from scientists. The entirety of DrWatson\'s functionality comes from answering questions of the type \"This would be helpful for my science project\".\nReproducible. DrWatson aims to make your projects fully reproducible using Git, Julia\'s package manager and consistent naming schemes.\nFlexible. DrWatson has a modular design (see Functionality) which means you only have to use what fits your project. There are no general rules to follow."
 },
 
 {
@@ -29,7 +29,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Introduction",
     "title": "Functionality",
     "category": "section",
-    "text": "The functionality of DrWatson is composed of the following core parts, each being independent from each other:Project Setup : A universal project structure and functions that allow you to consistently and robustly navigate through your project, no matter where it is located on your hard drive.\nNaming & Saving Simulations : A robust scheme for saving your data, naming files, finding out if a simulation already exists, tagging the git commit ID, and more.\nRunning & Listing Simulations: Tools for producing tables of existing simulations/data, adding runs to such tables, preparing batch parameter containers, and more.Applications of DrWatson are demonstrated the Real World Examples page. All of these examples are directly copied from code of real scientific projects that use DrWatson."
+    "text": "The core aspects of DrWatson are completely independent of each other. If you don\'t like the approach of one of them you can just not use it!Project Setup : A universal project structure and functions that allow you to consistently and robustly navigate through your project, no matter where it is located on your hard drive.\nNaming & Saving Simulations : A robust scheme for saving your data, naming files, tagging the Git commit ID to your saved files, and more.\nRunning & Listing Simulations: Tools for producing tables of existing simulations/data, adding runs to such tables, preparing batch parameter containers, and more.Applications of DrWatson are demonstrated the Real World Examples page. All of these examples are directly copied from code of real scientific projects that use DrWatson."
 },
 
 {
@@ -133,7 +133,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Project Setup",
     "title": "Navigating a Project",
     "category": "section",
-    "text": "To be able to navigate the project consistently, DrWatson provides the core functionprojectdirBesides the above, the shortcut functions:datadir()\nsrcdir()\nplotsdir()\nscriptdir()\npapersdir()immediately return the appropriate subdirectory. These are also defined due to the frequent use of these subdirectories.In addition all these functions end with /. This means that you can directly chain them with a file name using just *. E.g. you could dousing DrWatson, BSON\nfile = makesimulation()\nBSON.bson(datadir()*\"sims/test.bson\", file)"
+    "text": "To be able to navigate the project consistently, DrWatson provides the core functionprojectdirBesides the above, the shortcut functions:datadir()\nsrcdir()\nplotsdir()\nscriptdir()\npapersdir()immediately return the appropriate subdirectory. These are also defined due to the frequent use of these subdirectories.In addition, the return value of all these functions ends with /. This means that you can directly chain them with a file name using just *. E.g. you could dousing DrWatson\nfile = makesimulation()\ntagsave(datadir()*\"sims/test.bson\", file)"
 },
 
 {
@@ -141,11 +141,11 @@ var documenterSearchIndex = {"docs": [
     "page": "Project Setup",
     "title": "Reproducibility",
     "category": "section",
-    "text": "This project setup approach that DrWatson suggests has a very big side-benefit: it is fully reproducible firstly because it uses Julia\'s suggested project structure, secondly because the navigation only uses local directories and lastly because it is a Git repository.If you send your entire project folder to a colleague, they only need to do:julia> cd(\"path/to/project\")\npkg> activate .\npkg> instantiateAll required packages and dependencies will be installed and then any script that was running in your computer will also be running in their computer in the same way!In addition, with DrWatson you have the possibility of \"tagging\" each simulation created with the commit id, see the discussion around current_commit and tag!.Notice that for full reproducibility it is advised to never add Manifest.toml to your .gitignore file!"
+    "text": "This project setup approach that DrWatson suggests has a very big side-benefit: it is fully reproducible firstly because it uses Julia\'s suggested project structure, secondly because the navigation only uses local directories and lastly because it is a Git repository.If you send your entire project folder to a colleague, they only need to do:julia> cd(\"path/to/project\")\npkg> activate .\npkg> instantiateAll required packages and dependencies will be installed and then any script that was running in your computer will also be running in their computer in the same way!In addition, with DrWatson you have the possibility of \"tagging\" each simulation created with the commit id, see the discussion around current_commit and tag!."
 },
 
 {
-    "location": "savenames/#",
+    "location": "name&save/#",
     "page": "Naming & Saving Simulations",
     "title": "Naming & Saving Simulations",
     "category": "page",
@@ -153,7 +153,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "savenames/#Naming-and-Saving-Simulations-1",
+    "location": "name&save/#Naming-and-Saving-Simulations-1",
     "page": "Naming & Saving Simulations",
     "title": "Naming & Saving Simulations",
     "category": "section",
@@ -161,7 +161,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "savenames/#DrWatson.savename",
+    "location": "name&save/#DrWatson.savename",
     "page": "Naming & Saving Simulations",
     "title": "DrWatson.savename",
     "category": "function",
@@ -169,7 +169,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "savenames/#DrWatson.@dict",
+    "location": "name&save/#DrWatson.@dict",
     "page": "Naming & Saving Simulations",
     "title": "DrWatson.@dict",
     "category": "macro",
@@ -177,7 +177,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "savenames/#DrWatson.@strdict",
+    "location": "name&save/#DrWatson.@strdict",
     "page": "Naming & Saving Simulations",
     "title": "DrWatson.@strdict",
     "category": "macro",
@@ -185,7 +185,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "savenames/#DrWatson.@ntuple",
+    "location": "name&save/#DrWatson.@ntuple",
     "page": "Naming & Saving Simulations",
     "title": "DrWatson.@ntuple",
     "category": "macro",
@@ -193,7 +193,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "savenames/#DrWatson.ntuple2dict",
+    "location": "name&save/#DrWatson.ntuple2dict",
     "page": "Naming & Saving Simulations",
     "title": "DrWatson.ntuple2dict",
     "category": "function",
@@ -201,7 +201,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "savenames/#DrWatson.dict2ntuple",
+    "location": "name&save/#DrWatson.dict2ntuple",
     "page": "Naming & Saving Simulations",
     "title": "DrWatson.dict2ntuple",
     "category": "function",
@@ -209,7 +209,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "savenames/#Naming-Schemes-1",
+    "location": "name&save/#Naming-Schemes-1",
     "page": "Naming & Saving Simulations",
     "title": "Naming Schemes",
     "category": "section",
@@ -217,7 +217,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "savenames/#DrWatson.allaccess",
+    "location": "name&save/#DrWatson.allaccess",
     "page": "Naming & Saving Simulations",
     "title": "DrWatson.allaccess",
     "category": "function",
@@ -225,7 +225,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "savenames/#DrWatson.access",
+    "location": "name&save/#DrWatson.access",
     "page": "Naming & Saving Simulations",
     "title": "DrWatson.access",
     "category": "function",
@@ -233,7 +233,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "savenames/#DrWatson.default_allowed",
+    "location": "name&save/#DrWatson.default_allowed",
     "page": "Naming & Saving Simulations",
     "title": "DrWatson.default_allowed",
     "category": "function",
@@ -241,7 +241,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "savenames/#DrWatson.default_prefix",
+    "location": "name&save/#DrWatson.default_prefix",
     "page": "Naming & Saving Simulations",
     "title": "DrWatson.default_prefix",
     "category": "function",
@@ -249,7 +249,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "savenames/#Customizing-savename-1",
+    "location": "name&save/#Customizing-savename-1",
     "page": "Naming & Saving Simulations",
     "title": "Customizing savename",
     "category": "section",
@@ -257,7 +257,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "savenames/#DrWatson.current_commit",
+    "location": "name&save/#DrWatson.current_commit",
     "page": "Naming & Saving Simulations",
     "title": "DrWatson.current_commit",
     "category": "function",
@@ -265,7 +265,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "savenames/#DrWatson.tag!",
+    "location": "name&save/#DrWatson.tag!",
     "page": "Naming & Saving Simulations",
     "title": "DrWatson.tag!",
     "category": "function",
@@ -273,7 +273,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "savenames/#Tagging-a-run-using-Git-1",
+    "location": "name&save/#Tagging-a-run-using-Git-1",
     "page": "Naming & Saving Simulations",
     "title": "Tagging a run using Git",
     "category": "section",
@@ -281,23 +281,39 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "savenames/#Automatic-Tagging-during-Saving-1",
+    "location": "name&save/#DrWatson.tagsave",
+    "page": "Naming & Saving Simulations",
+    "title": "DrWatson.tagsave",
+    "category": "function",
+    "text": "tagsave(file::String, d::Dict [, path = projectdir()])\n\nFirst tag! dictionary d using the project in path, and then save d in file.\n\n\n\n\n\n"
+},
+
+{
+    "location": "name&save/#Automatic-Tagging-during-Saving-1",
     "page": "Naming & Saving Simulations",
     "title": "Automatic Tagging during Saving",
     "category": "section",
-    "text": "WIP. (adding the tag! functionality automatically with a save call)"
+    "text": "If you don\'t want to always call tag! before saving a file, you can just use the function tagsave:tagsave"
 },
 
 {
-    "location": "savenames/#Produce-or-Load-1",
+    "location": "name&save/#DrWatson.produce_or_load",
+    "page": "Naming & Saving Simulations",
+    "title": "DrWatson.produce_or_load",
+    "category": "function",
+    "text": "produce_or_load([prefix=\"\",] c, f; kwargs...) -> file\n\nLet s = savename(prefix, c, suffix). If a file named s exists then load it and return it.\n\nIf the file does not exist then call file = f(c), save file as s and then return the file.\n\nTo play well with BSON the function f should return a dictionary with Symbol as key type. The macro @dict can help with that.\n\nKeywords\n\ntag = false : Add the Git commit of the project in the saved file.\nprojectpath = projectdir() : Path to search for a Git repo.\nsuffix = \"bson\" : Used in savename.\nkwargs... : All other keywords are propagated to savename.\n\nSee also savename and tag!.\n\n\n\n\n\n"
+},
+
+{
+    "location": "name&save/#Produce-or-Load-1",
     "page": "Naming & Saving Simulations",
     "title": "Produce or Load",
     "category": "section",
-    "text": "WIP. (loading a simulation or producing it if it doesn\'t exist)"
+    "text": "produce_or_load is a function that very conveniently integrates with savename to either load a file if it exists, or if it doesn\'t to produce it, save it and then return it!This saves you the effort of checking if a file exists and then loading, or then running some code and saving, or writing a bunch of if clauses in your code! produce_or_load really shines when used in interactive sessions where some results require a couple of minutes to complete.produce_or_load"
 },
 
 {
-    "location": "addrun/#",
+    "location": "run&list/#",
     "page": "Running & Listing Simulations",
     "title": "Running & Listing Simulations",
     "category": "page",
@@ -305,7 +321,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "addrun/#Running-and-Listing-Simulations-1",
+    "location": "run&list/#Running-and-Listing-Simulations-1",
     "page": "Running & Listing Simulations",
     "title": "Running & Listing Simulations",
     "category": "section",
@@ -313,15 +329,15 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "addrun/#DrWatson.dict_list",
+    "location": "run&list/#DrWatson.dict_list",
     "page": "Running & Listing Simulations",
     "title": "DrWatson.dict_list",
     "category": "function",
-    "text": "dict_list(c)\n\nExpand the dictionary c into a vector of dictionaries. Each entry has a unique combination from the product of the Vector values of the dictionary while the non-Vector values are kept constant for all possibilities. The keys of the entries are the same.\n\nWhether the values of c are iterable or not is of no concern; the function considers as \"iterable\" only subtypes of Vector.\n\nUse the function dict_list_count to get an estimate of how many dictionaries will dict_list produce.\n\nExamples\n\njulia> c = Dict(:a => [1, 2], :b => 4);\n\njulia> dict_list(c)\n3-element Array{Dict{Symbol,Int64},1}:\n Dict(:a=>1,:b=>4)\n Dict(:a=>2,:b=>4)\n\njulia> c[:model] = \"linear\"; c[:mode] = [\"bi\", \"tri\"];\n\njulia> dict_list(c)\n4-element Array{Dict{Symbol,Any},1}:\n Dict(:a=>1,:b=>4,:mode=>\"bi\",:model=>\"linear\")\n Dict(:a=>2,:b=>4,:mode=>\"bi\",:model=>\"linear\")\n Dict(:a=>1,:b=>4,:mode=>\"tri\",:model=>\"linear\")\n Dict(:a=>2,:b=>4,:mode=>\"tri\",:model=>\"linear\")\n\njulia> c[:e] = [[1, 2], [3, 5]];\n\njulia> dict_list(c)\n8-element Array{Dict{Symbol,Any},1}:\n Dict(:a=>1,:b=>4,:mode=>\"bi\",:e=>[1, 2],:model=>\"linear\")\n Dict(:a=>2,:b=>4,:mode=>\"bi\",:e=>[1, 2],:model=>\"linear\")\n Dict(:a=>1,:b=>4,:mode=>\"tri\",:e=>[1, 2],:model=>\"linear\")\n Dict(:a=>2,:b=>4,:mode=>\"tri\",:e=>[1, 2],:model=>\"linear\")\n Dict(:a=>1,:b=>4,:mode=>\"bi\",:e=>[3, 5],:model=>\"linear\")\n Dict(:a=>2,:b=>4,:mode=>\"bi\",:e=>[3, 5],:model=>\"linear\")\n Dict(:a=>1,:b=>4,:mode=>\"tri\",:e=>[3, 5],:model=>\"linear\")\n Dict(:a=>2,:b=>4,:mode=>\"tri\",:e=>[3, 5],:model=>\"linear\")\n\n\n\n\n\n"
+    "text": "dict_list(c)\n\nExpand the dictionary c into a vector of dictionaries. Each entry has a unique combination from the product of the Vector values of the dictionary while the non-Vector values are kept constant for all possibilities. The keys of the entries are the same.\n\nWhether the values of c are iterable or not is of no concern; the function considers as \"iterable\" only subtypes of Vector.\n\nUse the function dict_list_count to get the number of dictionaries that dict_list will produce.\n\nExamples\n\njulia> c = Dict(:a => [1, 2], :b => 4);\n\njulia> dict_list(c)\n3-element Array{Dict{Symbol,Int64},1}:\n Dict(:a=>1,:b=>4)\n Dict(:a=>2,:b=>4)\n\njulia> c[:model] = \"linear\"; c[:run] = [\"bi\", \"tri\"];\n\njulia> dict_list(c)\n4-element Array{Dict{Symbol,Any},1}:\n Dict(:a=>1,:b=>4,:run=>\"bi\",:model=>\"linear\")\n Dict(:a=>2,:b=>4,:run=>\"bi\",:model=>\"linear\")\n Dict(:a=>1,:b=>4,:run=>\"tri\",:model=>\"linear\")\n Dict(:a=>2,:b=>4,:run=>\"tri\",:model=>\"linear\")\n\njulia> c[:e] = [[1, 2], [3, 5]];\n\njulia> dict_list(c)\n8-element Array{Dict{Symbol,Any},1}:\n Dict(:a=>1,:b=>4,:run=>\"bi\",:e=>[1, 2],:model=>\"linear\")\n Dict(:a=>2,:b=>4,:run=>\"bi\",:e=>[1, 2],:model=>\"linear\")\n Dict(:a=>1,:b=>4,:run=>\"tri\",:e=>[1, 2],:model=>\"linear\")\n Dict(:a=>2,:b=>4,:run=>\"tri\",:e=>[1, 2],:model=>\"linear\")\n Dict(:a=>1,:b=>4,:run=>\"bi\",:e=>[3, 5],:model=>\"linear\")\n Dict(:a=>2,:b=>4,:run=>\"bi\",:e=>[3, 5],:model=>\"linear\")\n Dict(:a=>1,:b=>4,:run=>\"tri\",:e=>[3, 5],:model=>\"linear\")\n Dict(:a=>2,:b=>4,:run=>\"tri\",:e=>[3, 5],:model=>\"linear\")\n\n\n\n\n\n"
 },
 
 {
-    "location": "addrun/#DrWatson.dict_list_count",
+    "location": "run&list/#DrWatson.dict_list_count",
     "page": "Running & Listing Simulations",
     "title": "DrWatson.dict_list_count",
     "category": "function",
@@ -329,7 +345,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "addrun/#Preparing-Simulation-Runs-1",
+    "location": "run&list/#Preparing-Simulation-Runs-1",
     "page": "Running & Listing Simulations",
     "title": "Preparing Simulation Runs",
     "category": "section",
@@ -337,19 +353,19 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "addrun/#DrWatson.collect_results",
+    "location": "run&list/#DrWatson.collect_results",
     "page": "Running & Listing Simulations",
     "title": "DrWatson.collect_results",
     "category": "function",
-    "text": "collect_results(folder; kwargs...) -> `df`\n\nSearch the folder (and possibly all subfolders) for new result-files and add them to df which is a DataFrame containing all the information from each result-file. BSON is used for both loading and saving, until FileIO interface includes BSON.\n\nIf a result-file is missing keys that are already columns in df, they will set as missing. If on the other hand new keys are encountered, a new column will be added and filled with missing for all previous entries.\n\nYou can re-use an existing df that has some results already collected. Files already included in df are skipped in subsequent calls to collect_results (see keywords).\n\nwarning: Warning\ndf contains a column :path which is the path where each result-file is saved to. This is used to not re-load and re-process files already present in df when searching for new ones.If you have an entry :path in your saved result-files this will probably break collect_results (untested).\n\nKeyword Arguments\n\nsubfolders::Bool = false : If true also scan all subfolders of folder for result-files.\nfilename = joinpath(dirname(folder), \"results_$(basename(folder)).bson\": Path to load df from and to save it to. If given the empty string \"\" then df is not loaded/saved (it is always returned).\nvalid_filetypes = [\".bson\"]: Only files that have these endings are interpreted as result-files. Other files are skipped.\nwhite_list = keys(data): List of keys to use from result file. By default uses all keys from all loaded result-files.\nblack_list=[]: List of keys not to include from result file.\nspecial_list=[]: List of additional (derived) key-value pairs to put in df as explained below.\n\nspecial_list is a Vector{Pair{Symbol, Function}} where each entry is a derived quantity to be included in df. The function entry always takes a single argument, which is the loaded the result-file (a dictionary). As an example consider that each result-file contains a field :longvector too large to be included in the df. The quantity of interest is the mean and the variance of said field. To have these values in your results first use black_list = [:longvector] and then define\n\nspecial_list = [ :lv_mean => data -> mean(data[:longvector]),\n                 :lv_lar  => data -> var(data[:longvector])]\n\nIn case this operation fails the values will be treated as missing.\n\n\n\n\n\n"
+    "text": "collect_results(folder; kwargs...) -> `df`\n\nSearch the folder (and possibly all subfolders) for new result-files and add them to df which is a DataFrame containing all the information from each result-file. BSON is used for both loading and saving, until FileIO interface includes BSON.\n\nIf a result-file is missing keys that are already columns in df, they will be set as missing. If on the other hand new keys are encountered, a new column will be added and filled with missing for all previous entries.\n\nYou can re-use an existing df that has some results already collected. Files already included in df are skipped in subsequent calls to collect_results (see keywords).\n\nwarning: Warning\ndf contains a column :path which is the path where each result-file is saved to. This is used to not re-load and re-process files already present in df when searching for new ones.If you have an entry :path in your saved result-files this will probably break collect_results (untested).\n\nKeyword Arguments\n\nsubfolders::Bool = false : If true also scan all subfolders of folder for result-files.\nfilename = joinpath(dirname(folder), \"results_$(basename(folder)).bson\": Path to load df from and to save it to. If given the empty string \"\" then df is not loaded/saved (it is always returned).\nvalid_filetypes = [\".bson\"]: Only files that have these endings are interpreted as result-files. Other files are skipped.\nwhite_list = keys(data): List of keys to use from result file. By default uses all keys from all loaded result-files.\nblack_list=[]: List of keys not to include from result-file.\nspecial_list=[]: List of additional (derived) key-value pairs to put in df as explained below.\n\nspecial_list is a Vector{Pair{Symbol, Function}} where each entry is a derived quantity to be included in df. The function entry always takes a single argument, which is the loaded the result-file (a dictionary). As an example consider that each result-file contains a field :longvector too large to be included in the df. The quantity of interest is the mean and the variance of said field. To have these values in your results first use black_list = [:longvector] and then define\n\nspecial_list = [ :lv_mean => data -> mean(data[:longvector]),\n                 :lv_lar  => data -> var(data[:longvector]) ]\n\nIn case this operation fails the values will be treated as missing.\n\n\n\n\n\n"
 },
 
 {
-    "location": "addrun/#Collecting-Results-1",
+    "location": "run&list/#Collecting-Results-1",
     "page": "Running & Listing Simulations",
     "title": "Collecting Results",
     "category": "section",
-    "text": "There are cases where you have saved a bunch of simulation results in a bunch of different files in a folder. It is useful to be able to collect all of these results into a single table, in this case a DataFrame. The function collect_results provides this functionality. Importantly, the function is \"future-proof\" which means that it works nicely even if you add new parameters or remove old parameters from your results as your project progresses!collect_resultsFor an example of using this functionality please have a look at the Real World Examples page!"
+    "text": "note: Requires `DataFrames`\nThe function collect_results is only available if you do using DataFrames in your Julia session.There are cases where you have saved a bunch of simulation results in a bunch of different files in a folder. It is useful to be able to collect all of these results into a single table, in this case a DataFrame. The function collect_results provides this functionality. Importantly, the function is \"future-proof\" which means that it works nicely even if you add new parameters or remove old parameters from your results as your project progresses!collect_resultsFor an example of using this functionality please have a look at the Real World Examples page!"
 },
 
 {
