@@ -337,11 +337,19 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "addrun/#Simulation-Tables-1",
+    "location": "addrun/#DrWatson.collect_results",
     "page": "Running & Listing Simulations",
-    "title": "Simulation Tables",
+    "title": "DrWatson.collect_results",
+    "category": "function",
+    "text": "collect_results(folder; kwargs...) -> `df`\n\nSearch the folder (and possibly all subfolders) for new result-files and add them to df which is a DataFrame containing all the information from each result-file. BSON is used for both loading and saving, until FileIO interface includes BSON.\n\nIf a result-file is missing keys that are already columns in df, they will set as missing. If on the other hand new keys are encountered, a new column will be added and filled with missing for all previous entries.\n\nYou can re-use an existing df that has some results already collected. Files already included in df are skipped in subsequent calls to collect_results (see keywords).\n\nwarning: Warning\ndf contains a column :path which is the path where each result-file is saved to. This is used to not re-load and re-process files already present in df when searching for new ones.If you have an entry :path in your saved result-files this will probably break collect_results (untested).\n\nKeyword Arguments\n\nsubfolders::Bool = false : If true also scan all subfolders of folder for result-files.\nfilename = joinpath(dirname(folder), \"results_$(basename(folder)).bson\": Path to load df from and to save it to. If given the empty string \"\" then df is not loaded/saved (it is always returned).\nvalid_filetypes = [\".bson\"]: Only files that have these endings are interpreted as result-files. Other files are skipped.\nwhite_list = keys(data): List of keys to use from result file. By default uses all keys from all loaded result-files.\nblack_list=[]: List of keys not to include from result file.\nspecial_list=[]: List of additional (derived) key-value pairs to put in df as explained below.\n\nspecial_list is a Vector{Pair{Symbol, Function}} where each entry is a derived quantity to be included in df. The function entry always takes a single argument, which is the loaded the result-file (a dictionary). As an example consider that each result-file contains a field :longvector too large to be included in the df. The quantity of interest is the mean and the variance of said field. To have these values in your results first use black_list = [:longvector] and then define\n\nspecial_list = [ :lv_mean => data -> mean(data[:longvector]),\n                 :lv_lar  => data -> var(data[:longvector])]\n\nIn case this operation fails the values will be treated as missing.\n\n\n\n\n\n"
+},
+
+{
+    "location": "addrun/#Collecting-Results-1",
+    "page": "Running & Listing Simulations",
+    "title": "Collecting Results",
     "category": "section",
-    "text": "WIP. (Adding simulation runs to a table/csv/dataframe)"
+    "text": "There are cases where you have saved a bunch of simulation results in a bunch of different files in a folder. It is useful to be able to collect all of these results into a single table, in this case a DataFrame. The function collect_results provides this functionality. Importantly, the function is \"future-proof\" which means that it works nicely even if you add new parameters or remove old parameters from your results as your project progresses!collect_resultsFor an example of using this functionality please have a look at the Real World Examples page!"
 },
 
 {
