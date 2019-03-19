@@ -5,7 +5,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Introduction",
     "title": "Introduction",
     "category": "page",
-    "text": "(Image: DrWatson)DrWatson is a Julia package created to help people \"deal\" with their simulations, simulation parameters, where are files saved, experimental data, scripts, existing simulations, project source code and in general their scientific projects.DrWatson is currently in alpha and under development!"
+    "text": "(Image: DrWatson)DrWatson is a Julia package created to help people \"deal\" with their simulations, simulation parameters, where are files saved, experimental data, scripts, existing simulations, project source code and in general their scientific projects.DrWatson is currently in alpha and under development!info: JuliaDynamics\nDrWatson is part of JuliaDynamics, check out our website for more cool stuff!"
 },
 
 {
@@ -253,7 +253,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Naming & Saving Simulations",
     "title": "Customizing savename",
     "category": "section",
-    "text": "You can customize savename for your own Types. For example you could make it so that it only uses some specific keys instead of all of them, only specific types, or you could make it access data in a different way (maybe even loading files!). You can even make it have a custom prefix!To do that you may extend the following functions:DrWatson.allaccess\nDrWatson.access\nDrWatson.default_allowed\nDrWatson.default_prefix"
+    "text": "You can customize savename for your own Types. For example you could make it so that it only uses some specific keys instead of all of them, only specific types, or you could make it access data in a different way (maybe even loading files!). You can even make it have a custom prefix!To do that you may extend the following functions:DrWatson.allaccess\nDrWatson.access\nDrWatson.default_allowed\nDrWatson.default_prefixSee Real World Examples for an example of customizing savename."
 },
 
 {
@@ -381,7 +381,15 @@ var documenterSearchIndex = {"docs": [
     "page": "Real World Examples",
     "title": "Real World Examples",
     "category": "section",
-    "text": "Coming soon."
+    "text": ""
+},
+
+{
+    "location": "real_world/#Customizing-savename-1",
+    "page": "Real World Examples",
+    "title": "Customizing savename",
+    "category": "section",
+    "text": "Here is an example for customizing savename. We are using a common struct Experiment across different experiments with cats and mice. In this example we are also using Parameters for a convenient default constructor.We first define the relevant types.using DrWatson, Parameters, Dates\n\n# Define a type hierarchy we use at experiments\nabstract type Species end\nstruct Mouse <: Species end\nstruct Cat <: Species end\n\n@with_kw struct Experiment{S<:Species}\n    n::Int = 50\n    c::Float64 = 10.0\n    x::Float64 = 0.2\n    date::Date = Date(Dates.now())\n    species::S = Mouse()\n    scientist::String = \"George\"\nend\n\ne1 = Experiment()\ne2 = Experiment(species = Cat())For analyzing our experiments we need information about the species used, and to use multiple dispatch latter on we decide to make this information associated with a Type.Now, we want to customize savename. We start by extending DrWatson.default_prefix:DrWatson.default_prefix(e::Experiment) = \"Experiment_\"*string(e.date)\n\nsavename(e1)However this is not good enough for us, as the information about the species is not contained in savename. We have to extend DrWatson.default_allowed like so:DrWatson.default_allowed(::Experiment) = (Real, String, Species)\n\nsavename(e1)To make printing better we can extend Base.string, which is what DrWatson uses internally in savename to display values.Base.string(::Mouse) = \"mouse\"\nBase.string(::Cat) = \"cat\"\nnothing # hideLastly, let\'s say that the information of which scientist performed the experiment is not really relevant for savename. We can extend the last method, DrWatson.allaccess:DrWatson.allaccess(::Experiment) = (:n, :c, :x, :species)so that only those four fields will be used (notice that the date field is anyway used in default_prefix). We finally have:println( savename(e1) )\nprintln( savename(e2) )"
 },
 
 ]}
