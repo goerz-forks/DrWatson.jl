@@ -301,7 +301,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Naming & Saving Simulations",
     "title": "DrWatson.produce_or_load",
     "category": "function",
-    "text": "produce_or_load([prefix=\"\",] c, f; kwargs...) -> file\n\nLet s = savename(prefix, c, suffix). If a file named s exists then load it and return it.\n\nIf the file does not exist then call file = f(c), save file as s and then return the file.\n\nTo play well with BSON the function f should return a dictionary with Symbol as key type. The macro @dict can help with that.\n\nKeywords\n\ntag = false : Add the Git commit of the project in the saved file.\nprojectpath = projectdir() : Path to search for a Git repo.\nsuffix = \"bson\" : Used in savename.\nkwargs... : All other keywords are propagated to savename.\n\nSee also savename and tag!.\n\n\n\n\n\n"
+    "text": "produce_or_load([prefix=\"\",] c, f; kwargs...) -> file\n\nLet s = savename(prefix, c, suffix). If a file named s exists then load it and return it.\n\nIf the file does not exist then call file = f(c), save file as s and then return the file.\n\nTo play well with BSON the function f should return a dictionary with Symbol as key type. The macro @dict can help with that.\n\nKeywords\n\ntag = false : Add the Git commit of the project in the saved file.\nprojectpath = projectdir() : Path to search for a Git repo.\nsuffix = \"bson\" : Used in savename.\nforce = false : If true then don\'t check if file s exists and produce it and save it anyway.\nkwargs... : All other keywords are propagated to savename.\n\nSee also savename and tag!.\n\n\n\n\n\n"
 },
 
 {
