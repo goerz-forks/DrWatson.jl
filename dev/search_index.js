@@ -385,6 +385,22 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "real_world/#Easy-local-directories-1",
+    "page": "Real World Examples",
+    "title": "Easy local directories",
+    "category": "section",
+    "text": "I setup all my science projects using DrWatson\'s suggested setup, using initialize_project. Then, every file in every project has a start that looks like this:using DrWatson\nquickactivate(@__DIR__, \"MagneticBilliardsLyapunovs\")\nusing DynamicalBilliards, PyPlot, LinearAlgebra\n\ninclude(srcdir()*\"plot_perturbationgrowth.jl\")\ninclude(srcdir()*\"unitcells.jl\")In all projects I save data using datadir():using BSON\n\nbson(datadir()*\"mushrooms/Λ_N=$N.bson\", (@dict Λ Λσ ws hs description))Here is an example from another project:using DrWatson\nquickactivate(@__DIR__, \"EmbeddingResearch\")\nusing FileIO, Parameters\nusing TimeseriesPrediction, LinearAlgebra, Statistics\n\ninclude(srcdir()*\"systems/barkley.jl\")\ninclude(srcdir()*\"nrmse.jl\")that ends withFileIO.save(\n    savename(datadir()*\"sim/bk\", simulation, \"jld2\"),\n    @strdict U V simulation\n)"
+},
+
+{
+    "location": "real_world/#savename-and-tagging-1",
+    "page": "Real World Examples",
+    "title": "savename and tagging",
+    "category": "section",
+    "text": "The combination of using savename and tagsave makes it easy and fast to save output in a way that is consistent, robust and reproducible. Here is an example from a project:using DrWatson\nquickactivate(@__DIR__, \"EmbeddingResearch\")\nusing TimeseriesPrediction, LinearAlgebra, Statistics\ninclude(srcdir()*\"systems/barkley.jl\")\n\nΔTs = [1.0, 0.5, 0.1] # resolution of the saved data\nNs = [50, 150] # spatial extent\nfor N ∈ Ns, ΔT ∈ ΔTs\n    T = 10050 # we can offset up to 1000 units\n    every = round(Int, ΔT/barkley_Δt)\n    seed = 1111\n\n    simulation = @ntuple T N ΔT seed\n    U, V = barkley(T, N, every; seed = seed)\n\n    tagsave(\n        savename(datadir()*\"sim/bk\", simulation, \"bson\"),\n        @dict U V simulation\n    )\nendThis saves files that look like:path/to/project/data/sim/bk_N=50_T=10050_seed=1111_ΔT=1.bsonand each file is a dictionary with four fields: :U, :V, :simulation, :commit. When I read this file I know exactly what was the source code that produced it (provided that I am not sloppy and commit code changes regularly :P)."
+},
+
+{
     "location": "real_world/#Customizing-savename-1",
     "page": "Real World Examples",
     "title": "Customizing savename",
