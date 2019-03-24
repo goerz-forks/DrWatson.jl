@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Real World Examples · DrWatson</title><link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL=".."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js" data-main="../assets/documenter.js"></script><script src="../siteinfo.js"></script><script src="../../versions.js"></script><link href="../assets/documenter.css" rel="stylesheet" type="text/css"/><link href="../assets/logo.ico" rel="icon" type="image/x-icon"/></head><body><nav class="toc"><a href="../index.html"><img class="logo" src="../assets/logo.png" alt="DrWatson logo"/></a><h1>DrWatson</h1><select id="version-selector" onChange="window.location.href=this.value" style="visibility: hidden"></select><form class="search" id="search-form" action="../search/"><input id="search-query" name="q" type="text" placeholder="Search docs"/></form><ul><li><a class="toctext" href="../">Introduction</a></li><li><a class="toctext" href="../project/">Project Setup</a></li><li><a class="toctext" href="../name&amp;save/">Naming &amp; Saving Simulations</a></li><li><a class="toctext" href="../run&amp;list/">Running &amp; Listing Simulations</a></li><li class="current"><a class="toctext" href>Real World Examples</a><ul class="internal"><li><a class="toctext" href="#Easy-local-directories-1">Easy local directories</a></li><li><a class="toctext" href="#savename-and-tagging-1"><code>savename</code> and tagging</a></li><li><a class="toctext" href="#Customizing-savename-1">Customizing <code>savename</code></a></li></ul></li></ul></nav><article id="docs"><header><nav><ul><li><a href>Real World Examples</a></li></ul><a class="edit-page" href="https://github.com/JuliaDynamics/DrWatson.jl/blob/master/docs/src/real_world.md"><span class="fa"></span> Edit on GitHub</a></nav><hr/><div id="topbar"><span>Real World Examples</span><a class="fa fa-bars" href="#"></a></div></header><h1><a class="nav-anchor" id="Real-World-Examples-1" href="#Real-World-Examples-1">Real World Examples</a></h1><h2><a class="nav-anchor" id="Easy-local-directories-1" href="#Easy-local-directories-1">Easy local directories</a></h2><p>I setup all my science projects using DrWatson&#39;s suggested setup, using <a href="../project/#DrWatson.initialize_project"><code>initialize_project</code></a>. Then, every file in every project has a start that looks like this:</p><pre><code class="language-julia">using DrWatson
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Real World Examples · DrWatson</title><link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL=".."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js" data-main="../assets/documenter.js"></script><script src="../siteinfo.js"></script><script src="../../versions.js"></script><link href="../assets/documenter.css" rel="stylesheet" type="text/css"/><link href="../assets/logo.ico" rel="icon" type="image/x-icon"/></head><body><nav class="toc"><a href="../index.html"><img class="logo" src="../assets/logo.png" alt="DrWatson logo"/></a><h1>DrWatson</h1><select id="version-selector" onChange="window.location.href=this.value" style="visibility: hidden"></select><form class="search" id="search-form" action="../search/"><input id="search-query" name="q" type="text" placeholder="Search docs"/></form><ul><li><a class="toctext" href="../">Introduction</a></li><li><a class="toctext" href="../project/">Project Setup</a></li><li><a class="toctext" href="../name&amp;save/">Naming &amp; Saving Simulations</a></li><li><a class="toctext" href="../run&amp;list/">Running &amp; Listing Simulations</a></li><li class="current"><a class="toctext" href>Real World Examples</a><ul class="internal"><li><a class="toctext" href="#Easy-local-directories-1">Easy local directories</a></li><li><a class="toctext" href="#savename-and-tagging-1"><code>savename</code> and tagging</a></li><li><a class="toctext" href="#Customizing-savename-1">Customizing <code>savename</code></a></li><li><a class="toctext" href="#Stopping-&quot;Did-I-run-this?&quot;-1">Stopping &quot;Did I run this?&quot;</a></li></ul></li></ul></nav><article id="docs"><header><nav><ul><li><a href>Real World Examples</a></li></ul><a class="edit-page" href="https://github.com/JuliaDynamics/DrWatson.jl/blob/master/docs/src/real_world.md"><span class="fa"></span> Edit on GitHub</a></nav><hr/><div id="topbar"><span>Real World Examples</span><a class="fa fa-bars" href="#"></a></div></header><h1><a class="nav-anchor" id="Real-World-Examples-1" href="#Real-World-Examples-1">Real World Examples</a></h1><h2><a class="nav-anchor" id="Easy-local-directories-1" href="#Easy-local-directories-1">Easy local directories</a></h2><p>I setup all my science projects using DrWatson&#39;s suggested setup, using <a href="../project/#DrWatson.initialize_project"><code>initialize_project</code></a>. Then, every file in every project has a start that looks like this:</p><pre><code class="language-julia">using DrWatson
 quickactivate(@__DIR__, &quot;MagneticBilliardsLyapunovs&quot;)
 using DynamicalBilliards, PyPlot, LinearAlgebra
 
@@ -64,4 +64,51 @@ savename(e1)</code></pre><pre><code class="language-none">&quot;Experiment_2019-
 savename(e1)</code></pre><pre><code class="language-none">&quot;Experiment_2019-03-24_c=10_n=50_scientist=George_species=Main.ex-customizing.Mouse()_x=0.2&quot;</code></pre></div><p>To make printing better we can extend <code>Base.string</code>, which is what DrWatson uses internally in <a href="../name&amp;save/#DrWatson.savename"><code>savename</code></a> to display values.</p><div><pre><code class="language-julia">Base.string(::Mouse) = &quot;mouse&quot;
 Base.string(::Cat) = &quot;cat&quot;</code></pre></div><p>Lastly, let&#39;s say that the information of which scientist performed the experiment is not really relevant for <code>savename</code>. We can extend the last method, <a href="../name&amp;save/#DrWatson.allaccess"><code>DrWatson.allaccess</code></a>:</p><div><pre><code class="language-julia">DrWatson.allaccess(::Experiment) = (:n, :c, :x, :species)</code></pre></div><p>so that only those four fields will be used (notice that the <code>date</code> field is anyway used in <code>default_prefix</code>). We finally have:</p><div><pre><code class="language-julia">println( savename(e1) )
 println( savename(e2) )</code></pre><pre><code class="language-none">Experiment_2019-03-24_c=10_n=50_species=mouse_x=0.2
-Experiment_2019-03-24_c=10_n=50_species=cat_x=0.2</code></pre></div><footer><hr/><a class="previous" href="../run&amp;list/"><span class="direction">Previous</span><span class="title">Running &amp; Listing Simulations</span></a></footer></article></body></html>
+Experiment_2019-03-24_c=10_n=50_species=cat_x=0.2</code></pre></div><h2><a class="nav-anchor" id="Stopping-&quot;Did-I-run-this?&quot;-1" href="#Stopping-&quot;Did-I-run-this?&quot;-1">Stopping &quot;Did I run this?&quot;</a></h2><p>It can become very tedious to have a piece of code that you may or may not have saved and you constantly ask yourself &quot;Did I run this?&quot;. Typically one uses <code>isfile</code> and an <code>if</code> clause to either load a file or run some code. Especially in the cases where the code takes only a couple of minutes to finish you are left in a dilemma &quot;Is it even worth it to save?&quot;.</p><p>This is the dilemma that <a href="../name&amp;save/#DrWatson.produce_or_load"><code>produce_or_load</code></a> resolves. You can wrap your code in a function and then <a href="../name&amp;save/#DrWatson.produce_or_load"><code>produce_or_load</code></a> will take care of the rest for you! I found it especially useful in scripts that generate figures for a publication.</p><p>Here is an example; originally I had this piece of code:</p><pre><code class="language-julia">WTEST = HTEST = 0.1:0.1:2.0
+HS = WS = [0.5, 1.0, 1.5]
+N = 10000; T = 10000.0
+
+toypar_w = [[] for l in HS]
+for (z, h) in enumerate(HS)
+    println(&quot;h = $h&quot;)
+    for (i, w) in enumerate(WTEST)
+        toyp = toyparameters(h, w, N, T)
+        push!(toypar_w[z], toyp)
+    end
+end
+toypar_h = [[] for l in HS]
+for (wi, w) in enumerate(WS)
+    println(&quot;w = $w&quot;)
+    for h in HTEST
+        toyp = toyparameters(h, w, N, T)
+        push!(toypar_h[wi], toyp)
+    end
+end</code></pre><p>that was taking some minutes to run. To use the function <a href="../name&amp;save/#DrWatson.produce_or_load"><code>produce_or_load</code></a> I first have to wrap this code in a high level function like so:</p><pre><code class="language-julia">WTEST = HTEST = 0.1:0.1:2.0
+HS = WS = [0.5, 1.0, 1.5]
+
+function g(d)
+    @unpack N, T = d
+
+    toypar_w = [[] for l in HS]
+    for (z, h) in enumerate(HS)
+        println(&quot;h = $h&quot;)
+        for (i, w) in enumerate(WTEST)
+            toyp = toyparameters(h, w, N, T)
+            push!(toypar_w[z], toyp)
+        end
+    end
+    toypar_h = [[] for l in HS]
+    for (wi, w) in enumerate(WS)
+        println(&quot;w = $w&quot;)
+        for h in HTEST
+            toyp = toyparameters(h, w, N, T)
+            push!(toypar_h[wi], toyp)
+        end
+    end
+
+    return @dict toypar_w toypar_h
+end
+
+N = 2000; T = 2000.0
+file = produce_or_load(datadir()*&quot;mushrooms/toytest&quot;, @dict(N, T), g; force = true)
+@unpack toypar_w, toypar_h = file</code></pre><p>Now every time I run this code block the function tests automatically whether the file exists and only if it does not the code is run.</p><p>The extra step is that I have to extract the useful data I need from the container <code>file</code>. Thankfully the <code>@unpack</code> macro from <a href="https://mauro3.github.io/Parameters.jl/stable/manual.html">Parameters.jl</a> makes this super easy.</p><footer><hr/><a class="previous" href="../run&amp;list/"><span class="direction">Previous</span><span class="title">Running &amp; Listing Simulations</span></a></footer></article></body></html>
