@@ -429,7 +429,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Real World Examples",
     "title": "Listing completed runs",
     "category": "section",
-    "text": "Continuing from the above example, we now want to collect the results of all these simulations into a single DataFrame. We will do that with the function collect_results. Here is how:"
+    "text": "Continuing from the above example, we now want to collect the results of all these simulations into a single DataFrame. We will do that with the function collect_results.It is quite simple actually:using DataFrames # this is necessary to access collect_results!\nres = collect_results(datadir()*\"results\")(unfortunately for now the type of all columns is Any due to bugs in BSON)names(res)The dataframe has the error column, each being a vector of numbers. We can take advantage of the basic processing functionality of collect_results to replace this column with the average error instead.blacklist = [\"error\"]\nspecial_list = [:avrg_error => data -> mean(data[\"error\"])]\nres = collect_results(\n      datadir()*\"results\",\n      blacklist = blacklist,\n      special_list = special_list\n)names(res)"
 },
 
 ]}
