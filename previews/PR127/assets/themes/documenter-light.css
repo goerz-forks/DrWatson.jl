@@ -363,7 +363,7 @@ span {
   font-weight: inherit; }
 
 strong {
-  color: #6940b0;
+  color: #573592;
   font-weight: 700; }
 
 fieldset {
@@ -392,7 +392,7 @@ table th {
     text-align: left; }
 
 table th {
-  color: #6940b0; }
+  color: #573592; }
 
 .is-clearfix::after {
   clear: both;
@@ -1224,10 +1224,10 @@ a.box:active {
     text-decoration: underline; }
     .button.is-text:hover, .button.is-text.is-hovered, .button.is-text:focus, .button.is-text.is-focused {
       background-color: #7E57C2;
-      color: #6940b0; }
+      color: #573592; }
     .button.is-text:active, .button.is-text.is-active {
       background-color: #7044bb;
-      color: #6940b0; }
+      color: #573592; }
     .button.is-text[disabled],
     fieldset[disabled] .button.is-text {
       background-color: transparent;
@@ -2054,7 +2054,7 @@ a.box:active {
 .content h4,
 .content h5,
 .content h6 {
-  color: #6940b0;
+  color: #573592;
   font-weight: 600;
   line-height: 1.125; }
 
@@ -2154,17 +2154,17 @@ a.box:active {
     padding: 0.5em 0.75em;
     vertical-align: top; }
   .content table th {
-    color: #6940b0; }
+    color: #573592; }
     .content table th:not([align]) {
       text-align: left; }
   .content table thead td,
   .content table thead th {
     border-width: 0 0 2px;
-    color: #6940b0; }
+    color: #573592; }
   .content table tfoot td,
   .content table tfoot th {
     border-width: 2px 0 0;
-    color: #6940b0; }
+    color: #573592; }
   .content table tbody tr:last-child td,
   .content table tbody tr:last-child th {
     border-bottom-width: 0; }
@@ -2546,7 +2546,7 @@ a.box:active {
       .table th.is-selected strong {
         color: currentColor; }
   .table th {
-    color: #6940b0; }
+    color: #573592; }
     .table th:not([align]) {
       text-align: left; }
   .table tr.is-selected {
@@ -2564,13 +2564,13 @@ a.box:active {
     .table thead td,
     .table thead th {
       border-width: 0 0 2px;
-      color: #6940b0; }
+      color: #573592; }
   .table tfoot {
     background-color: transparent; }
     .table tfoot td,
     .table tfoot th {
       border-width: 2px 0 0;
-      color: #6940b0; }
+      color: #573592; }
   .table tbody {
     background-color: transparent; }
     .table tbody tr:last-child td,
@@ -3694,7 +3694,7 @@ a.tag:hover, .docstring > section > a.docs-sourcelink:hover {
     .breadcrumb li:first-child a {
       padding-left: 0; }
     .breadcrumb li.is-active a {
-      color: #6940b0;
+      color: #573592;
       cursor: default;
       pointer-events: none; }
     .breadcrumb li + li::before {
@@ -3746,7 +3746,7 @@ a.tag:hover, .docstring > section > a.docs-sourcelink:hover {
 
 .card-header-title {
   align-items: center;
-  color: #6940b0;
+  color: #573592;
   display: flex;
   flex-grow: 1;
   font-weight: 700;
@@ -4011,7 +4011,7 @@ a.list-item {
     padding: 0.5em 0.75em; }
     .menu-list a:hover {
       background-color: #7E57C2;
-      color: #6940b0; }
+      color: #573592; }
     .menu-list a.is-active {
       background-color: #05a28d;
       color: #fff; }
@@ -4218,7 +4218,7 @@ a.list-item {
   border-top-right-radius: 6px; }
 
 .modal-card-title {
-  color: #6940b0;
+  color: #573592;
   flex-grow: 1;
   flex-shrink: 0;
   font-size: 1.5rem;
@@ -5208,7 +5208,7 @@ a.navbar-item,
 .panel-heading {
   background-color: #7E57C2;
   border-radius: 4px 4px 0 0;
-  color: #6940b0;
+  color: #573592;
   font-size: 1.25em;
   font-weight: 300;
   line-height: 1.25;
@@ -5234,7 +5234,7 @@ a.navbar-item,
 
 .panel-block {
   align-items: center;
-  color: #6940b0;
+  color: #573592;
   display: flex;
   justify-content: flex-start;
   padding: 0.5em 0.75em; }
@@ -5294,8 +5294,8 @@ label.panel-block {
     padding: 0.5em 1em;
     vertical-align: top; }
     .tabs a:hover {
-      border-bottom-color: #6940b0;
-      color: #6940b0; }
+      border-bottom-color: #573592;
+      color: #573592; }
   .tabs li {
     display: block; }
     .tabs li.is-active a {
@@ -7096,7 +7096,7 @@ label.panel-block {
   padding: 3rem 1.5rem 6rem; }
 
 h1 .docs-heading-anchor, h1 .docs-heading-anchor:hover, h1 .docs-heading-anchor:visited, h2 .docs-heading-anchor, h2 .docs-heading-anchor:hover, h2 .docs-heading-anchor:visited, h3 .docs-heading-anchor, h3 .docs-heading-anchor:hover, h3 .docs-heading-anchor:visited, h4 .docs-heading-anchor, h4 .docs-heading-anchor:hover, h4 .docs-heading-anchor:visited, h5 .docs-heading-anchor, h5 .docs-heading-anchor:hover, h5 .docs-heading-anchor:visited, h6 .docs-heading-anchor, h6 .docs-heading-anchor:hover, h6 .docs-heading-anchor:visited {
-  color: #6940b0; }
+  color: #573592; }
 
 h1 .docs-heading-anchor-permalink, h2 .docs-heading-anchor-permalink, h3 .docs-heading-anchor-permalink, h4 .docs-heading-anchor-permalink, h5 .docs-heading-anchor-permalink, h6 .docs-heading-anchor-permalink {
   visibility: hidden;
@@ -7249,7 +7249,7 @@ h1:hover .docs-heading-anchor-permalink, h2:hover .docs-heading-anchor-permalink
   color: #05a28d; }
 
 .content h1 code, .content h2 code, .content h3 code, .content h4 code, .content h5 code, .content h6 code {
-  color: #6940b0; }
+  color: #573592; }
 
 .content table {
   display: block;
@@ -7264,7 +7264,7 @@ h1:hover .docs-heading-anchor-permalink, h2:hover .docs-heading-anchor-permalink
   cursor: default;
   pointer-events: none; }
   .breadcrumb a.is-disabled, .breadcrumb a.is-disabled:hover {
-    color: #6940b0; }
+    color: #573592; }
 
 .hljs {
   background: initial !important;
