@@ -7377,7 +7377,7 @@ html {
 #documenter .docs-sidebar {
   display: flex;
   flex-direction: column;
-  color: #fafafa;
+  color: #202020;
   background-color: #644e99;
   border-right: 1px solid #dbdbdb;
   padding: 0;
@@ -7464,7 +7464,7 @@ html {
       display: block;
       padding: 0.5rem 0.5rem; }
       #documenter .docs-sidebar ul.docs-menu .tocitem, #documenter .docs-sidebar ul.docs-menu .tocitem:hover {
-        color: #fafafa; }
+        color: #202020; }
     #documenter .docs-sidebar ul.docs-menu a.tocitem:hover, #documenter .docs-sidebar ul.docs-menu label.tocitem:hover {
       background-color: #5b478b; }
     #documenter .docs-sidebar ul.docs-menu li.is-active {
