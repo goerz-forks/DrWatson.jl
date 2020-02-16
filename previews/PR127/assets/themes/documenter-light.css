@@ -2848,9 +2848,9 @@ a.tag:hover, .docstring > section > a.docs-sourcelink:hover {
   .input:-ms-input-placeholder, #documenter .docs-sidebar form.docs-search > input:-ms-input-placeholder, .textarea:-ms-input-placeholder, .select select:-ms-input-placeholder {
     color: rgba(54, 54, 54, 0.3); }
   .input:hover, #documenter .docs-sidebar form.docs-search > input:hover, .textarea:hover, .select select:hover, .is-hovered.input, #documenter .docs-sidebar form.docs-search > input.is-hovered, .is-hovered.textarea, .select select.is-hovered {
-    border-color: #b5b5b5; }
+    border-color: #008eac; }
   .input:focus, #documenter .docs-sidebar form.docs-search > input:focus, .textarea:focus, .select select:focus, .is-focused.input, #documenter .docs-sidebar form.docs-search > input.is-focused, .is-focused.textarea, .select select.is-focused, .input:active, #documenter .docs-sidebar form.docs-search > input:active, .textarea:active, .select select:active, .is-active.input, #documenter .docs-sidebar form.docs-search > input.is-active, .is-active.textarea, .select select.is-active {
-    border-color: #008eac;
+    border-color: #fff;
     box-shadow: 0 0 0 0.125em rgba(0, 142, 172, 0.25); }
   .input[disabled], #documenter .docs-sidebar form.docs-search > input[disabled], .textarea[disabled], .select select[disabled],
   fieldset[disabled] .input,
