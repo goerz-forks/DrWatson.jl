@@ -7383,7 +7383,7 @@ html {
   padding: 0;
   flex: 0 0 18rem;
   z-index: 5;
-  font-size: 1rem;
+  font-size: 1em;
   position: fixed;
   left: -18rem;
   width: 18rem;
@@ -7431,7 +7431,7 @@ html {
     #documenter .docs-sidebar ul.docs-menu > li > .tocitem {
       font-weight: bold; }
     #documenter .docs-sidebar ul.docs-menu > li li {
-      font-size: 0.95rem;
+      font-size: 0.95em;
       margin-left: 1em;
       border-left: 1px solid #dbdbdb; }
     #documenter .docs-sidebar ul.docs-menu input.collapse-toggle {
@@ -7450,7 +7450,7 @@ html {
         font-variant: normal;
         text-rendering: auto;
         line-height: 1;
-        font-size: 0.75rem;
+        font-size: 0.75em;
         margin-left: 1rem;
         margin-top: auto;
         margin-bottom: auto; }
@@ -7485,7 +7485,7 @@ html {
       margin: 0 0.5rem 0.5rem;
       border-top: 1px solid #dbdbdb; }
       #documenter .docs-sidebar ul.docs-menu ul.internal li {
-        font-size: 0.85rem;
+        font-size: 0.85em;
         border-left: none;
         margin-left: 0;
         margin-top: 0.5rem; }
