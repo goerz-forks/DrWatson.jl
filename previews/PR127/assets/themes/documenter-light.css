@@ -7608,6 +7608,5 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 .hljs-strong {
   font-weight: bold; }
 
-@media screen and (min-width: 1056px) {
-  #documenter .docs-sidebar.visible {
-    box-shadow: 1rem 2rem 0.8rem #bbb; } }
+#documenter .docs-sidebar {
+  box-shadow: 1rem 2rem 0.8rem #bbb; }
