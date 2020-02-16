@@ -334,7 +334,7 @@ a {
     color: #644e99; }
 
 code {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: blue;
   color: #000000;
   font-size: 0.875em;
   font-weight: normal;
@@ -7199,7 +7199,7 @@ h1:hover .docs-heading-anchor-permalink, h2:hover .docs-heading-anchor-permalink
   .admonition-body pre {
     background-color: whitesmoke; }
   .admonition-body code {
-    background-color: rgba(0, 0, 0, 0.05); }
+    background-color: blue; }
 
 .docstring {
   margin-bottom: 1em;
