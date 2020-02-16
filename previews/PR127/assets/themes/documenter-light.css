@@ -7464,15 +7464,20 @@ html {
       display: block;
       padding: 0.5rem 0.5rem; }
       #documenter .docs-sidebar ul.docs-menu .tocitem, #documenter .docs-sidebar ul.docs-menu .tocitem:hover {
-        color: #202020; }
+        color: #202020;
+        background: #644e99; }
     #documenter .docs-sidebar ul.docs-menu a.tocitem:hover, #documenter .docs-sidebar ul.docs-menu label.tocitem:hover {
+      color: #202020;
       background-color: #5b478b; }
     #documenter .docs-sidebar ul.docs-menu li.is-active {
-      border-top: 1px solid #c7c7c7;
+      border-top: 1px solid #dbdbdb;
       border-bottom: 1px solid #dbdbdb;
       background-color: #fafafa; }
-      #documenter .docs-sidebar ul.docs-menu li.is-active > .tocitem, #documenter .docs-sidebar ul.docs-menu li.is-active > .tocitem:hover {
+      #documenter .docs-sidebar ul.docs-menu li.is-active .tocitem, #documenter .docs-sidebar ul.docs-menu li.is-active .tocitem:hover {
         background-color: #fafafa;
+        color: #202020; }
+      #documenter .docs-sidebar ul.docs-menu li.is-active ul.internal .tocitem:hover {
+        background-color: #5b478b;
         color: #202020; }
     #documenter .docs-sidebar ul.docs-menu > li.is-active:first-child {
       border-top: none; }
