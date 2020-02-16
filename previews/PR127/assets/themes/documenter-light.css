@@ -7616,3 +7616,6 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 #documenter .docs-sidebar {
   border-right: none;
   box-shadow: 0.24rem 0rem 0.4rem #bbb; }
+  #documenter .docs-sidebar form.docs-search > input {
+    background-color: red;
+    border-color: yellow; }
