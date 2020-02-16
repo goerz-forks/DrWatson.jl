@@ -371,7 +371,7 @@ fieldset {
 
 pre {
   -webkit-overflow-scrolling: touch;
-  background-color: whitesmoke;
+  background-color: green;
   color: #202020;
   font-size: 0.875em;
   overflow-x: auto;
