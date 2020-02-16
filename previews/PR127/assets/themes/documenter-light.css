@@ -7619,4 +7619,8 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   #documenter .docs-sidebar form.docs-search > input {
     color: #fafafa;
     background-color: #52407e;
-    border-color: #413263; }
+    border-color: #413263;
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem; }
+    #documenter .docs-sidebar form.docs-search > input::placeholder {
+      color: #fafafa; }
