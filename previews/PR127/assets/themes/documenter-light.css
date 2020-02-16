@@ -334,7 +334,7 @@ a {
     color: #644e99; }
 
 code {
-  background-color: blue;
+  background-color: #ece8f3;
   color: #000000;
   font-size: 0.875em;
   font-weight: normal;
@@ -371,7 +371,7 @@ fieldset {
 
 pre {
   -webkit-overflow-scrolling: touch;
-  background-color: green;
+  background-color: #ece8f3;
   color: #202020;
   font-size: 0.875em;
   overflow-x: auto;
@@ -7199,7 +7199,7 @@ h1:hover .docs-heading-anchor-permalink, h2:hover .docs-heading-anchor-permalink
   .admonition-body pre {
     background-color: whitesmoke; }
   .admonition-body code {
-    background-color: blue; }
+    background-color: #ece8f3; }
 
 .docstring {
   margin-bottom: 1em;
@@ -7617,5 +7617,6 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   border-right: none;
   box-shadow: 0.24rem 0rem 0.4rem #bbb; }
   #documenter .docs-sidebar form.docs-search > input {
-    background-color: red;
-    border-color: yellow; }
+    color: #fafafa;
+    background-color: #52407e;
+    border-color: #413263; }
