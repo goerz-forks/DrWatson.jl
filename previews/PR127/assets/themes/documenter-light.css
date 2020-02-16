@@ -286,7 +286,7 @@ th {
     text-align: left; }
 
 html {
-  background-color: #fafafa;
+  background-color: #fff;
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -7306,7 +7306,7 @@ html {
       margin: 0; } }
 
 #documenter .docs-main header.docs-navbar {
-  background-color: #fafafa;
+  background-color: #fff;
   border-bottom: 1px solid #dbdbdb;
   z-index: 2;
   min-height: 4rem;
@@ -7377,7 +7377,7 @@ html {
 #documenter .docs-sidebar {
   display: flex;
   flex-direction: column;
-  color: #fafafa;
+  color: #fff;
   background-color: #644e99;
   border-right: 1px solid #dbdbdb;
   padding: 0;
@@ -7464,17 +7464,17 @@ html {
       display: block;
       padding: 0.5rem 0.5rem; }
       #documenter .docs-sidebar ul.docs-menu .tocitem, #documenter .docs-sidebar ul.docs-menu .tocitem:hover {
-        color: #fafafa;
+        color: #fff;
         background: #644e99; }
     #documenter .docs-sidebar ul.docs-menu a.tocitem:hover, #documenter .docs-sidebar ul.docs-menu label.tocitem:hover {
-      color: #fafafa;
+      color: #fff;
       background-color: #413263; }
     #documenter .docs-sidebar ul.docs-menu li.is-active {
       border-top: 1px solid #dbdbdb;
       border-bottom: 1px solid #dbdbdb;
-      background-color: #fafafa; }
+      background-color: #fff; }
       #documenter .docs-sidebar ul.docs-menu li.is-active .tocitem, #documenter .docs-sidebar ul.docs-menu li.is-active .tocitem:hover {
-        background-color: #fafafa;
+        background-color: #fff;
         color: #202020; }
       #documenter .docs-sidebar ul.docs-menu li.is-active ul.internal .tocitem:hover {
         background-color: #a697ca;
@@ -7617,10 +7617,10 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   border-right: none;
   box-shadow: 0.24rem 0rem 0.4rem #bbb; }
   #documenter .docs-sidebar form.docs-search > input {
-    color: #fafafa;
+    color: #fff;
     background-color: #52407e;
     border-color: #413263;
     margin-top: 1.0rem;
     margin-bottom: 1.0rem; }
     #documenter .docs-sidebar form.docs-search > input::placeholder {
-      color: #fafafa; }
+      color: #fff; }
