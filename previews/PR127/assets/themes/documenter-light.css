@@ -286,7 +286,7 @@ th {
     text-align: left; }
 
 html {
-  background-color: #fff;
+  background-color: #f0f0f0;
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -331,10 +331,10 @@ a {
   a strong {
     color: currentColor; }
   a:hover {
-    color: #644e99; }
+    color: #0c4749; }
 
 code {
-  background-color: #ece8f3;
+  background-color: #e7e3f1;
   color: #000000;
   font-size: 0.875em;
   font-weight: normal;
@@ -371,7 +371,7 @@ fieldset {
 
 pre {
   -webkit-overflow-scrolling: touch;
-  background-color: #ece8f3;
+  background-color: #e7e3f1;
   color: #202020;
   font-size: 0.875em;
   overflow-x: auto;
@@ -1208,7 +1208,7 @@ a.box:active {
     margin-right: calc(-0.375em - 1px); }
   .button:hover, .button.is-hovered {
     border-color: #b5b5b5;
-    color: #644e99; }
+    color: #0c4749; }
   .button:focus, .button.is-focused {
     border-color: #2e63b8;
     color: #363636; }
@@ -2850,7 +2850,7 @@ a.tag:hover, .docstring > section > a.docs-sourcelink:hover {
   .input:hover, #documenter .docs-sidebar form.docs-search > input:hover, .textarea:hover, .select select:hover, .is-hovered.input, #documenter .docs-sidebar form.docs-search > input.is-hovered, .is-hovered.textarea, .select select.is-hovered {
     border-color: #178b8f; }
   .input:focus, #documenter .docs-sidebar form.docs-search > input:focus, .textarea:focus, .select select:focus, .is-focused.input, #documenter .docs-sidebar form.docs-search > input.is-focused, .is-focused.textarea, .select select.is-focused, .input:active, #documenter .docs-sidebar form.docs-search > input:active, .textarea:active, .select select:active, .is-active.input, #documenter .docs-sidebar form.docs-search > input.is-active, .is-active.textarea, .select select.is-active {
-    border-color: #fff;
+    border-color: #f0f0f0;
     box-shadow: 0 0 0 0.125em rgba(23, 139, 143, 0.25); }
   .input[disabled], #documenter .docs-sidebar form.docs-search > input[disabled], .textarea[disabled], .select select[disabled],
   fieldset[disabled] .input,
@@ -3687,7 +3687,7 @@ a.tag:hover, .docstring > section > a.docs-sourcelink:hover {
     justify-content: center;
     padding: 0 0.75em; }
     .breadcrumb a:hover {
-      color: #644e99; }
+      color: #0c4749; }
   .breadcrumb li {
     align-items: center;
     display: flex; }
@@ -5115,7 +5115,7 @@ a.navbar-item,
   .pagination-next:hover,
   .pagination-link:hover {
     border-color: #b5b5b5;
-    color: #644e99; }
+    color: #0c4749; }
   .pagination-previous:focus,
   .pagination-next:focus,
   .pagination-link:focus {
@@ -7199,7 +7199,7 @@ h1:hover .docs-heading-anchor-permalink, h2:hover .docs-heading-anchor-permalink
   .admonition-body pre {
     background-color: whitesmoke; }
   .admonition-body code {
-    background-color: #ece8f3; }
+    background-color: #e7e3f1; }
 
 .docstring {
   margin-bottom: 1em;
@@ -7306,7 +7306,7 @@ html {
       margin: 0; } }
 
 #documenter .docs-main header.docs-navbar {
-  background-color: #fff;
+  background-color: #f0f0f0;
   border-bottom: 1px solid #dbdbdb;
   z-index: 2;
   min-height: 4rem;
@@ -7377,7 +7377,7 @@ html {
 #documenter .docs-sidebar {
   display: flex;
   flex-direction: column;
-  color: #fff;
+  color: #f0f0f0;
   background-color: #644e99;
   border-right: 1px solid #dbdbdb;
   padding: 0;
@@ -7464,20 +7464,20 @@ html {
       display: block;
       padding: 0.5rem 0.5rem; }
       #documenter .docs-sidebar ul.docs-menu .tocitem, #documenter .docs-sidebar ul.docs-menu .tocitem:hover {
-        color: #fff;
+        color: #f0f0f0;
         background: #644e99; }
     #documenter .docs-sidebar ul.docs-menu a.tocitem:hover, #documenter .docs-sidebar ul.docs-menu label.tocitem:hover {
-      color: #fff;
+      color: #f0f0f0;
       background-color: #413263; }
     #documenter .docs-sidebar ul.docs-menu li.is-active {
       border-top: 1px solid #dbdbdb;
       border-bottom: 1px solid #dbdbdb;
-      background-color: #fff; }
+      background-color: #f0f0f0; }
       #documenter .docs-sidebar ul.docs-menu li.is-active .tocitem, #documenter .docs-sidebar ul.docs-menu li.is-active .tocitem:hover {
-        background-color: #fff;
+        background-color: #f0f0f0;
         color: #202020; }
       #documenter .docs-sidebar ul.docs-menu li.is-active ul.internal .tocitem:hover {
-        background-color: #d4cde6;
+        background-color: #d9d3e8;
         color: #202020; }
     #documenter .docs-sidebar ul.docs-menu > li.is-active:first-child {
       border-top: none; }
@@ -7617,10 +7617,10 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   border-right: none;
   box-shadow: 0.24rem 0rem 0.4rem #bbb; }
   #documenter .docs-sidebar form.docs-search > input {
-    color: #fff;
+    color: #f0f0f0;
     background-color: #52407e;
     border-color: #413263;
     margin-top: 1.0rem;
     margin-bottom: 1.0rem; }
     #documenter .docs-sidebar form.docs-search > input::placeholder {
-      color: #fff; }
+      color: #f0f0f0; }
