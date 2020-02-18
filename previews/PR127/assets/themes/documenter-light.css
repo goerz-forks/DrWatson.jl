@@ -286,7 +286,7 @@ th {
     text-align: left; }
 
 html {
-  background-color: #f0f0f0;
+  background-color: #fff;
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2850,7 +2850,7 @@ a.tag:hover, .docstring > section > a.docs-sourcelink:hover {
   .input:hover, #documenter .docs-sidebar form.docs-search > input:hover, .textarea:hover, .select select:hover, .is-hovered.input, #documenter .docs-sidebar form.docs-search > input.is-hovered, .is-hovered.textarea, .select select.is-hovered {
     border-color: #178b8f; }
   .input:focus, #documenter .docs-sidebar form.docs-search > input:focus, .textarea:focus, .select select:focus, .is-focused.input, #documenter .docs-sidebar form.docs-search > input.is-focused, .is-focused.textarea, .select select.is-focused, .input:active, #documenter .docs-sidebar form.docs-search > input:active, .textarea:active, .select select:active, .is-active.input, #documenter .docs-sidebar form.docs-search > input.is-active, .is-active.textarea, .select select.is-active {
-    border-color: #f0f0f0;
+    border-color: #fff;
     box-shadow: 0 0 0 0.125em rgba(23, 139, 143, 0.25); }
   .input[disabled], #documenter .docs-sidebar form.docs-search > input[disabled], .textarea[disabled], .select select[disabled],
   fieldset[disabled] .input,
@@ -7306,7 +7306,7 @@ html {
       margin: 0; } }
 
 #documenter .docs-main header.docs-navbar {
-  background-color: #f0f0f0;
+  background-color: #fff;
   border-bottom: 1px solid #dbdbdb;
   z-index: 2;
   min-height: 4rem;
@@ -7377,7 +7377,7 @@ html {
 #documenter .docs-sidebar {
   display: flex;
   flex-direction: column;
-  color: #f0f0f0;
+  color: #fff;
   background-color: #644e99;
   border-right: 1px solid #dbdbdb;
   padding: 0;
@@ -7464,17 +7464,17 @@ html {
       display: block;
       padding: 0.5rem 0.5rem; }
       #documenter .docs-sidebar ul.docs-menu .tocitem, #documenter .docs-sidebar ul.docs-menu .tocitem:hover {
-        color: #f0f0f0;
+        color: #fff;
         background: #644e99; }
     #documenter .docs-sidebar ul.docs-menu a.tocitem:hover, #documenter .docs-sidebar ul.docs-menu label.tocitem:hover {
-      color: #f0f0f0;
+      color: #fff;
       background-color: #413263; }
     #documenter .docs-sidebar ul.docs-menu li.is-active {
       border-top: 1px solid #dbdbdb;
       border-bottom: 1px solid #dbdbdb;
-      background-color: #f0f0f0; }
+      background-color: #fff; }
       #documenter .docs-sidebar ul.docs-menu li.is-active .tocitem, #documenter .docs-sidebar ul.docs-menu li.is-active .tocitem:hover {
-        background-color: #f0f0f0;
+        background-color: #fff;
         color: #202020; }
       #documenter .docs-sidebar ul.docs-menu li.is-active ul.internal .tocitem:hover {
         background-color: #d9d3e8;
@@ -7617,10 +7617,10 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   border-right: none;
   box-shadow: 0.24rem 0rem 0.4rem #bbb; }
   #documenter .docs-sidebar form.docs-search > input {
-    color: #f0f0f0;
+    color: #fff;
     background-color: #52407e;
     border-color: #413263;
     margin-top: 1.0rem;
     margin-bottom: 1.0rem; }
     #documenter .docs-sidebar form.docs-search > input::placeholder {
-      color: #f0f0f0; }
+      color: #fff; }
