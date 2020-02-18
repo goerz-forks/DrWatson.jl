@@ -1,285 +1,1075 @@
 @charset "UTF-8";
-html.theme--documenter-dark {
-  /* Font Awesome 5 mixin. Can be included in any rule that should render Font Awesome icons. */
-  /*! minireset.css v0.0.4 | MIT License | github.com/jgthms/minireset.css */
-  /* This file contain the overall layout.
- *
- * The main container is <div> that is identified by id #documenter.
- */
-  /*
-
-Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
-
-*/
-  /* Base color: saturation 0; */
-  /* User color: hue: 0 */
-  /* Language color: hue: 90; */
-  /* Meta color: hue: 200 */
-  /* Misc effects */ }
-
+/* Font Awesome 5 mixin. Can be included in any rule that should render Font Awesome icons. */
 @keyframes spinAround {
   from {
     transform: rotate(0deg); }
   to {
     transform: rotate(359deg); } }
-  html.theme--documenter-dark .delete, html.theme--documenter-dark .modal-close, html.theme--documenter-dark .is-unselectable, html.theme--documenter-dark .button, html.theme--documenter-dark .file, html.theme--documenter-dark .breadcrumb, html.theme--documenter-dark .pagination-previous,
-  html.theme--documenter-dark .pagination-next,
-  html.theme--documenter-dark .pagination-link,
-  html.theme--documenter-dark .pagination-ellipsis, html.theme--documenter-dark .tabs {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; }
-  html.theme--documenter-dark .select:not(.is-multiple):not(.is-loading)::after, html.theme--documenter-dark .navbar-link:not(.is-arrowless)::after {
-    border: 3px solid transparent;
-    border-radius: 2px;
-    border-right: 0;
-    border-top: 0;
-    content: " ";
-    display: block;
-    height: 0.625em;
-    margin-top: -0.4375em;
-    pointer-events: none;
-    position: absolute;
-    top: 50%;
-    transform: rotate(-45deg);
-    transform-origin: center;
-    width: 0.625em; }
-  html.theme--documenter-dark .box:not(:last-child), html.theme--documenter-dark .content:not(:last-child), html.theme--documenter-dark .notification:not(:last-child), html.theme--documenter-dark .progress:not(:last-child), html.theme--documenter-dark .table:not(:last-child), html.theme--documenter-dark .table-container:not(:last-child), html.theme--documenter-dark .title:not(:last-child),
-  html.theme--documenter-dark .subtitle:not(:last-child), html.theme--documenter-dark .block:not(:last-child), html.theme--documenter-dark .highlight:not(:last-child), html.theme--documenter-dark .breadcrumb:not(:last-child), html.theme--documenter-dark .level:not(:last-child), html.theme--documenter-dark .list:not(:last-child), html.theme--documenter-dark .message:not(:last-child), html.theme--documenter-dark .tabs:not(:last-child), html.theme--documenter-dark .admonition:not(:last-child) {
-    margin-bottom: 1.5rem; }
-  html.theme--documenter-dark .delete, html.theme--documenter-dark .modal-close {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    background-color: rgba(10, 10, 10, 0.2);
-    border: none;
-    border-radius: 290486px;
-    cursor: pointer;
-    pointer-events: auto;
-    display: inline-block;
-    flex-grow: 0;
-    flex-shrink: 0;
-    font-size: 0;
-    height: 20px;
-    max-height: 20px;
-    max-width: 20px;
-    min-height: 20px;
-    min-width: 20px;
-    outline: none;
-    position: relative;
-    vertical-align: top;
-    width: 20px; }
-    html.theme--documenter-dark .delete::before, html.theme--documenter-dark .modal-close::before, html.theme--documenter-dark .delete::after, html.theme--documenter-dark .modal-close::after {
-      background-color: white;
-      content: "";
-      display: block;
-      left: 50%;
-      position: absolute;
-      top: 50%;
-      transform: translateX(-50%) translateY(-50%) rotate(45deg);
-      transform-origin: center center; }
-    html.theme--documenter-dark .delete::before, html.theme--documenter-dark .modal-close::before {
-      height: 2px;
-      width: 50%; }
-    html.theme--documenter-dark .delete::after, html.theme--documenter-dark .modal-close::after {
-      height: 50%;
-      width: 2px; }
-    html.theme--documenter-dark .delete:hover, html.theme--documenter-dark .modal-close:hover, html.theme--documenter-dark .delete:focus, html.theme--documenter-dark .modal-close:focus {
-      background-color: rgba(10, 10, 10, 0.3); }
-    html.theme--documenter-dark .delete:active, html.theme--documenter-dark .modal-close:active {
-      background-color: rgba(10, 10, 10, 0.4); }
-    html.theme--documenter-dark .is-small.delete, html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input.delete, html.theme--documenter-dark .is-small.modal-close, html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input.modal-close {
-      height: 16px;
-      max-height: 16px;
-      max-width: 16px;
-      min-height: 16px;
-      min-width: 16px;
-      width: 16px; }
-    html.theme--documenter-dark .is-medium.delete, html.theme--documenter-dark .is-medium.modal-close {
-      height: 24px;
-      max-height: 24px;
-      max-width: 24px;
-      min-height: 24px;
-      min-width: 24px;
-      width: 24px; }
-    html.theme--documenter-dark .is-large.delete, html.theme--documenter-dark .is-large.modal-close {
-      height: 32px;
-      max-height: 32px;
-      max-width: 32px;
-      min-height: 32px;
-      min-width: 32px;
-      width: 32px; }
-  html.theme--documenter-dark .button.is-loading::after, html.theme--documenter-dark .loader, html.theme--documenter-dark .select.is-loading::after, html.theme--documenter-dark .control.is-loading::after {
-    animation: spinAround 500ms infinite linear;
-    border: 2px solid #dbdbdb;
-    border-radius: 290486px;
-    border-right-color: transparent;
-    border-top-color: transparent;
+
+html.theme--documenter-dark .delete, html.theme--documenter-dark .modal-close, .is-unselectable, html.theme--documenter-dark .button, html.theme--documenter-dark .file, html.theme--documenter-dark .breadcrumb, html.theme--documenter-dark .pagination-previous,
+html.theme--documenter-dark .pagination-next,
+html.theme--documenter-dark .pagination-link,
+html.theme--documenter-dark .pagination-ellipsis, html.theme--documenter-dark .tabs {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+html.theme--documenter-dark .select:not(.is-multiple):not(.is-loading)::after, html.theme--documenter-dark .navbar-link:not(.is-arrowless)::after {
+  border: 3px solid transparent;
+  border-radius: 2px;
+  border-right: 0;
+  border-top: 0;
+  content: " ";
+  display: block;
+  height: 0.625em;
+  margin-top: -0.4375em;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: rotate(-45deg);
+  transform-origin: center;
+  width: 0.625em; }
+
+html.theme--documenter-dark .box:not(:last-child), html.theme--documenter-dark .content:not(:last-child), html.theme--documenter-dark .notification:not(:last-child), html.theme--documenter-dark .progress:not(:last-child), html.theme--documenter-dark .table:not(:last-child), html.theme--documenter-dark .table-container:not(:last-child), html.theme--documenter-dark .title:not(:last-child),
+html.theme--documenter-dark .subtitle:not(:last-child), html.theme--documenter-dark .block:not(:last-child), html.theme--documenter-dark .highlight:not(:last-child), html.theme--documenter-dark .breadcrumb:not(:last-child), html.theme--documenter-dark .level:not(:last-child), html.theme--documenter-dark .list:not(:last-child), html.theme--documenter-dark .message:not(:last-child), html.theme--documenter-dark .tabs:not(:last-child), html.theme--documenter-dark .admonition:not(:last-child) {
+  margin-bottom: 1.5rem; }
+
+html.theme--documenter-dark .delete, html.theme--documenter-dark .modal-close {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: rgba(10, 10, 10, 0.2);
+  border: none;
+  border-radius: 290486px;
+  cursor: pointer;
+  pointer-events: auto;
+  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 0;
+  height: 20px;
+  max-height: 20px;
+  max-width: 20px;
+  min-height: 20px;
+  min-width: 20px;
+  outline: none;
+  position: relative;
+  vertical-align: top;
+  width: 20px; }
+  html.theme--documenter-dark .delete::before, html.theme--documenter-dark .modal-close::before, html.theme--documenter-dark .delete::after, html.theme--documenter-dark .modal-close::after {
+    background-color: white;
     content: "";
     display: block;
-    height: 1em;
-    position: relative;
-    width: 1em; }
-  html.theme--documenter-dark .is-overlay, html.theme--documenter-dark .image.is-square img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-square img,
-  html.theme--documenter-dark .image.is-square .has-ratio,
-  html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-square .has-ratio, html.theme--documenter-dark .image.is-1by1 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-1by1 img,
-  html.theme--documenter-dark .image.is-1by1 .has-ratio,
-  html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-1by1 .has-ratio, html.theme--documenter-dark .image.is-5by4 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-5by4 img,
-  html.theme--documenter-dark .image.is-5by4 .has-ratio,
-  html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-5by4 .has-ratio, html.theme--documenter-dark .image.is-4by3 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-4by3 img,
-  html.theme--documenter-dark .image.is-4by3 .has-ratio,
-  html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-4by3 .has-ratio, html.theme--documenter-dark .image.is-3by2 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-3by2 img,
-  html.theme--documenter-dark .image.is-3by2 .has-ratio,
-  html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-3by2 .has-ratio, html.theme--documenter-dark .image.is-5by3 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-5by3 img,
-  html.theme--documenter-dark .image.is-5by3 .has-ratio,
-  html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-5by3 .has-ratio, html.theme--documenter-dark .image.is-16by9 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-16by9 img,
-  html.theme--documenter-dark .image.is-16by9 .has-ratio,
-  html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-16by9 .has-ratio, html.theme--documenter-dark .image.is-2by1 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-2by1 img,
-  html.theme--documenter-dark .image.is-2by1 .has-ratio,
-  html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-2by1 .has-ratio, html.theme--documenter-dark .image.is-3by1 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-3by1 img,
-  html.theme--documenter-dark .image.is-3by1 .has-ratio,
-  html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-3by1 .has-ratio, html.theme--documenter-dark .image.is-4by5 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-4by5 img,
-  html.theme--documenter-dark .image.is-4by5 .has-ratio,
-  html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-4by5 .has-ratio, html.theme--documenter-dark .image.is-3by4 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-3by4 img,
-  html.theme--documenter-dark .image.is-3by4 .has-ratio,
-  html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-3by4 .has-ratio, html.theme--documenter-dark .image.is-2by3 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-2by3 img,
-  html.theme--documenter-dark .image.is-2by3 .has-ratio,
-  html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-2by3 .has-ratio, html.theme--documenter-dark .image.is-3by5 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-3by5 img,
-  html.theme--documenter-dark .image.is-3by5 .has-ratio,
-  html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-3by5 .has-ratio, html.theme--documenter-dark .image.is-9by16 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-9by16 img,
-  html.theme--documenter-dark .image.is-9by16 .has-ratio,
-  html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-9by16 .has-ratio, html.theme--documenter-dark .image.is-1by2 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-1by2 img,
-  html.theme--documenter-dark .image.is-1by2 .has-ratio,
-  html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-1by2 .has-ratio, html.theme--documenter-dark .image.is-1by3 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-1by3 img,
-  html.theme--documenter-dark .image.is-1by3 .has-ratio,
-  html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-1by3 .has-ratio, html.theme--documenter-dark .modal, html.theme--documenter-dark .modal-background, html.theme--documenter-dark .hero-video {
-    bottom: 0;
-    left: 0;
+    left: 50%;
     position: absolute;
-    right: 0;
-    top: 0; }
-  html.theme--documenter-dark .button, html.theme--documenter-dark .input, html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input, html.theme--documenter-dark .textarea, html.theme--documenter-dark .select select, html.theme--documenter-dark .file-cta,
-  html.theme--documenter-dark .file-name, html.theme--documenter-dark .pagination-previous,
-  html.theme--documenter-dark .pagination-next,
-  html.theme--documenter-dark .pagination-link,
-  html.theme--documenter-dark .pagination-ellipsis {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    align-items: center;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    box-shadow: none;
-    display: inline-flex;
-    font-size: 1rem;
-    height: 2.25em;
-    justify-content: flex-start;
-    line-height: 1.5;
-    padding-bottom: calc(0.375em - 1px);
-    padding-left: calc(0.625em - 1px);
-    padding-right: calc(0.625em - 1px);
-    padding-top: calc(0.375em - 1px);
-    position: relative;
-    vertical-align: top; }
-    html.theme--documenter-dark .button:focus, html.theme--documenter-dark .input:focus, html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input:focus, html.theme--documenter-dark .textarea:focus, html.theme--documenter-dark .select select:focus, html.theme--documenter-dark .file-cta:focus,
-    html.theme--documenter-dark .file-name:focus, html.theme--documenter-dark .pagination-previous:focus,
-    html.theme--documenter-dark .pagination-next:focus,
-    html.theme--documenter-dark .pagination-link:focus,
-    html.theme--documenter-dark .pagination-ellipsis:focus, html.theme--documenter-dark .is-focused.button, html.theme--documenter-dark .is-focused.input, html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input.is-focused, html.theme--documenter-dark .is-focused.textarea, html.theme--documenter-dark .select select.is-focused, html.theme--documenter-dark .is-focused.file-cta,
-    html.theme--documenter-dark .is-focused.file-name, html.theme--documenter-dark .is-focused.pagination-previous,
-    html.theme--documenter-dark .is-focused.pagination-next,
-    html.theme--documenter-dark .is-focused.pagination-link,
-    html.theme--documenter-dark .is-focused.pagination-ellipsis, html.theme--documenter-dark .button:active, html.theme--documenter-dark .input:active, html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input:active, html.theme--documenter-dark .textarea:active, html.theme--documenter-dark .select select:active, html.theme--documenter-dark .file-cta:active,
-    html.theme--documenter-dark .file-name:active, html.theme--documenter-dark .pagination-previous:active,
-    html.theme--documenter-dark .pagination-next:active,
-    html.theme--documenter-dark .pagination-link:active,
-    html.theme--documenter-dark .pagination-ellipsis:active, html.theme--documenter-dark .is-active.button, html.theme--documenter-dark .is-active.input, html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input.is-active, html.theme--documenter-dark .is-active.textarea, html.theme--documenter-dark .select select.is-active, html.theme--documenter-dark .is-active.file-cta,
-    html.theme--documenter-dark .is-active.file-name, html.theme--documenter-dark .is-active.pagination-previous,
-    html.theme--documenter-dark .is-active.pagination-next,
-    html.theme--documenter-dark .is-active.pagination-link,
-    html.theme--documenter-dark .is-active.pagination-ellipsis {
-      outline: none; }
-    html.theme--documenter-dark .button[disabled], html.theme--documenter-dark .input[disabled], html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input[disabled], html.theme--documenter-dark .textarea[disabled], html.theme--documenter-dark .select select[disabled], html.theme--documenter-dark .file-cta[disabled],
-    html.theme--documenter-dark .file-name[disabled], html.theme--documenter-dark .pagination-previous[disabled],
-    html.theme--documenter-dark .pagination-next[disabled],
-    html.theme--documenter-dark .pagination-link[disabled],
-    html.theme--documenter-dark .pagination-ellipsis[disabled],
-    fieldset[disabled] html.theme--documenter-dark .button,
-    fieldset[disabled] html.theme--documenter-dark .input,
-    fieldset[disabled] html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input,
-    fieldset[disabled] html.theme--documenter-dark .textarea,
-    fieldset[disabled] html.theme--documenter-dark .select select,
-    fieldset[disabled] html.theme--documenter-dark .file-cta,
-    fieldset[disabled] html.theme--documenter-dark .file-name,
-    fieldset[disabled] html.theme--documenter-dark .pagination-previous,
-    fieldset[disabled] html.theme--documenter-dark .pagination-next,
-    fieldset[disabled] html.theme--documenter-dark .pagination-link,
-    fieldset[disabled] html.theme--documenter-dark .pagination-ellipsis {
-      cursor: not-allowed; }
-  html.theme--documenter-dark html,
-  html.theme--documenter-dark body,
-  html.theme--documenter-dark p,
-  html.theme--documenter-dark ol,
-  html.theme--documenter-dark ul,
-  html.theme--documenter-dark li,
-  html.theme--documenter-dark dl,
-  html.theme--documenter-dark dt,
-  html.theme--documenter-dark dd,
-  html.theme--documenter-dark blockquote,
-  html.theme--documenter-dark figure,
-  html.theme--documenter-dark fieldset,
-  html.theme--documenter-dark legend,
-  html.theme--documenter-dark textarea,
-  html.theme--documenter-dark pre,
-  html.theme--documenter-dark iframe,
-  html.theme--documenter-dark hr,
-  html.theme--documenter-dark h1,
-  html.theme--documenter-dark h2,
-  html.theme--documenter-dark h3,
-  html.theme--documenter-dark h4,
-  html.theme--documenter-dark h5,
-  html.theme--documenter-dark h6 {
-    margin: 0;
-    padding: 0; }
-  html.theme--documenter-dark h1,
-  html.theme--documenter-dark h2,
-  html.theme--documenter-dark h3,
-  html.theme--documenter-dark h4,
-  html.theme--documenter-dark h5,
-  html.theme--documenter-dark h6 {
-    font-size: 100%;
-    font-weight: normal; }
-  html.theme--documenter-dark ul {
-    list-style: none; }
-  html.theme--documenter-dark button,
-  html.theme--documenter-dark input,
-  html.theme--documenter-dark select,
-  html.theme--documenter-dark textarea {
-    margin: 0; }
-  html.theme--documenter-dark html {
-    box-sizing: border-box; }
-  html.theme--documenter-dark *, html.theme--documenter-dark *::before, html.theme--documenter-dark *::after {
-    box-sizing: inherit; }
-  html.theme--documenter-dark img,
-  html.theme--documenter-dark embed,
-  html.theme--documenter-dark iframe,
-  html.theme--documenter-dark object,
-  html.theme--documenter-dark video {
-    height: auto;
-    max-width: 100%; }
-  html.theme--documenter-dark audio {
-    max-width: 100%; }
-  html.theme--documenter-dark iframe {
-    border: 0; }
-  html.theme--documenter-dark table {
-    border-collapse: collapse;
-    border-spacing: 0; }
-  html.theme--documenter-dark td,
-  html.theme--documenter-dark th {
-    padding: 0; }
-    html.theme--documenter-dark td:not([align]),
-    html.theme--documenter-dark th:not([align]) {
-      text-align: left; }
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform-origin: center center; }
+  html.theme--documenter-dark .delete::before, html.theme--documenter-dark .modal-close::before {
+    height: 2px;
+    width: 50%; }
+  html.theme--documenter-dark .delete::after, html.theme--documenter-dark .modal-close::after {
+    height: 50%;
+    width: 2px; }
+  html.theme--documenter-dark .delete:hover, html.theme--documenter-dark .modal-close:hover, html.theme--documenter-dark .delete:focus, html.theme--documenter-dark .modal-close:focus {
+    background-color: rgba(10, 10, 10, 0.3); }
+  html.theme--documenter-dark .delete:active, html.theme--documenter-dark .modal-close:active {
+    background-color: rgba(10, 10, 10, 0.4); }
+  html.theme--documenter-dark .is-small.delete, html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input.delete, html.theme--documenter-dark .is-small.modal-close, html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input.modal-close {
+    height: 16px;
+    max-height: 16px;
+    max-width: 16px;
+    min-height: 16px;
+    min-width: 16px;
+    width: 16px; }
+  html.theme--documenter-dark .is-medium.delete, html.theme--documenter-dark .is-medium.modal-close {
+    height: 24px;
+    max-height: 24px;
+    max-width: 24px;
+    min-height: 24px;
+    min-width: 24px;
+    width: 24px; }
+  html.theme--documenter-dark .is-large.delete, html.theme--documenter-dark .is-large.modal-close {
+    height: 32px;
+    max-height: 32px;
+    max-width: 32px;
+    min-height: 32px;
+    min-width: 32px;
+    width: 32px; }
+
+html.theme--documenter-dark .button.is-loading::after, html.theme--documenter-dark .loader, html.theme--documenter-dark .select.is-loading::after, html.theme--documenter-dark .control.is-loading::after {
+  animation: spinAround 500ms infinite linear;
+  border: 2px solid #dbdbdb;
+  border-radius: 290486px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 1em;
+  position: relative;
+  width: 1em; }
+
+.is-overlay, html.theme--documenter-dark .image.is-square img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-square img,
+html.theme--documenter-dark .image.is-square .has-ratio,
+html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-square .has-ratio, html.theme--documenter-dark .image.is-1by1 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-1by1 img,
+html.theme--documenter-dark .image.is-1by1 .has-ratio,
+html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-1by1 .has-ratio, html.theme--documenter-dark .image.is-5by4 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-5by4 img,
+html.theme--documenter-dark .image.is-5by4 .has-ratio,
+html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-5by4 .has-ratio, html.theme--documenter-dark .image.is-4by3 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-4by3 img,
+html.theme--documenter-dark .image.is-4by3 .has-ratio,
+html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-4by3 .has-ratio, html.theme--documenter-dark .image.is-3by2 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-3by2 img,
+html.theme--documenter-dark .image.is-3by2 .has-ratio,
+html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-3by2 .has-ratio, html.theme--documenter-dark .image.is-5by3 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-5by3 img,
+html.theme--documenter-dark .image.is-5by3 .has-ratio,
+html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-5by3 .has-ratio, html.theme--documenter-dark .image.is-16by9 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-16by9 img,
+html.theme--documenter-dark .image.is-16by9 .has-ratio,
+html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-16by9 .has-ratio, html.theme--documenter-dark .image.is-2by1 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-2by1 img,
+html.theme--documenter-dark .image.is-2by1 .has-ratio,
+html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-2by1 .has-ratio, html.theme--documenter-dark .image.is-3by1 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-3by1 img,
+html.theme--documenter-dark .image.is-3by1 .has-ratio,
+html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-3by1 .has-ratio, html.theme--documenter-dark .image.is-4by5 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-4by5 img,
+html.theme--documenter-dark .image.is-4by5 .has-ratio,
+html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-4by5 .has-ratio, html.theme--documenter-dark .image.is-3by4 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-3by4 img,
+html.theme--documenter-dark .image.is-3by4 .has-ratio,
+html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-3by4 .has-ratio, html.theme--documenter-dark .image.is-2by3 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-2by3 img,
+html.theme--documenter-dark .image.is-2by3 .has-ratio,
+html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-2by3 .has-ratio, html.theme--documenter-dark .image.is-3by5 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-3by5 img,
+html.theme--documenter-dark .image.is-3by5 .has-ratio,
+html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-3by5 .has-ratio, html.theme--documenter-dark .image.is-9by16 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-9by16 img,
+html.theme--documenter-dark .image.is-9by16 .has-ratio,
+html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-9by16 .has-ratio, html.theme--documenter-dark .image.is-1by2 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-1by2 img,
+html.theme--documenter-dark .image.is-1by2 .has-ratio,
+html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-1by2 .has-ratio, html.theme--documenter-dark .image.is-1by3 img, html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-1by3 img,
+html.theme--documenter-dark .image.is-1by3 .has-ratio,
+html.theme--documenter-dark #documenter .docs-sidebar .docs-logo > img.is-1by3 .has-ratio, html.theme--documenter-dark .modal, html.theme--documenter-dark .modal-background, html.theme--documenter-dark .hero-video {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+html.theme--documenter-dark .button, html.theme--documenter-dark .input, html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input, html.theme--documenter-dark .textarea, html.theme--documenter-dark .select select, html.theme--documenter-dark .file-cta,
+html.theme--documenter-dark .file-name, html.theme--documenter-dark .pagination-previous,
+html.theme--documenter-dark .pagination-next,
+html.theme--documenter-dark .pagination-link,
+html.theme--documenter-dark .pagination-ellipsis {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: none;
+  display: inline-flex;
+  font-size: 1rem;
+  height: 2.25em;
+  justify-content: flex-start;
+  line-height: 1.5;
+  padding-bottom: calc(0.375em - 1px);
+  padding-left: calc(0.625em - 1px);
+  padding-right: calc(0.625em - 1px);
+  padding-top: calc(0.375em - 1px);
+  position: relative;
+  vertical-align: top; }
+  html.theme--documenter-dark .button:focus, html.theme--documenter-dark .input:focus, html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input:focus, html.theme--documenter-dark .textarea:focus, html.theme--documenter-dark .select select:focus, html.theme--documenter-dark .file-cta:focus,
+  html.theme--documenter-dark .file-name:focus, html.theme--documenter-dark .pagination-previous:focus,
+  html.theme--documenter-dark .pagination-next:focus,
+  html.theme--documenter-dark .pagination-link:focus,
+  html.theme--documenter-dark .pagination-ellipsis:focus, html.theme--documenter-dark .is-focused.button, html.theme--documenter-dark .is-focused.input, html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input.is-focused, html.theme--documenter-dark .is-focused.textarea, html.theme--documenter-dark .select select.is-focused, html.theme--documenter-dark .is-focused.file-cta,
+  html.theme--documenter-dark .is-focused.file-name, html.theme--documenter-dark .is-focused.pagination-previous,
+  html.theme--documenter-dark .is-focused.pagination-next,
+  html.theme--documenter-dark .is-focused.pagination-link,
+  html.theme--documenter-dark .is-focused.pagination-ellipsis, html.theme--documenter-dark .button:active, html.theme--documenter-dark .input:active, html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input:active, html.theme--documenter-dark .textarea:active, html.theme--documenter-dark .select select:active, html.theme--documenter-dark .file-cta:active,
+  html.theme--documenter-dark .file-name:active, html.theme--documenter-dark .pagination-previous:active,
+  html.theme--documenter-dark .pagination-next:active,
+  html.theme--documenter-dark .pagination-link:active,
+  html.theme--documenter-dark .pagination-ellipsis:active, html.theme--documenter-dark .is-active.button, html.theme--documenter-dark .is-active.input, html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input.is-active, html.theme--documenter-dark .is-active.textarea, html.theme--documenter-dark .select select.is-active, html.theme--documenter-dark .is-active.file-cta,
+  html.theme--documenter-dark .is-active.file-name, html.theme--documenter-dark .is-active.pagination-previous,
+  html.theme--documenter-dark .is-active.pagination-next,
+  html.theme--documenter-dark .is-active.pagination-link,
+  html.theme--documenter-dark .is-active.pagination-ellipsis {
+    outline: none; }
+  html.theme--documenter-dark .button[disabled], html.theme--documenter-dark .input[disabled], html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input[disabled], html.theme--documenter-dark .textarea[disabled], html.theme--documenter-dark .select select[disabled], html.theme--documenter-dark .file-cta[disabled],
+  html.theme--documenter-dark .file-name[disabled], html.theme--documenter-dark .pagination-previous[disabled],
+  html.theme--documenter-dark .pagination-next[disabled],
+  html.theme--documenter-dark .pagination-link[disabled],
+  html.theme--documenter-dark .pagination-ellipsis[disabled],
+  fieldset[disabled] html.theme--documenter-dark .button,
+  html.theme--documenter-dark fieldset[disabled] .button,
+  fieldset[disabled] html.theme--documenter-dark .input,
+  html.theme--documenter-dark fieldset[disabled] .input,
+  fieldset[disabled] html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input,
+  html.theme--documenter-dark #documenter .docs-sidebar fieldset[disabled] form.docs-search > input,
+  fieldset[disabled] html.theme--documenter-dark .textarea,
+  html.theme--documenter-dark fieldset[disabled] .textarea,
+  fieldset[disabled] html.theme--documenter-dark .select select,
+  html.theme--documenter-dark .select fieldset[disabled] select,
+  fieldset[disabled] html.theme--documenter-dark .file-cta,
+  html.theme--documenter-dark fieldset[disabled] .file-cta,
+  fieldset[disabled] html.theme--documenter-dark .file-name,
+  html.theme--documenter-dark fieldset[disabled] .file-name,
+  fieldset[disabled] html.theme--documenter-dark .pagination-previous,
+  html.theme--documenter-dark fieldset[disabled] .pagination-previous,
+  fieldset[disabled] html.theme--documenter-dark .pagination-next,
+  html.theme--documenter-dark fieldset[disabled] .pagination-next,
+  fieldset[disabled] html.theme--documenter-dark .pagination-link,
+  html.theme--documenter-dark fieldset[disabled] .pagination-link,
+  fieldset[disabled] html.theme--documenter-dark .pagination-ellipsis,
+  html.theme--documenter-dark fieldset[disabled] .pagination-ellipsis {
+    cursor: not-allowed; }
+
+/*! minireset.css v0.0.4 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+ul {
+  list-style: none; }
+
+button,
+input,
+select,
+textarea {
+  margin: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+img,
+embed,
+iframe,
+object,
+video {
+  height: auto;
+  max-width: 100%; }
+
+audio {
+  max-width: 100%; }
+
+iframe {
+  border: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+  td:not([align]),
+  th:not([align]) {
+    text-align: left; }
+
+.is-clearfix::after {
+  clear: both;
+  content: " ";
+  display: table; }
+
+.is-pulled-left {
+  float: left !important; }
+
+.is-pulled-right {
+  float: right !important; }
+
+.is-clipped {
+  overflow: hidden !important; }
+
+.is-size-1 {
+  font-size: 3rem !important; }
+
+.is-size-2 {
+  font-size: 2.5rem !important; }
+
+.is-size-3 {
+  font-size: 2rem !important; }
+
+.is-size-4 {
+  font-size: 1.5rem !important; }
+
+.is-size-5 {
+  font-size: 1.25rem !important; }
+
+.is-size-6 {
+  font-size: 1rem !important; }
+
+.is-size-7, html.theme--documenter-dark .docstring > section > a.docs-sourcelink {
+  font-size: 0.75rem !important; }
+
+@media screen and (max-width: 768px) {
+  .is-size-1-mobile {
+    font-size: 3rem !important; }
+  .is-size-2-mobile {
+    font-size: 2.5rem !important; }
+  .is-size-3-mobile {
+    font-size: 2rem !important; }
+  .is-size-4-mobile {
+    font-size: 1.5rem !important; }
+  .is-size-5-mobile {
+    font-size: 1.25rem !important; }
+  .is-size-6-mobile {
+    font-size: 1rem !important; }
+  .is-size-7-mobile {
+    font-size: 0.75rem !important; } }
+
+@media screen and (min-width: 769px), print {
+  .is-size-1-tablet {
+    font-size: 3rem !important; }
+  .is-size-2-tablet {
+    font-size: 2.5rem !important; }
+  .is-size-3-tablet {
+    font-size: 2rem !important; }
+  .is-size-4-tablet {
+    font-size: 1.5rem !important; }
+  .is-size-5-tablet {
+    font-size: 1.25rem !important; }
+  .is-size-6-tablet {
+    font-size: 1rem !important; }
+  .is-size-7-tablet {
+    font-size: 0.75rem !important; } }
+
+@media screen and (max-width: 1055px) {
+  .is-size-1-touch {
+    font-size: 3rem !important; }
+  .is-size-2-touch {
+    font-size: 2.5rem !important; }
+  .is-size-3-touch {
+    font-size: 2rem !important; }
+  .is-size-4-touch {
+    font-size: 1.5rem !important; }
+  .is-size-5-touch {
+    font-size: 1.25rem !important; }
+  .is-size-6-touch {
+    font-size: 1rem !important; }
+  .is-size-7-touch {
+    font-size: 0.75rem !important; } }
+
+@media screen and (min-width: 1056px) {
+  .is-size-1-desktop {
+    font-size: 3rem !important; }
+  .is-size-2-desktop {
+    font-size: 2.5rem !important; }
+  .is-size-3-desktop {
+    font-size: 2rem !important; }
+  .is-size-4-desktop {
+    font-size: 1.5rem !important; }
+  .is-size-5-desktop {
+    font-size: 1.25rem !important; }
+  .is-size-6-desktop {
+    font-size: 1rem !important; }
+  .is-size-7-desktop {
+    font-size: 0.75rem !important; } }
+
+@media screen and (min-width: 1216px) {
+  .is-size-1-widescreen {
+    font-size: 3rem !important; }
+  .is-size-2-widescreen {
+    font-size: 2.5rem !important; }
+  .is-size-3-widescreen {
+    font-size: 2rem !important; }
+  .is-size-4-widescreen {
+    font-size: 1.5rem !important; }
+  .is-size-5-widescreen {
+    font-size: 1.25rem !important; }
+  .is-size-6-widescreen {
+    font-size: 1rem !important; }
+  .is-size-7-widescreen {
+    font-size: 0.75rem !important; } }
+
+@media screen and (min-width: 1408px) {
+  .is-size-1-fullhd {
+    font-size: 3rem !important; }
+  .is-size-2-fullhd {
+    font-size: 2.5rem !important; }
+  .is-size-3-fullhd {
+    font-size: 2rem !important; }
+  .is-size-4-fullhd {
+    font-size: 1.5rem !important; }
+  .is-size-5-fullhd {
+    font-size: 1.25rem !important; }
+  .is-size-6-fullhd {
+    font-size: 1rem !important; }
+  .is-size-7-fullhd {
+    font-size: 0.75rem !important; } }
+
+.has-text-centered {
+  text-align: center !important; }
+
+.has-text-justified {
+  text-align: justify !important; }
+
+.has-text-left {
+  text-align: left !important; }
+
+.has-text-right {
+  text-align: right !important; }
+
+@media screen and (max-width: 768px) {
+  .has-text-centered-mobile {
+    text-align: center !important; } }
+
+@media screen and (min-width: 769px), print {
+  .has-text-centered-tablet {
+    text-align: center !important; } }
+
+@media screen and (min-width: 769px) and (max-width: 1055px) {
+  .has-text-centered-tablet-only {
+    text-align: center !important; } }
+
+@media screen and (max-width: 1055px) {
+  .has-text-centered-touch {
+    text-align: center !important; } }
+
+@media screen and (min-width: 1056px) {
+  .has-text-centered-desktop {
+    text-align: center !important; } }
+
+@media screen and (min-width: 1056px) and (max-width: 1215px) {
+  .has-text-centered-desktop-only {
+    text-align: center !important; } }
+
+@media screen and (min-width: 1216px) {
+  .has-text-centered-widescreen {
+    text-align: center !important; } }
+
+@media screen and (min-width: 1216px) and (max-width: 1407px) {
+  .has-text-centered-widescreen-only {
+    text-align: center !important; } }
+
+@media screen and (min-width: 1408px) {
+  .has-text-centered-fullhd {
+    text-align: center !important; } }
+
+@media screen and (max-width: 768px) {
+  .has-text-justified-mobile {
+    text-align: justify !important; } }
+
+@media screen and (min-width: 769px), print {
+  .has-text-justified-tablet {
+    text-align: justify !important; } }
+
+@media screen and (min-width: 769px) and (max-width: 1055px) {
+  .has-text-justified-tablet-only {
+    text-align: justify !important; } }
+
+@media screen and (max-width: 1055px) {
+  .has-text-justified-touch {
+    text-align: justify !important; } }
+
+@media screen and (min-width: 1056px) {
+  .has-text-justified-desktop {
+    text-align: justify !important; } }
+
+@media screen and (min-width: 1056px) and (max-width: 1215px) {
+  .has-text-justified-desktop-only {
+    text-align: justify !important; } }
+
+@media screen and (min-width: 1216px) {
+  .has-text-justified-widescreen {
+    text-align: justify !important; } }
+
+@media screen and (min-width: 1216px) and (max-width: 1407px) {
+  .has-text-justified-widescreen-only {
+    text-align: justify !important; } }
+
+@media screen and (min-width: 1408px) {
+  .has-text-justified-fullhd {
+    text-align: justify !important; } }
+
+@media screen and (max-width: 768px) {
+  .has-text-left-mobile {
+    text-align: left !important; } }
+
+@media screen and (min-width: 769px), print {
+  .has-text-left-tablet {
+    text-align: left !important; } }
+
+@media screen and (min-width: 769px) and (max-width: 1055px) {
+  .has-text-left-tablet-only {
+    text-align: left !important; } }
+
+@media screen and (max-width: 1055px) {
+  .has-text-left-touch {
+    text-align: left !important; } }
+
+@media screen and (min-width: 1056px) {
+  .has-text-left-desktop {
+    text-align: left !important; } }
+
+@media screen and (min-width: 1056px) and (max-width: 1215px) {
+  .has-text-left-desktop-only {
+    text-align: left !important; } }
+
+@media screen and (min-width: 1216px) {
+  .has-text-left-widescreen {
+    text-align: left !important; } }
+
+@media screen and (min-width: 1216px) and (max-width: 1407px) {
+  .has-text-left-widescreen-only {
+    text-align: left !important; } }
+
+@media screen and (min-width: 1408px) {
+  .has-text-left-fullhd {
+    text-align: left !important; } }
+
+@media screen and (max-width: 768px) {
+  .has-text-right-mobile {
+    text-align: right !important; } }
+
+@media screen and (min-width: 769px), print {
+  .has-text-right-tablet {
+    text-align: right !important; } }
+
+@media screen and (min-width: 769px) and (max-width: 1055px) {
+  .has-text-right-tablet-only {
+    text-align: right !important; } }
+
+@media screen and (max-width: 1055px) {
+  .has-text-right-touch {
+    text-align: right !important; } }
+
+@media screen and (min-width: 1056px) {
+  .has-text-right-desktop {
+    text-align: right !important; } }
+
+@media screen and (min-width: 1056px) and (max-width: 1215px) {
+  .has-text-right-desktop-only {
+    text-align: right !important; } }
+
+@media screen and (min-width: 1216px) {
+  .has-text-right-widescreen {
+    text-align: right !important; } }
+
+@media screen and (min-width: 1216px) and (max-width: 1407px) {
+  .has-text-right-widescreen-only {
+    text-align: right !important; } }
+
+@media screen and (min-width: 1408px) {
+  .has-text-right-fullhd {
+    text-align: right !important; } }
+
+.is-capitalized {
+  text-transform: capitalize !important; }
+
+.is-lowercase {
+  text-transform: lowercase !important; }
+
+.is-uppercase {
+  text-transform: uppercase !important; }
+
+.is-italic {
+  font-style: italic !important; }
+
+.has-text-white {
+  color: white !important; }
+
+a.has-text-white:hover, a.has-text-white:focus {
+  color: #e6e6e6 !important; }
+
+.has-background-white {
+  background-color: white !important; }
+
+.has-text-black {
+  color: #0a0a0a !important; }
+
+a.has-text-black:hover, a.has-text-black:focus {
+  color: black !important; }
+
+.has-background-black {
+  background-color: #0a0a0a !important; }
+
+.has-text-light {
+  color: whitesmoke !important; }
+
+a.has-text-light:hover, a.has-text-light:focus {
+  color: #dbdbdb !important; }
+
+.has-background-light {
+  background-color: whitesmoke !important; }
+
+.has-text-dark {
+  color: #363636 !important; }
+
+a.has-text-dark:hover, a.has-text-dark:focus {
+  color: #1c1c1c !important; }
+
+.has-background-dark {
+  background-color: #363636 !important; }
+
+.has-text-primary {
+  color: #4eb5de !important; }
+
+a.has-text-primary:hover, a.has-text-primary:focus {
+  color: #27a1d2 !important; }
+
+.has-background-primary {
+  background-color: #4eb5de !important; }
+
+.has-text-link {
+  color: #2e63b8 !important; }
+
+a.has-text-link:hover, a.has-text-link:focus {
+  color: #244d8f !important; }
+
+.has-background-link {
+  background-color: #2e63b8 !important; }
+
+.has-text-info {
+  color: #209cee !important; }
+
+a.has-text-info:hover, a.has-text-info:focus {
+  color: #0f81cc !important; }
+
+.has-background-info {
+  background-color: #209cee !important; }
+
+.has-text-success {
+  color: #22c35b !important; }
+
+a.has-text-success:hover, a.has-text-success:focus {
+  color: #1a9847 !important; }
+
+.has-background-success {
+  background-color: #22c35b !important; }
+
+.has-text-warning {
+  color: #ffdd57 !important; }
+
+a.has-text-warning:hover, a.has-text-warning:focus {
+  color: #ffd324 !important; }
+
+.has-background-warning {
+  background-color: #ffdd57 !important; }
+
+.has-text-danger {
+  color: #da0b00 !important; }
+
+a.has-text-danger:hover, a.has-text-danger:focus {
+  color: #a70800 !important; }
+
+.has-background-danger {
+  background-color: #da0b00 !important; }
+
+.has-text-black-bis {
+  color: #121212 !important; }
+
+.has-background-black-bis {
+  background-color: #121212 !important; }
+
+.has-text-black-ter {
+  color: #242424 !important; }
+
+.has-background-black-ter {
+  background-color: #242424 !important; }
+
+.has-text-grey-darker {
+  color: #363636 !important; }
+
+.has-background-grey-darker {
+  background-color: #363636 !important; }
+
+.has-text-grey-dark {
+  color: #4a4a4a !important; }
+
+.has-background-grey-dark {
+  background-color: #4a4a4a !important; }
+
+.has-text-grey {
+  color: #7a7a7a !important; }
+
+.has-background-grey {
+  background-color: #7a7a7a !important; }
+
+.has-text-grey-light {
+  color: #b5b5b5 !important; }
+
+.has-background-grey-light {
+  background-color: #b5b5b5 !important; }
+
+.has-text-grey-lighter {
+  color: #dbdbdb !important; }
+
+.has-background-grey-lighter {
+  background-color: #dbdbdb !important; }
+
+.has-text-white-ter {
+  color: whitesmoke !important; }
+
+.has-background-white-ter {
+  background-color: whitesmoke !important; }
+
+.has-text-white-bis {
+  color: #fafafa !important; }
+
+.has-background-white-bis {
+  background-color: #fafafa !important; }
+
+.has-text-weight-light {
+  font-weight: 300 !important; }
+
+.has-text-weight-normal {
+  font-weight: 400 !important; }
+
+.has-text-weight-medium {
+  font-weight: 500 !important; }
+
+.has-text-weight-semibold {
+  font-weight: 600 !important; }
+
+.has-text-weight-bold {
+  font-weight: 700 !important; }
+
+.is-family-primary {
+  font-family: "Montserrat", sans-serif !important; }
+
+.is-family-secondary {
+  font-family: "Montserrat", sans-serif !important; }
+
+.is-family-sans-serif {
+  font-family: "Montserrat", sans-serif !important; }
+
+.is-family-monospace {
+  font-family: "Source Code Pro", monospace !important; }
+
+.is-family-code {
+  font-family: "Source Code Pro", monospace !important; }
+
+.is-block {
+  display: block !important; }
+
+@media screen and (max-width: 768px) {
+  .is-block-mobile {
+    display: block !important; } }
+
+@media screen and (min-width: 769px), print {
+  .is-block-tablet {
+    display: block !important; } }
+
+@media screen and (min-width: 769px) and (max-width: 1055px) {
+  .is-block-tablet-only {
+    display: block !important; } }
+
+@media screen and (max-width: 1055px) {
+  .is-block-touch {
+    display: block !important; } }
+
+@media screen and (min-width: 1056px) {
+  .is-block-desktop {
+    display: block !important; } }
+
+@media screen and (min-width: 1056px) and (max-width: 1215px) {
+  .is-block-desktop-only {
+    display: block !important; } }
+
+@media screen and (min-width: 1216px) {
+  .is-block-widescreen {
+    display: block !important; } }
+
+@media screen and (min-width: 1216px) and (max-width: 1407px) {
+  .is-block-widescreen-only {
+    display: block !important; } }
+
+@media screen and (min-width: 1408px) {
+  .is-block-fullhd {
+    display: block !important; } }
+
+.is-flex {
+  display: flex !important; }
+
+@media screen and (max-width: 768px) {
+  .is-flex-mobile {
+    display: flex !important; } }
+
+@media screen and (min-width: 769px), print {
+  .is-flex-tablet {
+    display: flex !important; } }
+
+@media screen and (min-width: 769px) and (max-width: 1055px) {
+  .is-flex-tablet-only {
+    display: flex !important; } }
+
+@media screen and (max-width: 1055px) {
+  .is-flex-touch {
+    display: flex !important; } }
+
+@media screen and (min-width: 1056px) {
+  .is-flex-desktop {
+    display: flex !important; } }
+
+@media screen and (min-width: 1056px) and (max-width: 1215px) {
+  .is-flex-desktop-only {
+    display: flex !important; } }
+
+@media screen and (min-width: 1216px) {
+  .is-flex-widescreen {
+    display: flex !important; } }
+
+@media screen and (min-width: 1216px) and (max-width: 1407px) {
+  .is-flex-widescreen-only {
+    display: flex !important; } }
+
+@media screen and (min-width: 1408px) {
+  .is-flex-fullhd {
+    display: flex !important; } }
+
+.is-inline {
+  display: inline !important; }
+
+@media screen and (max-width: 768px) {
+  .is-inline-mobile {
+    display: inline !important; } }
+
+@media screen and (min-width: 769px), print {
+  .is-inline-tablet {
+    display: inline !important; } }
+
+@media screen and (min-width: 769px) and (max-width: 1055px) {
+  .is-inline-tablet-only {
+    display: inline !important; } }
+
+@media screen and (max-width: 1055px) {
+  .is-inline-touch {
+    display: inline !important; } }
+
+@media screen and (min-width: 1056px) {
+  .is-inline-desktop {
+    display: inline !important; } }
+
+@media screen and (min-width: 1056px) and (max-width: 1215px) {
+  .is-inline-desktop-only {
+    display: inline !important; } }
+
+@media screen and (min-width: 1216px) {
+  .is-inline-widescreen {
+    display: inline !important; } }
+
+@media screen and (min-width: 1216px) and (max-width: 1407px) {
+  .is-inline-widescreen-only {
+    display: inline !important; } }
+
+@media screen and (min-width: 1408px) {
+  .is-inline-fullhd {
+    display: inline !important; } }
+
+.is-inline-block {
+  display: inline-block !important; }
+
+@media screen and (max-width: 768px) {
+  .is-inline-block-mobile {
+    display: inline-block !important; } }
+
+@media screen and (min-width: 769px), print {
+  .is-inline-block-tablet {
+    display: inline-block !important; } }
+
+@media screen and (min-width: 769px) and (max-width: 1055px) {
+  .is-inline-block-tablet-only {
+    display: inline-block !important; } }
+
+@media screen and (max-width: 1055px) {
+  .is-inline-block-touch {
+    display: inline-block !important; } }
+
+@media screen and (min-width: 1056px) {
+  .is-inline-block-desktop {
+    display: inline-block !important; } }
+
+@media screen and (min-width: 1056px) and (max-width: 1215px) {
+  .is-inline-block-desktop-only {
+    display: inline-block !important; } }
+
+@media screen and (min-width: 1216px) {
+  .is-inline-block-widescreen {
+    display: inline-block !important; } }
+
+@media screen and (min-width: 1216px) and (max-width: 1407px) {
+  .is-inline-block-widescreen-only {
+    display: inline-block !important; } }
+
+@media screen and (min-width: 1408px) {
+  .is-inline-block-fullhd {
+    display: inline-block !important; } }
+
+.is-inline-flex {
+  display: inline-flex !important; }
+
+@media screen and (max-width: 768px) {
+  .is-inline-flex-mobile {
+    display: inline-flex !important; } }
+
+@media screen and (min-width: 769px), print {
+  .is-inline-flex-tablet {
+    display: inline-flex !important; } }
+
+@media screen and (min-width: 769px) and (max-width: 1055px) {
+  .is-inline-flex-tablet-only {
+    display: inline-flex !important; } }
+
+@media screen and (max-width: 1055px) {
+  .is-inline-flex-touch {
+    display: inline-flex !important; } }
+
+@media screen and (min-width: 1056px) {
+  .is-inline-flex-desktop {
+    display: inline-flex !important; } }
+
+@media screen and (min-width: 1056px) and (max-width: 1215px) {
+  .is-inline-flex-desktop-only {
+    display: inline-flex !important; } }
+
+@media screen and (min-width: 1216px) {
+  .is-inline-flex-widescreen {
+    display: inline-flex !important; } }
+
+@media screen and (min-width: 1216px) and (max-width: 1407px) {
+  .is-inline-flex-widescreen-only {
+    display: inline-flex !important; } }
+
+@media screen and (min-width: 1408px) {
+  .is-inline-flex-fullhd {
+    display: inline-flex !important; } }
+
+.is-hidden {
+  display: none !important; }
+
+.is-sr-only {
+  border: none !important;
+  clip: rect(0, 0, 0, 0) !important;
+  height: 0.01em !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 0.01em !important; }
+
+@media screen and (max-width: 768px) {
+  .is-hidden-mobile {
+    display: none !important; } }
+
+@media screen and (min-width: 769px), print {
+  .is-hidden-tablet {
+    display: none !important; } }
+
+@media screen and (min-width: 769px) and (max-width: 1055px) {
+  .is-hidden-tablet-only {
+    display: none !important; } }
+
+@media screen and (max-width: 1055px) {
+  .is-hidden-touch {
+    display: none !important; } }
+
+@media screen and (min-width: 1056px) {
+  .is-hidden-desktop {
+    display: none !important; } }
+
+@media screen and (min-width: 1056px) and (max-width: 1215px) {
+  .is-hidden-desktop-only {
+    display: none !important; } }
+
+@media screen and (min-width: 1216px) {
+  .is-hidden-widescreen {
+    display: none !important; } }
+
+@media screen and (min-width: 1216px) and (max-width: 1407px) {
+  .is-hidden-widescreen-only {
+    display: none !important; } }
+
+@media screen and (min-width: 1408px) {
+  .is-hidden-fullhd {
+    display: none !important; } }
+
+.is-invisible {
+  visibility: hidden !important; }
+
+@media screen and (max-width: 768px) {
+  .is-invisible-mobile {
+    visibility: hidden !important; } }
+
+@media screen and (min-width: 769px), print {
+  .is-invisible-tablet {
+    visibility: hidden !important; } }
+
+@media screen and (min-width: 769px) and (max-width: 1055px) {
+  .is-invisible-tablet-only {
+    visibility: hidden !important; } }
+
+@media screen and (max-width: 1055px) {
+  .is-invisible-touch {
+    visibility: hidden !important; } }
+
+@media screen and (min-width: 1056px) {
+  .is-invisible-desktop {
+    visibility: hidden !important; } }
+
+@media screen and (min-width: 1056px) and (max-width: 1215px) {
+  .is-invisible-desktop-only {
+    visibility: hidden !important; } }
+
+@media screen and (min-width: 1216px) {
+  .is-invisible-widescreen {
+    visibility: hidden !important; } }
+
+@media screen and (min-width: 1216px) and (max-width: 1407px) {
+  .is-invisible-widescreen-only {
+    visibility: hidden !important; } }
+
+@media screen and (min-width: 1408px) {
+  .is-invisible-fullhd {
+    visibility: hidden !important; } }
+
+.is-marginless {
+  margin: 0 !important; }
+
+.is-paddingless {
+  padding: 0 !important; }
+
+.is-radiusless {
+  border-radius: 0 !important; }
+
+.is-shadowless {
+  box-shadow: none !important; }
+
+.is-relative {
+  position: relative !important; }
+
+html.theme--documenter-dark {
+  /* This file contain the overall layout.
+ *
+ * The main container is <div> that is identified by id #documenter.
+ */ }
   html.theme--documenter-dark html {
     background-color: #0799eb;
     font-size: 16px;
@@ -372,582 +1162,6 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
       text-align: left; }
   html.theme--documenter-dark table th {
     color: #3f498e; }
-  html.theme--documenter-dark .is-clearfix::after {
-    clear: both;
-    content: " ";
-    display: table; }
-  html.theme--documenter-dark .is-pulled-left {
-    float: left !important; }
-  html.theme--documenter-dark .is-pulled-right {
-    float: right !important; }
-  html.theme--documenter-dark .is-clipped {
-    overflow: hidden !important; }
-  html.theme--documenter-dark .is-size-1 {
-    font-size: 3rem !important; }
-  html.theme--documenter-dark .is-size-2 {
-    font-size: 2.5rem !important; }
-  html.theme--documenter-dark .is-size-3 {
-    font-size: 2rem !important; }
-  html.theme--documenter-dark .is-size-4 {
-    font-size: 1.5rem !important; }
-  html.theme--documenter-dark .is-size-5 {
-    font-size: 1.25rem !important; }
-  html.theme--documenter-dark .is-size-6 {
-    font-size: 1rem !important; }
-  html.theme--documenter-dark .is-size-7, html.theme--documenter-dark .docstring > section > a.docs-sourcelink {
-    font-size: 0.75rem !important; }
-  @media screen and (max-width: 768px) {
-    html.theme--documenter-dark .is-size-1-mobile {
-      font-size: 3rem !important; }
-    html.theme--documenter-dark .is-size-2-mobile {
-      font-size: 2.5rem !important; }
-    html.theme--documenter-dark .is-size-3-mobile {
-      font-size: 2rem !important; }
-    html.theme--documenter-dark .is-size-4-mobile {
-      font-size: 1.5rem !important; }
-    html.theme--documenter-dark .is-size-5-mobile {
-      font-size: 1.25rem !important; }
-    html.theme--documenter-dark .is-size-6-mobile {
-      font-size: 1rem !important; }
-    html.theme--documenter-dark .is-size-7-mobile {
-      font-size: 0.75rem !important; } }
-  @media screen and (min-width: 769px), print {
-    html.theme--documenter-dark .is-size-1-tablet {
-      font-size: 3rem !important; }
-    html.theme--documenter-dark .is-size-2-tablet {
-      font-size: 2.5rem !important; }
-    html.theme--documenter-dark .is-size-3-tablet {
-      font-size: 2rem !important; }
-    html.theme--documenter-dark .is-size-4-tablet {
-      font-size: 1.5rem !important; }
-    html.theme--documenter-dark .is-size-5-tablet {
-      font-size: 1.25rem !important; }
-    html.theme--documenter-dark .is-size-6-tablet {
-      font-size: 1rem !important; }
-    html.theme--documenter-dark .is-size-7-tablet {
-      font-size: 0.75rem !important; } }
-  @media screen and (max-width: 1055px) {
-    html.theme--documenter-dark .is-size-1-touch {
-      font-size: 3rem !important; }
-    html.theme--documenter-dark .is-size-2-touch {
-      font-size: 2.5rem !important; }
-    html.theme--documenter-dark .is-size-3-touch {
-      font-size: 2rem !important; }
-    html.theme--documenter-dark .is-size-4-touch {
-      font-size: 1.5rem !important; }
-    html.theme--documenter-dark .is-size-5-touch {
-      font-size: 1.25rem !important; }
-    html.theme--documenter-dark .is-size-6-touch {
-      font-size: 1rem !important; }
-    html.theme--documenter-dark .is-size-7-touch {
-      font-size: 0.75rem !important; } }
-  @media screen and (min-width: 1056px) {
-    html.theme--documenter-dark .is-size-1-desktop {
-      font-size: 3rem !important; }
-    html.theme--documenter-dark .is-size-2-desktop {
-      font-size: 2.5rem !important; }
-    html.theme--documenter-dark .is-size-3-desktop {
-      font-size: 2rem !important; }
-    html.theme--documenter-dark .is-size-4-desktop {
-      font-size: 1.5rem !important; }
-    html.theme--documenter-dark .is-size-5-desktop {
-      font-size: 1.25rem !important; }
-    html.theme--documenter-dark .is-size-6-desktop {
-      font-size: 1rem !important; }
-    html.theme--documenter-dark .is-size-7-desktop {
-      font-size: 0.75rem !important; } }
-  @media screen and (min-width: 1216px) {
-    html.theme--documenter-dark .is-size-1-widescreen {
-      font-size: 3rem !important; }
-    html.theme--documenter-dark .is-size-2-widescreen {
-      font-size: 2.5rem !important; }
-    html.theme--documenter-dark .is-size-3-widescreen {
-      font-size: 2rem !important; }
-    html.theme--documenter-dark .is-size-4-widescreen {
-      font-size: 1.5rem !important; }
-    html.theme--documenter-dark .is-size-5-widescreen {
-      font-size: 1.25rem !important; }
-    html.theme--documenter-dark .is-size-6-widescreen {
-      font-size: 1rem !important; }
-    html.theme--documenter-dark .is-size-7-widescreen {
-      font-size: 0.75rem !important; } }
-  @media screen and (min-width: 1408px) {
-    html.theme--documenter-dark .is-size-1-fullhd {
-      font-size: 3rem !important; }
-    html.theme--documenter-dark .is-size-2-fullhd {
-      font-size: 2.5rem !important; }
-    html.theme--documenter-dark .is-size-3-fullhd {
-      font-size: 2rem !important; }
-    html.theme--documenter-dark .is-size-4-fullhd {
-      font-size: 1.5rem !important; }
-    html.theme--documenter-dark .is-size-5-fullhd {
-      font-size: 1.25rem !important; }
-    html.theme--documenter-dark .is-size-6-fullhd {
-      font-size: 1rem !important; }
-    html.theme--documenter-dark .is-size-7-fullhd {
-      font-size: 0.75rem !important; } }
-  html.theme--documenter-dark .has-text-centered {
-    text-align: center !important; }
-  html.theme--documenter-dark .has-text-justified {
-    text-align: justify !important; }
-  html.theme--documenter-dark .has-text-left {
-    text-align: left !important; }
-  html.theme--documenter-dark .has-text-right {
-    text-align: right !important; }
-  @media screen and (max-width: 768px) {
-    html.theme--documenter-dark .has-text-centered-mobile {
-      text-align: center !important; } }
-  @media screen and (min-width: 769px), print {
-    html.theme--documenter-dark .has-text-centered-tablet {
-      text-align: center !important; } }
-  @media screen and (min-width: 769px) and (max-width: 1055px) {
-    html.theme--documenter-dark .has-text-centered-tablet-only {
-      text-align: center !important; } }
-  @media screen and (max-width: 1055px) {
-    html.theme--documenter-dark .has-text-centered-touch {
-      text-align: center !important; } }
-  @media screen and (min-width: 1056px) {
-    html.theme--documenter-dark .has-text-centered-desktop {
-      text-align: center !important; } }
-  @media screen and (min-width: 1056px) and (max-width: 1215px) {
-    html.theme--documenter-dark .has-text-centered-desktop-only {
-      text-align: center !important; } }
-  @media screen and (min-width: 1216px) {
-    html.theme--documenter-dark .has-text-centered-widescreen {
-      text-align: center !important; } }
-  @media screen and (min-width: 1216px) and (max-width: 1407px) {
-    html.theme--documenter-dark .has-text-centered-widescreen-only {
-      text-align: center !important; } }
-  @media screen and (min-width: 1408px) {
-    html.theme--documenter-dark .has-text-centered-fullhd {
-      text-align: center !important; } }
-  @media screen and (max-width: 768px) {
-    html.theme--documenter-dark .has-text-justified-mobile {
-      text-align: justify !important; } }
-  @media screen and (min-width: 769px), print {
-    html.theme--documenter-dark .has-text-justified-tablet {
-      text-align: justify !important; } }
-  @media screen and (min-width: 769px) and (max-width: 1055px) {
-    html.theme--documenter-dark .has-text-justified-tablet-only {
-      text-align: justify !important; } }
-  @media screen and (max-width: 1055px) {
-    html.theme--documenter-dark .has-text-justified-touch {
-      text-align: justify !important; } }
-  @media screen and (min-width: 1056px) {
-    html.theme--documenter-dark .has-text-justified-desktop {
-      text-align: justify !important; } }
-  @media screen and (min-width: 1056px) and (max-width: 1215px) {
-    html.theme--documenter-dark .has-text-justified-desktop-only {
-      text-align: justify !important; } }
-  @media screen and (min-width: 1216px) {
-    html.theme--documenter-dark .has-text-justified-widescreen {
-      text-align: justify !important; } }
-  @media screen and (min-width: 1216px) and (max-width: 1407px) {
-    html.theme--documenter-dark .has-text-justified-widescreen-only {
-      text-align: justify !important; } }
-  @media screen and (min-width: 1408px) {
-    html.theme--documenter-dark .has-text-justified-fullhd {
-      text-align: justify !important; } }
-  @media screen and (max-width: 768px) {
-    html.theme--documenter-dark .has-text-left-mobile {
-      text-align: left !important; } }
-  @media screen and (min-width: 769px), print {
-    html.theme--documenter-dark .has-text-left-tablet {
-      text-align: left !important; } }
-  @media screen and (min-width: 769px) and (max-width: 1055px) {
-    html.theme--documenter-dark .has-text-left-tablet-only {
-      text-align: left !important; } }
-  @media screen and (max-width: 1055px) {
-    html.theme--documenter-dark .has-text-left-touch {
-      text-align: left !important; } }
-  @media screen and (min-width: 1056px) {
-    html.theme--documenter-dark .has-text-left-desktop {
-      text-align: left !important; } }
-  @media screen and (min-width: 1056px) and (max-width: 1215px) {
-    html.theme--documenter-dark .has-text-left-desktop-only {
-      text-align: left !important; } }
-  @media screen and (min-width: 1216px) {
-    html.theme--documenter-dark .has-text-left-widescreen {
-      text-align: left !important; } }
-  @media screen and (min-width: 1216px) and (max-width: 1407px) {
-    html.theme--documenter-dark .has-text-left-widescreen-only {
-      text-align: left !important; } }
-  @media screen and (min-width: 1408px) {
-    html.theme--documenter-dark .has-text-left-fullhd {
-      text-align: left !important; } }
-  @media screen and (max-width: 768px) {
-    html.theme--documenter-dark .has-text-right-mobile {
-      text-align: right !important; } }
-  @media screen and (min-width: 769px), print {
-    html.theme--documenter-dark .has-text-right-tablet {
-      text-align: right !important; } }
-  @media screen and (min-width: 769px) and (max-width: 1055px) {
-    html.theme--documenter-dark .has-text-right-tablet-only {
-      text-align: right !important; } }
-  @media screen and (max-width: 1055px) {
-    html.theme--documenter-dark .has-text-right-touch {
-      text-align: right !important; } }
-  @media screen and (min-width: 1056px) {
-    html.theme--documenter-dark .has-text-right-desktop {
-      text-align: right !important; } }
-  @media screen and (min-width: 1056px) and (max-width: 1215px) {
-    html.theme--documenter-dark .has-text-right-desktop-only {
-      text-align: right !important; } }
-  @media screen and (min-width: 1216px) {
-    html.theme--documenter-dark .has-text-right-widescreen {
-      text-align: right !important; } }
-  @media screen and (min-width: 1216px) and (max-width: 1407px) {
-    html.theme--documenter-dark .has-text-right-widescreen-only {
-      text-align: right !important; } }
-  @media screen and (min-width: 1408px) {
-    html.theme--documenter-dark .has-text-right-fullhd {
-      text-align: right !important; } }
-  html.theme--documenter-dark .is-capitalized {
-    text-transform: capitalize !important; }
-  html.theme--documenter-dark .is-lowercase {
-    text-transform: lowercase !important; }
-  html.theme--documenter-dark .is-uppercase {
-    text-transform: uppercase !important; }
-  html.theme--documenter-dark .is-italic {
-    font-style: italic !important; }
-  html.theme--documenter-dark .has-text-white {
-    color: white !important; }
-  html.theme--documenter-dark a.has-text-white:hover, html.theme--documenter-dark a.has-text-white:focus {
-    color: #e6e6e6 !important; }
-  html.theme--documenter-dark .has-background-white {
-    background-color: white !important; }
-  html.theme--documenter-dark .has-text-black {
-    color: #0a0a0a !important; }
-  html.theme--documenter-dark a.has-text-black:hover, html.theme--documenter-dark a.has-text-black:focus {
-    color: black !important; }
-  html.theme--documenter-dark .has-background-black {
-    background-color: #0a0a0a !important; }
-  html.theme--documenter-dark .has-text-light {
-    color: whitesmoke !important; }
-  html.theme--documenter-dark a.has-text-light:hover, html.theme--documenter-dark a.has-text-light:focus {
-    color: #dbdbdb !important; }
-  html.theme--documenter-dark .has-background-light {
-    background-color: whitesmoke !important; }
-  html.theme--documenter-dark .has-text-dark {
-    color: #363636 !important; }
-  html.theme--documenter-dark a.has-text-dark:hover, html.theme--documenter-dark a.has-text-dark:focus {
-    color: #1c1c1c !important; }
-  html.theme--documenter-dark .has-background-dark {
-    background-color: #363636 !important; }
-  html.theme--documenter-dark .has-text-primary {
-    color: #4eb5de !important; }
-  html.theme--documenter-dark a.has-text-primary:hover, html.theme--documenter-dark a.has-text-primary:focus {
-    color: #27a1d2 !important; }
-  html.theme--documenter-dark .has-background-primary {
-    background-color: #4eb5de !important; }
-  html.theme--documenter-dark .has-text-link {
-    color: #2e63b8 !important; }
-  html.theme--documenter-dark a.has-text-link:hover, html.theme--documenter-dark a.has-text-link:focus {
-    color: #244d8f !important; }
-  html.theme--documenter-dark .has-background-link {
-    background-color: #2e63b8 !important; }
-  html.theme--documenter-dark .has-text-info {
-    color: #209cee !important; }
-  html.theme--documenter-dark a.has-text-info:hover, html.theme--documenter-dark a.has-text-info:focus {
-    color: #0f81cc !important; }
-  html.theme--documenter-dark .has-background-info {
-    background-color: #209cee !important; }
-  html.theme--documenter-dark .has-text-success {
-    color: #22c35b !important; }
-  html.theme--documenter-dark a.has-text-success:hover, html.theme--documenter-dark a.has-text-success:focus {
-    color: #1a9847 !important; }
-  html.theme--documenter-dark .has-background-success {
-    background-color: #22c35b !important; }
-  html.theme--documenter-dark .has-text-warning {
-    color: #ffdd57 !important; }
-  html.theme--documenter-dark a.has-text-warning:hover, html.theme--documenter-dark a.has-text-warning:focus {
-    color: #ffd324 !important; }
-  html.theme--documenter-dark .has-background-warning {
-    background-color: #ffdd57 !important; }
-  html.theme--documenter-dark .has-text-danger {
-    color: #da0b00 !important; }
-  html.theme--documenter-dark a.has-text-danger:hover, html.theme--documenter-dark a.has-text-danger:focus {
-    color: #a70800 !important; }
-  html.theme--documenter-dark .has-background-danger {
-    background-color: #da0b00 !important; }
-  html.theme--documenter-dark .has-text-black-bis {
-    color: #121212 !important; }
-  html.theme--documenter-dark .has-background-black-bis {
-    background-color: #121212 !important; }
-  html.theme--documenter-dark .has-text-black-ter {
-    color: #242424 !important; }
-  html.theme--documenter-dark .has-background-black-ter {
-    background-color: #242424 !important; }
-  html.theme--documenter-dark .has-text-grey-darker {
-    color: #363636 !important; }
-  html.theme--documenter-dark .has-background-grey-darker {
-    background-color: #363636 !important; }
-  html.theme--documenter-dark .has-text-grey-dark {
-    color: #4a4a4a !important; }
-  html.theme--documenter-dark .has-background-grey-dark {
-    background-color: #4a4a4a !important; }
-  html.theme--documenter-dark .has-text-grey {
-    color: #7a7a7a !important; }
-  html.theme--documenter-dark .has-background-grey {
-    background-color: #7a7a7a !important; }
-  html.theme--documenter-dark .has-text-grey-light {
-    color: #b5b5b5 !important; }
-  html.theme--documenter-dark .has-background-grey-light {
-    background-color: #b5b5b5 !important; }
-  html.theme--documenter-dark .has-text-grey-lighter {
-    color: #dbdbdb !important; }
-  html.theme--documenter-dark .has-background-grey-lighter {
-    background-color: #dbdbdb !important; }
-  html.theme--documenter-dark .has-text-white-ter {
-    color: whitesmoke !important; }
-  html.theme--documenter-dark .has-background-white-ter {
-    background-color: whitesmoke !important; }
-  html.theme--documenter-dark .has-text-white-bis {
-    color: #fafafa !important; }
-  html.theme--documenter-dark .has-background-white-bis {
-    background-color: #fafafa !important; }
-  html.theme--documenter-dark .has-text-weight-light {
-    font-weight: 300 !important; }
-  html.theme--documenter-dark .has-text-weight-normal {
-    font-weight: 400 !important; }
-  html.theme--documenter-dark .has-text-weight-medium {
-    font-weight: 500 !important; }
-  html.theme--documenter-dark .has-text-weight-semibold {
-    font-weight: 600 !important; }
-  html.theme--documenter-dark .has-text-weight-bold {
-    font-weight: 700 !important; }
-  html.theme--documenter-dark .is-family-primary {
-    font-family: "Montserrat", sans-serif !important; }
-  html.theme--documenter-dark .is-family-secondary {
-    font-family: "Montserrat", sans-serif !important; }
-  html.theme--documenter-dark .is-family-sans-serif {
-    font-family: "Montserrat", sans-serif !important; }
-  html.theme--documenter-dark .is-family-monospace {
-    font-family: "Source Code Pro", monospace !important; }
-  html.theme--documenter-dark .is-family-code {
-    font-family: "Source Code Pro", monospace !important; }
-  html.theme--documenter-dark .is-block {
-    display: block !important; }
-  @media screen and (max-width: 768px) {
-    html.theme--documenter-dark .is-block-mobile {
-      display: block !important; } }
-  @media screen and (min-width: 769px), print {
-    html.theme--documenter-dark .is-block-tablet {
-      display: block !important; } }
-  @media screen and (min-width: 769px) and (max-width: 1055px) {
-    html.theme--documenter-dark .is-block-tablet-only {
-      display: block !important; } }
-  @media screen and (max-width: 1055px) {
-    html.theme--documenter-dark .is-block-touch {
-      display: block !important; } }
-  @media screen and (min-width: 1056px) {
-    html.theme--documenter-dark .is-block-desktop {
-      display: block !important; } }
-  @media screen and (min-width: 1056px) and (max-width: 1215px) {
-    html.theme--documenter-dark .is-block-desktop-only {
-      display: block !important; } }
-  @media screen and (min-width: 1216px) {
-    html.theme--documenter-dark .is-block-widescreen {
-      display: block !important; } }
-  @media screen and (min-width: 1216px) and (max-width: 1407px) {
-    html.theme--documenter-dark .is-block-widescreen-only {
-      display: block !important; } }
-  @media screen and (min-width: 1408px) {
-    html.theme--documenter-dark .is-block-fullhd {
-      display: block !important; } }
-  html.theme--documenter-dark .is-flex {
-    display: flex !important; }
-  @media screen and (max-width: 768px) {
-    html.theme--documenter-dark .is-flex-mobile {
-      display: flex !important; } }
-  @media screen and (min-width: 769px), print {
-    html.theme--documenter-dark .is-flex-tablet {
-      display: flex !important; } }
-  @media screen and (min-width: 769px) and (max-width: 1055px) {
-    html.theme--documenter-dark .is-flex-tablet-only {
-      display: flex !important; } }
-  @media screen and (max-width: 1055px) {
-    html.theme--documenter-dark .is-flex-touch {
-      display: flex !important; } }
-  @media screen and (min-width: 1056px) {
-    html.theme--documenter-dark .is-flex-desktop {
-      display: flex !important; } }
-  @media screen and (min-width: 1056px) and (max-width: 1215px) {
-    html.theme--documenter-dark .is-flex-desktop-only {
-      display: flex !important; } }
-  @media screen and (min-width: 1216px) {
-    html.theme--documenter-dark .is-flex-widescreen {
-      display: flex !important; } }
-  @media screen and (min-width: 1216px) and (max-width: 1407px) {
-    html.theme--documenter-dark .is-flex-widescreen-only {
-      display: flex !important; } }
-  @media screen and (min-width: 1408px) {
-    html.theme--documenter-dark .is-flex-fullhd {
-      display: flex !important; } }
-  html.theme--documenter-dark .is-inline {
-    display: inline !important; }
-  @media screen and (max-width: 768px) {
-    html.theme--documenter-dark .is-inline-mobile {
-      display: inline !important; } }
-  @media screen and (min-width: 769px), print {
-    html.theme--documenter-dark .is-inline-tablet {
-      display: inline !important; } }
-  @media screen and (min-width: 769px) and (max-width: 1055px) {
-    html.theme--documenter-dark .is-inline-tablet-only {
-      display: inline !important; } }
-  @media screen and (max-width: 1055px) {
-    html.theme--documenter-dark .is-inline-touch {
-      display: inline !important; } }
-  @media screen and (min-width: 1056px) {
-    html.theme--documenter-dark .is-inline-desktop {
-      display: inline !important; } }
-  @media screen and (min-width: 1056px) and (max-width: 1215px) {
-    html.theme--documenter-dark .is-inline-desktop-only {
-      display: inline !important; } }
-  @media screen and (min-width: 1216px) {
-    html.theme--documenter-dark .is-inline-widescreen {
-      display: inline !important; } }
-  @media screen and (min-width: 1216px) and (max-width: 1407px) {
-    html.theme--documenter-dark .is-inline-widescreen-only {
-      display: inline !important; } }
-  @media screen and (min-width: 1408px) {
-    html.theme--documenter-dark .is-inline-fullhd {
-      display: inline !important; } }
-  html.theme--documenter-dark .is-inline-block {
-    display: inline-block !important; }
-  @media screen and (max-width: 768px) {
-    html.theme--documenter-dark .is-inline-block-mobile {
-      display: inline-block !important; } }
-  @media screen and (min-width: 769px), print {
-    html.theme--documenter-dark .is-inline-block-tablet {
-      display: inline-block !important; } }
-  @media screen and (min-width: 769px) and (max-width: 1055px) {
-    html.theme--documenter-dark .is-inline-block-tablet-only {
-      display: inline-block !important; } }
-  @media screen and (max-width: 1055px) {
-    html.theme--documenter-dark .is-inline-block-touch {
-      display: inline-block !important; } }
-  @media screen and (min-width: 1056px) {
-    html.theme--documenter-dark .is-inline-block-desktop {
-      display: inline-block !important; } }
-  @media screen and (min-width: 1056px) and (max-width: 1215px) {
-    html.theme--documenter-dark .is-inline-block-desktop-only {
-      display: inline-block !important; } }
-  @media screen and (min-width: 1216px) {
-    html.theme--documenter-dark .is-inline-block-widescreen {
-      display: inline-block !important; } }
-  @media screen and (min-width: 1216px) and (max-width: 1407px) {
-    html.theme--documenter-dark .is-inline-block-widescreen-only {
-      display: inline-block !important; } }
-  @media screen and (min-width: 1408px) {
-    html.theme--documenter-dark .is-inline-block-fullhd {
-      display: inline-block !important; } }
-  html.theme--documenter-dark .is-inline-flex {
-    display: inline-flex !important; }
-  @media screen and (max-width: 768px) {
-    html.theme--documenter-dark .is-inline-flex-mobile {
-      display: inline-flex !important; } }
-  @media screen and (min-width: 769px), print {
-    html.theme--documenter-dark .is-inline-flex-tablet {
-      display: inline-flex !important; } }
-  @media screen and (min-width: 769px) and (max-width: 1055px) {
-    html.theme--documenter-dark .is-inline-flex-tablet-only {
-      display: inline-flex !important; } }
-  @media screen and (max-width: 1055px) {
-    html.theme--documenter-dark .is-inline-flex-touch {
-      display: inline-flex !important; } }
-  @media screen and (min-width: 1056px) {
-    html.theme--documenter-dark .is-inline-flex-desktop {
-      display: inline-flex !important; } }
-  @media screen and (min-width: 1056px) and (max-width: 1215px) {
-    html.theme--documenter-dark .is-inline-flex-desktop-only {
-      display: inline-flex !important; } }
-  @media screen and (min-width: 1216px) {
-    html.theme--documenter-dark .is-inline-flex-widescreen {
-      display: inline-flex !important; } }
-  @media screen and (min-width: 1216px) and (max-width: 1407px) {
-    html.theme--documenter-dark .is-inline-flex-widescreen-only {
-      display: inline-flex !important; } }
-  @media screen and (min-width: 1408px) {
-    html.theme--documenter-dark .is-inline-flex-fullhd {
-      display: inline-flex !important; } }
-  html.theme--documenter-dark .is-hidden {
-    display: none !important; }
-  html.theme--documenter-dark .is-sr-only {
-    border: none !important;
-    clip: rect(0, 0, 0, 0) !important;
-    height: 0.01em !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-    position: absolute !important;
-    white-space: nowrap !important;
-    width: 0.01em !important; }
-  @media screen and (max-width: 768px) {
-    html.theme--documenter-dark .is-hidden-mobile {
-      display: none !important; } }
-  @media screen and (min-width: 769px), print {
-    html.theme--documenter-dark .is-hidden-tablet {
-      display: none !important; } }
-  @media screen and (min-width: 769px) and (max-width: 1055px) {
-    html.theme--documenter-dark .is-hidden-tablet-only {
-      display: none !important; } }
-  @media screen and (max-width: 1055px) {
-    html.theme--documenter-dark .is-hidden-touch {
-      display: none !important; } }
-  @media screen and (min-width: 1056px) {
-    html.theme--documenter-dark .is-hidden-desktop {
-      display: none !important; } }
-  @media screen and (min-width: 1056px) and (max-width: 1215px) {
-    html.theme--documenter-dark .is-hidden-desktop-only {
-      display: none !important; } }
-  @media screen and (min-width: 1216px) {
-    html.theme--documenter-dark .is-hidden-widescreen {
-      display: none !important; } }
-  @media screen and (min-width: 1216px) and (max-width: 1407px) {
-    html.theme--documenter-dark .is-hidden-widescreen-only {
-      display: none !important; } }
-  @media screen and (min-width: 1408px) {
-    html.theme--documenter-dark .is-hidden-fullhd {
-      display: none !important; } }
-  html.theme--documenter-dark .is-invisible {
-    visibility: hidden !important; }
-  @media screen and (max-width: 768px) {
-    html.theme--documenter-dark .is-invisible-mobile {
-      visibility: hidden !important; } }
-  @media screen and (min-width: 769px), print {
-    html.theme--documenter-dark .is-invisible-tablet {
-      visibility: hidden !important; } }
-  @media screen and (min-width: 769px) and (max-width: 1055px) {
-    html.theme--documenter-dark .is-invisible-tablet-only {
-      visibility: hidden !important; } }
-  @media screen and (max-width: 1055px) {
-    html.theme--documenter-dark .is-invisible-touch {
-      visibility: hidden !important; } }
-  @media screen and (min-width: 1056px) {
-    html.theme--documenter-dark .is-invisible-desktop {
-      visibility: hidden !important; } }
-  @media screen and (min-width: 1056px) and (max-width: 1215px) {
-    html.theme--documenter-dark .is-invisible-desktop-only {
-      visibility: hidden !important; } }
-  @media screen and (min-width: 1216px) {
-    html.theme--documenter-dark .is-invisible-widescreen {
-      visibility: hidden !important; } }
-  @media screen and (min-width: 1216px) and (max-width: 1407px) {
-    html.theme--documenter-dark .is-invisible-widescreen-only {
-      visibility: hidden !important; } }
-  @media screen and (min-width: 1408px) {
-    html.theme--documenter-dark .is-invisible-fullhd {
-      visibility: hidden !important; } }
-  html.theme--documenter-dark .is-marginless {
-    margin: 0 !important; }
-  html.theme--documenter-dark .is-paddingless {
-    padding: 0 !important; }
-  html.theme--documenter-dark .is-radiusless {
-    border-radius: 0 !important; }
-  html.theme--documenter-dark .is-shadowless {
-    box-shadow: none !important; }
-  html.theme--documenter-dark .is-relative {
-    position: relative !important; }
   html.theme--documenter-dark .box {
     background-color: white;
     border-radius: 6px;
@@ -6714,7 +6928,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
       content: "\f0c1"; }
   html.theme--documenter-dark h1:hover .docs-heading-anchor-permalink, html.theme--documenter-dark h2:hover .docs-heading-anchor-permalink, html.theme--documenter-dark h3:hover .docs-heading-anchor-permalink, html.theme--documenter-dark h4:hover .docs-heading-anchor-permalink, html.theme--documenter-dark h5:hover .docs-heading-anchor-permalink, html.theme--documenter-dark h6:hover .docs-heading-anchor-permalink {
     visibility: visible; }
-  html.theme--documenter-dark .docs-dark-only {
+  html.theme--documenter-dark .docs-light-only {
     display: none !important; }
   html.theme--documenter-dark .admonition {
     background-color: #b5b5b5;
@@ -6876,7 +7090,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
         -webkit-transition-duration: 0.3s;
         /* Safari */ }
         html.theme--documenter-dark #documenter .docs-main header.docs-navbar.headroom--not-top {
-          box-shadow: 0.2rem 0rem 0.4rem #bbb;
+          box-shadow: 0.5em 0rem 1em #000;
           transition-duration: 0.7s;
           -webkit-transition-duration: 0.7s;
           /* Safari */ }
@@ -6923,7 +7137,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
     /* Setting up a nicer theme style for the scrollbar */ }
     html.theme--documenter-dark #documenter .docs-sidebar.visible {
       left: 0;
-      box-shadow: 0.4rem 0rem 0.8rem #bbb; }
+      box-shadow: 1em 0rem 2em #000; }
       @media screen and (min-width: 1056px) {
         html.theme--documenter-dark #documenter .docs-sidebar.visible {
           box-shadow: none; } }
@@ -7065,68 +7279,22 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
       margin-left: 2rem; }
     html.theme--documenter-dark #documenter .docs-main #documenter-search-results .docs-highlight {
       background-color: yellow; }
-  html.theme--documenter-dark .hljs {
-    display: block;
+  html.theme--documenter-dark {
+    background-color: #0799eb;
+    font-size: 16px;
+    min-width: 300px;
     overflow-x: auto;
-    padding: 0.5em;
-    background: #F0F0F0; }
-  html.theme--documenter-dark .hljs,
-  html.theme--documenter-dark .hljs-subst {
-    color: #444; }
-  html.theme--documenter-dark .hljs-comment {
-    color: #888888; }
-  html.theme--documenter-dark .hljs-keyword,
-  html.theme--documenter-dark .hljs-attribute,
-  html.theme--documenter-dark .hljs-selector-tag,
-  html.theme--documenter-dark .hljs-meta-keyword,
-  html.theme--documenter-dark .hljs-doctag,
-  html.theme--documenter-dark .hljs-name {
-    font-weight: bold; }
-  html.theme--documenter-dark .hljs-type,
-  html.theme--documenter-dark .hljs-string,
-  html.theme--documenter-dark .hljs-number,
-  html.theme--documenter-dark .hljs-selector-id,
-  html.theme--documenter-dark .hljs-selector-class,
-  html.theme--documenter-dark .hljs-quote,
-  html.theme--documenter-dark .hljs-template-tag,
-  html.theme--documenter-dark .hljs-deletion {
-    color: #880000; }
-  html.theme--documenter-dark .hljs-title,
-  html.theme--documenter-dark .hljs-section {
-    color: #880000;
-    font-weight: bold; }
-  html.theme--documenter-dark .hljs-regexp,
-  html.theme--documenter-dark .hljs-symbol,
-  html.theme--documenter-dark .hljs-variable,
-  html.theme--documenter-dark .hljs-template-variable,
-  html.theme--documenter-dark .hljs-link,
-  html.theme--documenter-dark .hljs-selector-attr,
-  html.theme--documenter-dark .hljs-selector-pseudo {
-    color: #BC6060; }
-  html.theme--documenter-dark .hljs-literal {
-    color: #78A960; }
-  html.theme--documenter-dark .hljs-built_in,
-  html.theme--documenter-dark .hljs-bullet,
-  html.theme--documenter-dark .hljs-code,
-  html.theme--documenter-dark .hljs-addition {
-    color: #397300; }
-  html.theme--documenter-dark .hljs-meta {
-    color: #1f7199; }
-  html.theme--documenter-dark .hljs-meta-string {
-    color: #4d99bf; }
-  html.theme--documenter-dark .hljs-emphasis {
-    font-style: italic; }
-  html.theme--documenter-dark .hljs-strong {
-    font-weight: bold; }
-
-#documenter .docs-sidebar {
-  border-right: none;
-  box-shadow: 0.6em 0rem 1em #000; }
-  #documenter .docs-sidebar form.docs-search > input {
-    color: #fff;
-    background-color: darken-color(#644e99, 1);
-    border-color: darken-color(#644e99, 2);
-    margin-top: 1.0rem;
-    margin-bottom: 1.0rem; }
-    #documenter .docs-sidebar form.docs-search > input::placeholder {
-      color: #fff; }
+    overflow-y: scroll;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%; }
+  html.theme--documenter-dark #documenter .docs-sidebar {
+    border-right: none;
+    box-shadow: 0.6em 0rem 1em #000; }
+    html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input {
+      color: #fff;
+      background-color: #52407e;
+      border-color: #413263;
+      margin-top: 1.0rem;
+      margin-bottom: 1.0rem; }
+      html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input::placeholder {
+        color: #fff; }
