@@ -303,14 +303,14 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   html.theme--documenter-dark input,
   html.theme--documenter-dark select,
   html.theme--documenter-dark textarea {
-    font-family: monospace; }
+    font-family: "Montserrat", sans-serif; }
   html.theme--documenter-dark code,
   html.theme--documenter-dark pre {
     -moz-osx-font-smoothing: auto;
     -webkit-font-smoothing: auto;
-    font-family: "Roboto Mono", "SFMono-Regular", "Menlo", "Consolas", "Liberation Mono", "DejaVu Sans Mono", monospace; }
+    font-family: "Source Code Pro", monospace; }
   html.theme--documenter-dark body {
-    color: #222222;
+    color: #59aa1a;
     font-size: 1em;
     font-weight: 400;
     line-height: 1.5; }
@@ -346,14 +346,14 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
     font-style: inherit;
     font-weight: inherit; }
   html.theme--documenter-dark strong {
-    color: #222222;
+    color: #3f498e;
     font-weight: 700; }
   html.theme--documenter-dark fieldset {
     border: none; }
   html.theme--documenter-dark pre {
     -webkit-overflow-scrolling: touch;
     background-color: whitesmoke;
-    color: #222222;
+    color: #59aa1a;
     font-size: 0.875em;
     overflow-x: auto;
     padding: 1.25rem 1.5rem;
@@ -371,7 +371,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
     html.theme--documenter-dark table th:not([align]) {
       text-align: left; }
   html.theme--documenter-dark table th {
-    color: #222222; }
+    color: #3f498e; }
   html.theme--documenter-dark .is-clearfix::after {
     clear: both;
     content: " ";
@@ -717,15 +717,15 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   html.theme--documenter-dark .has-text-weight-bold {
     font-weight: 700 !important; }
   html.theme--documenter-dark .is-family-primary {
-    font-family: monospace !important; }
+    font-family: "Montserrat", sans-serif !important; }
   html.theme--documenter-dark .is-family-secondary {
-    font-family: monospace !important; }
+    font-family: "Montserrat", sans-serif !important; }
   html.theme--documenter-dark .is-family-sans-serif {
-    font-family: monospace !important; }
+    font-family: "Montserrat", sans-serif !important; }
   html.theme--documenter-dark .is-family-monospace {
-    font-family: "Roboto Mono", "SFMono-Regular", "Menlo", "Consolas", "Liberation Mono", "DejaVu Sans Mono", monospace !important; }
+    font-family: "Source Code Pro", monospace !important; }
   html.theme--documenter-dark .is-family-code {
-    font-family: "Roboto Mono", "SFMono-Regular", "Menlo", "Consolas", "Liberation Mono", "DejaVu Sans Mono", monospace !important; }
+    font-family: "Source Code Pro", monospace !important; }
   html.theme--documenter-dark .is-block {
     display: block !important; }
   @media screen and (max-width: 768px) {
@@ -952,7 +952,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    color: #222222;
+    color: #59aa1a;
     display: block;
     padding: 1.25rem; }
   html.theme--documenter-dark a.box:hover, html.theme--documenter-dark a.box:focus {
@@ -1000,14 +1000,14 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
     html.theme--documenter-dark .button.is-text {
       background-color: transparent;
       border-color: transparent;
-      color: #222222;
+      color: #59aa1a;
       text-decoration: underline; }
       html.theme--documenter-dark .button.is-text:hover, html.theme--documenter-dark .button.is-text.is-hovered, html.theme--documenter-dark .button.is-text:focus, html.theme--documenter-dark .button.is-text.is-focused {
         background-color: whitesmoke;
-        color: #222222; }
+        color: #3f498e; }
       html.theme--documenter-dark .button.is-text:active, html.theme--documenter-dark .button.is-text.is-active {
         background-color: #e8e8e8;
-        color: #222222; }
+        color: #3f498e; }
       html.theme--documenter-dark .button.is-text[disabled],
       fieldset[disabled] html.theme--documenter-dark .button.is-text {
         background-color: transparent;
@@ -1825,7 +1825,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   html.theme--documenter-dark .content h4,
   html.theme--documenter-dark .content h5,
   html.theme--documenter-dark .content h6 {
-    color: #222222;
+    color: #3f498e;
     font-weight: 600;
     line-height: 1.125; }
   html.theme--documenter-dark .content h1 {
@@ -1911,17 +1911,17 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
       padding: 0.5em 0.75em;
       vertical-align: top; }
     html.theme--documenter-dark .content table th {
-      color: #222222; }
+      color: #3f498e; }
       html.theme--documenter-dark .content table th:not([align]) {
         text-align: left; }
     html.theme--documenter-dark .content table thead td,
     html.theme--documenter-dark .content table thead th {
       border-width: 0 0 2px;
-      color: #222222; }
+      color: #3f498e; }
     html.theme--documenter-dark .content table tfoot td,
     html.theme--documenter-dark .content table tfoot th {
       border-width: 2px 0 0;
-      color: #222222; }
+      color: #3f498e; }
     html.theme--documenter-dark .content table tbody tr:last-child td,
     html.theme--documenter-dark .content table tbody tr:last-child th {
       border-bottom-width: 0; }
@@ -2109,11 +2109,11 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
     html.theme--documenter-dark .progress::-webkit-progress-bar {
       background-color: #dbdbdb; }
     html.theme--documenter-dark .progress::-webkit-progress-value {
-      background-color: #222222; }
+      background-color: #59aa1a; }
     html.theme--documenter-dark .progress::-moz-progress-bar {
-      background-color: #222222; }
+      background-color: #59aa1a; }
     html.theme--documenter-dark .progress::-ms-fill {
-      background-color: #222222;
+      background-color: #59aa1a;
       border: none; }
     html.theme--documenter-dark .progress.is-white::-webkit-progress-value {
       background-color: white; }
@@ -2201,7 +2201,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
       animation-name: moveIndeterminate;
       animation-timing-function: linear;
       background-color: #dbdbdb;
-      background-image: linear-gradient(to right, #222222 30%, #dbdbdb 30%);
+      background-image: linear-gradient(to right, #59aa1a 30%, #dbdbdb 30%);
       background-position: top left;
       background-repeat: no-repeat;
       background-size: 150% 150%; }
@@ -2294,7 +2294,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
         html.theme--documenter-dark .table th.is-selected strong {
           color: currentColor; }
     html.theme--documenter-dark .table th {
-      color: #222222; }
+      color: #3f498e; }
       html.theme--documenter-dark .table th:not([align]) {
         text-align: left; }
     html.theme--documenter-dark .table tr.is-selected {
@@ -2312,13 +2312,13 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
       html.theme--documenter-dark .table thead td,
       html.theme--documenter-dark .table thead th {
         border-width: 0 0 2px;
-        color: #222222; }
+        color: #3f498e; }
     html.theme--documenter-dark .table tfoot {
       background-color: transparent; }
       html.theme--documenter-dark .table tfoot td,
       html.theme--documenter-dark .table tfoot th {
         border-width: 2px 0 0;
-        color: #222222; }
+        color: #3f498e; }
     html.theme--documenter-dark .table tbody {
       background-color: transparent; }
       html.theme--documenter-dark .table tbody tr:last-child td,
@@ -2389,7 +2389,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
     align-items: center;
     background-color: whitesmoke;
     border-radius: 4px;
-    color: #222222;
+    color: #59aa1a;
     display: inline-flex;
     font-size: 0.75rem;
     height: 2em;
@@ -2585,9 +2585,9 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
     html.theme--documenter-dark .input:-ms-input-placeholder, html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input:-ms-input-placeholder, html.theme--documenter-dark .textarea:-ms-input-placeholder, html.theme--documenter-dark .select select:-ms-input-placeholder {
       color: rgba(54, 54, 54, 0.3); }
     html.theme--documenter-dark .input:hover, html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input:hover, html.theme--documenter-dark .textarea:hover, html.theme--documenter-dark .select select:hover, html.theme--documenter-dark .is-hovered.input, html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input.is-hovered, html.theme--documenter-dark .is-hovered.textarea, html.theme--documenter-dark .select select.is-hovered {
-      border-color: #b5b5b5; }
+      border-color: #178b8f; }
     html.theme--documenter-dark .input:focus, html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input:focus, html.theme--documenter-dark .textarea:focus, html.theme--documenter-dark .select select:focus, html.theme--documenter-dark .is-focused.input, html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input.is-focused, html.theme--documenter-dark .is-focused.textarea, html.theme--documenter-dark .select select.is-focused, html.theme--documenter-dark .input:active, html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input:active, html.theme--documenter-dark .textarea:active, html.theme--documenter-dark .select select:active, html.theme--documenter-dark .is-active.input, html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input.is-active, html.theme--documenter-dark .is-active.textarea, html.theme--documenter-dark .select select.is-active {
-      border-color: #2e63b8;
+      border-color: #fff;
       box-shadow: 0 0 0 0.125em rgba(46, 99, 184, 0.25); }
     html.theme--documenter-dark .input[disabled], html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input[disabled], html.theme--documenter-dark .textarea[disabled], html.theme--documenter-dark .select select[disabled],
     fieldset[disabled] html.theme--documenter-dark .input,
@@ -3394,7 +3394,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
       html.theme--documenter-dark .breadcrumb li:first-child a {
         padding-left: 0; }
       html.theme--documenter-dark .breadcrumb li.is-active a {
-        color: #222222;
+        color: #3f498e;
         cursor: default;
         pointer-events: none; }
       html.theme--documenter-dark .breadcrumb li + li::before {
@@ -3433,7 +3433,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   html.theme--documenter-dark .card {
     background-color: white;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    color: #222222;
+    color: #59aa1a;
     max-width: 100%;
     position: relative; }
   html.theme--documenter-dark .card-header {
@@ -3443,7 +3443,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
     display: flex; }
   html.theme--documenter-dark .card-header-title {
     align-items: center;
-    color: #222222;
+    color: #3f498e;
     display: flex;
     flex-grow: 1;
     font-weight: 700;
@@ -3607,7 +3607,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
     display: block;
     padding: 0.5em 1em; }
     html.theme--documenter-dark .list-item:not(a) {
-      color: #222222; }
+      color: #59aa1a; }
     html.theme--documenter-dark .list-item:first-child {
       border-top-left-radius: 4px;
       border-top-right-radius: 4px; }
@@ -3675,12 +3675,12 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
     line-height: 1.25; }
     html.theme--documenter-dark .menu-list a {
       border-radius: 2px;
-      color: #222222;
+      color: #59aa1a;
       display: block;
       padding: 0.5em 0.75em; }
       html.theme--documenter-dark .menu-list a:hover {
         background-color: whitesmoke;
-        color: #222222; }
+        color: #3f498e; }
       html.theme--documenter-dark .menu-list a.is-active {
         background-color: #2e63b8;
         color: #fff; }
@@ -3794,7 +3794,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
         color: #9b0c04; }
   html.theme--documenter-dark .message-header {
     align-items: center;
-    background-color: #222222;
+    background-color: #59aa1a;
     border-radius: 4px 4px 0 0;
     color: #fff;
     display: flex;
@@ -3816,7 +3816,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
     border-radius: 4px;
     border-style: solid;
     border-width: 0 0 0 4px;
-    color: #222222;
+    color: #59aa1a;
     padding: 1em 1.25em; }
     html.theme--documenter-dark .message-body code,
     html.theme--documenter-dark .message-body pre {
@@ -3875,7 +3875,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
     border-top-left-radius: 6px;
     border-top-right-radius: 6px; }
   html.theme--documenter-dark .modal-card-title {
-    color: #222222;
+    color: #3f498e;
     flex-grow: 1;
     flex-shrink: 0;
     font-size: 1.5rem;
@@ -4832,7 +4832,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   html.theme--documenter-dark .panel-heading {
     background-color: whitesmoke;
     border-radius: 4px 4px 0 0;
-    color: #222222;
+    color: #3f498e;
     font-size: 1.25em;
     font-weight: 300;
     line-height: 1.25;
@@ -4850,12 +4850,12 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
         border-bottom-color: #4a4a4a;
         color: #363636; }
   html.theme--documenter-dark .panel-list a {
-    color: #222222; }
+    color: #59aa1a; }
     html.theme--documenter-dark .panel-list a:hover {
       color: #2e63b8; }
   html.theme--documenter-dark .panel-block {
     align-items: center;
-    color: #222222;
+    color: #3f498e;
     display: flex;
     justify-content: flex-start;
     padding: 0.5em 0.75em; }
@@ -4905,15 +4905,15 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
       border-bottom-color: #dbdbdb;
       border-bottom-style: solid;
       border-bottom-width: 1px;
-      color: #222222;
+      color: #59aa1a;
       display: flex;
       justify-content: center;
       margin-bottom: -1px;
       padding: 0.5em 1em;
       vertical-align: top; }
       html.theme--documenter-dark .tabs a:hover {
-        border-bottom-color: #222222;
-        color: #222222; }
+        border-bottom-color: #3f498e;
+        color: #3f498e; }
     html.theme--documenter-dark .tabs li {
       display: block; }
       html.theme--documenter-dark .tabs li.is-active a {
@@ -6702,7 +6702,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
     background-color: #fafafa;
     padding: 3rem 1.5rem 6rem; }
   html.theme--documenter-dark h1 .docs-heading-anchor, html.theme--documenter-dark h1 .docs-heading-anchor:hover, html.theme--documenter-dark h1 .docs-heading-anchor:visited, html.theme--documenter-dark h2 .docs-heading-anchor, html.theme--documenter-dark h2 .docs-heading-anchor:hover, html.theme--documenter-dark h2 .docs-heading-anchor:visited, html.theme--documenter-dark h3 .docs-heading-anchor, html.theme--documenter-dark h3 .docs-heading-anchor:hover, html.theme--documenter-dark h3 .docs-heading-anchor:visited, html.theme--documenter-dark h4 .docs-heading-anchor, html.theme--documenter-dark h4 .docs-heading-anchor:hover, html.theme--documenter-dark h4 .docs-heading-anchor:visited, html.theme--documenter-dark h5 .docs-heading-anchor, html.theme--documenter-dark h5 .docs-heading-anchor:hover, html.theme--documenter-dark h5 .docs-heading-anchor:visited, html.theme--documenter-dark h6 .docs-heading-anchor, html.theme--documenter-dark h6 .docs-heading-anchor:hover, html.theme--documenter-dark h6 .docs-heading-anchor:visited {
-    color: #222222; }
+    color: #3f498e; }
   html.theme--documenter-dark h1 .docs-heading-anchor-permalink, html.theme--documenter-dark h2 .docs-heading-anchor-permalink, html.theme--documenter-dark h3 .docs-heading-anchor-permalink, html.theme--documenter-dark h4 .docs-heading-anchor-permalink, html.theme--documenter-dark h5 .docs-heading-anchor-permalink, html.theme--documenter-dark h6 .docs-heading-anchor-permalink {
     visibility: hidden;
     vertical-align: middle;
@@ -6747,7 +6747,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
       margin-right: 0.75em;
       content: "\f06a"; }
   html.theme--documenter-dark .admonition-body {
-    color: #222222;
+    color: #59aa1a;
     padding: 1em 1.25em; }
     html.theme--documenter-dark .admonition-body pre {
       background-color: whitesmoke; }
@@ -6797,7 +6797,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   html.theme--documenter-dark .content a code {
     color: #2e63b8; }
   html.theme--documenter-dark .content h1 code, html.theme--documenter-dark .content h2 code, html.theme--documenter-dark .content h3 code, html.theme--documenter-dark .content h4 code, html.theme--documenter-dark .content h5 code, html.theme--documenter-dark .content h6 code {
-    color: #222222; }
+    color: #3f498e; }
   html.theme--documenter-dark .content table {
     display: block;
     width: initial;
@@ -6809,7 +6809,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
     cursor: default;
     pointer-events: none; }
     html.theme--documenter-dark .breadcrumb a.is-disabled, html.theme--documenter-dark .breadcrumb a.is-disabled:hover {
-      color: #222222; }
+      color: #3f498e; }
   html.theme--documenter-dark .hljs {
     background: initial !important;
     padding: initial !important; }
@@ -6908,8 +6908,8 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   html.theme--documenter-dark #documenter .docs-sidebar {
     display: flex;
     flex-direction: column;
-    color: #0a0a0a;
-    background-color: whitesmoke;
+    color: #fff;
+    background-color: #644e99;
     border-right: 1px solid #dbdbdb;
     padding: 0;
     flex: 0 0 18rem;
@@ -6995,21 +6995,21 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
         display: block;
         padding: 0.5rem 0.5rem; }
         html.theme--documenter-dark #documenter .docs-sidebar ul.docs-menu .tocitem, html.theme--documenter-dark #documenter .docs-sidebar ul.docs-menu .tocitem:hover {
-          color: #0a0a0a;
-          background: whitesmoke; }
+          color: #fff;
+          background: #644e99; }
       html.theme--documenter-dark #documenter .docs-sidebar ul.docs-menu a.tocitem:hover, html.theme--documenter-dark #documenter .docs-sidebar ul.docs-menu label.tocitem:hover {
-        color: #0a0a0a;
-        background-color: #ebebeb; }
+        color: #fff;
+        background-color: darken-color(#644e99, 2); }
       html.theme--documenter-dark #documenter .docs-sidebar ul.docs-menu li.is-active {
         border-top: 1px solid #dbdbdb;
         border-bottom: 1px solid #dbdbdb;
-        background-color: white; }
+        background-color: #fff; }
         html.theme--documenter-dark #documenter .docs-sidebar ul.docs-menu li.is-active .tocitem, html.theme--documenter-dark #documenter .docs-sidebar ul.docs-menu li.is-active .tocitem:hover {
-          background-color: white;
-          color: #0a0a0a; }
+          background-color: #fff;
+          color: #202020; }
         html.theme--documenter-dark #documenter .docs-sidebar ul.docs-menu li.is-active ul.internal .tocitem:hover {
-          background-color: #ebebeb;
-          color: #0a0a0a; }
+          background-color: lighten-color(#644e99, 5);
+          color: #202020; }
       html.theme--documenter-dark #documenter .docs-sidebar ul.docs-menu > li.is-active:first-child {
         border-top: none; }
       html.theme--documenter-dark #documenter .docs-sidebar ul.docs-menu ul.internal {
@@ -7041,9 +7041,9 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
           background: none; }
         html.theme--documenter-dark #documenter .docs-sidebar ul.docs-menu::-webkit-scrollbar-thumb {
           border-radius: 5px 0px 0px 5px;
-          background: #e0e0e0; }
+          background: #52407e; }
         html.theme--documenter-dark #documenter .docs-sidebar ul.docs-menu::-webkit-scrollbar-thumb:hover {
-          background: #cccccc; } }
+          background: #413263; } }
     @media screen and (max-width: 1055px) {
       html.theme--documenter-dark #documenter .docs-sidebar {
         overflow-y: auto;
@@ -7053,9 +7053,9 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
           background: none; }
         html.theme--documenter-dark #documenter .docs-sidebar::-webkit-scrollbar-thumb {
           border-radius: 5px 0px 0px 5px;
-          background: #e0e0e0; }
+          background: #52407e; }
         html.theme--documenter-dark #documenter .docs-sidebar::-webkit-scrollbar-thumb:hover {
-          background: #cccccc; } }
+          background: #413263; } }
   html.theme--documenter-dark #documenter .docs-main #documenter-search-info {
     margin-bottom: 1rem; }
   html.theme--documenter-dark #documenter .docs-main #documenter-search-results {
@@ -7118,3 +7118,15 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
     font-style: italic; }
   html.theme--documenter-dark .hljs-strong {
     font-weight: bold; }
+
+#documenter .docs-sidebar {
+  border-right: none;
+  box-shadow: 0.6em 0rem 1em #000; }
+  #documenter .docs-sidebar form.docs-search > input {
+    color: #fff;
+    background-color: darken-color(#644e99, 1);
+    border-color: darken-color(#644e99, 2);
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem; }
+    #documenter .docs-sidebar form.docs-search > input::placeholder {
+      color: #fff; }
