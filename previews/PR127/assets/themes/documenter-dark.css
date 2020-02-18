@@ -1071,7 +1071,7 @@ html.theme--documenter-dark {
  * The main container is <div> that is identified by id #documenter.
  */ }
   html.theme--documenter-dark html {
-    background-color: #0799eb;
+    background-color: #222024;
     font-size: 16px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -1100,7 +1100,7 @@ html.theme--documenter-dark {
     -webkit-font-smoothing: auto;
     font-family: "Source Code Pro", monospace; }
   html.theme--documenter-dark body {
-    color: #59aa1a;
+    color: #fff;
     font-size: 1em;
     font-weight: 400;
     line-height: 1.5; }
@@ -1136,14 +1136,14 @@ html.theme--documenter-dark {
     font-style: inherit;
     font-weight: inherit; }
   html.theme--documenter-dark strong {
-    color: #3f498e;
+    color: #fff;
     font-weight: 700; }
   html.theme--documenter-dark fieldset {
     border: none; }
   html.theme--documenter-dark pre {
     -webkit-overflow-scrolling: touch;
     background-color: whitesmoke;
-    color: #59aa1a;
+    color: #fff;
     font-size: 0.875em;
     overflow-x: auto;
     padding: 1.25rem 1.5rem;
@@ -1161,12 +1161,12 @@ html.theme--documenter-dark {
     html.theme--documenter-dark table th:not([align]) {
       text-align: left; }
   html.theme--documenter-dark table th {
-    color: #3f498e; }
+    color: #fff; }
   html.theme--documenter-dark .box {
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    color: #59aa1a;
+    color: #fff;
     display: block;
     padding: 1.25rem; }
   html.theme--documenter-dark a.box:hover, html.theme--documenter-dark a.box:focus {
@@ -1214,14 +1214,14 @@ html.theme--documenter-dark {
     html.theme--documenter-dark .button.is-text {
       background-color: transparent;
       border-color: transparent;
-      color: #59aa1a;
+      color: #fff;
       text-decoration: underline; }
       html.theme--documenter-dark .button.is-text:hover, html.theme--documenter-dark .button.is-text.is-hovered, html.theme--documenter-dark .button.is-text:focus, html.theme--documenter-dark .button.is-text.is-focused {
         background-color: whitesmoke;
-        color: #3f498e; }
+        color: #fff; }
       html.theme--documenter-dark .button.is-text:active, html.theme--documenter-dark .button.is-text.is-active {
         background-color: #e8e8e8;
-        color: #3f498e; }
+        color: #fff; }
       html.theme--documenter-dark .button.is-text[disabled],
       fieldset[disabled] html.theme--documenter-dark .button.is-text {
         background-color: transparent;
@@ -2039,7 +2039,7 @@ html.theme--documenter-dark {
   html.theme--documenter-dark .content h4,
   html.theme--documenter-dark .content h5,
   html.theme--documenter-dark .content h6 {
-    color: #3f498e;
+    color: #fff;
     font-weight: 600;
     line-height: 1.125; }
   html.theme--documenter-dark .content h1 {
@@ -2125,17 +2125,17 @@ html.theme--documenter-dark {
       padding: 0.5em 0.75em;
       vertical-align: top; }
     html.theme--documenter-dark .content table th {
-      color: #3f498e; }
+      color: #fff; }
       html.theme--documenter-dark .content table th:not([align]) {
         text-align: left; }
     html.theme--documenter-dark .content table thead td,
     html.theme--documenter-dark .content table thead th {
       border-width: 0 0 2px;
-      color: #3f498e; }
+      color: #fff; }
     html.theme--documenter-dark .content table tfoot td,
     html.theme--documenter-dark .content table tfoot th {
       border-width: 2px 0 0;
-      color: #3f498e; }
+      color: #fff; }
     html.theme--documenter-dark .content table tbody tr:last-child td,
     html.theme--documenter-dark .content table tbody tr:last-child th {
       border-bottom-width: 0; }
@@ -2323,11 +2323,11 @@ html.theme--documenter-dark {
     html.theme--documenter-dark .progress::-webkit-progress-bar {
       background-color: #dbdbdb; }
     html.theme--documenter-dark .progress::-webkit-progress-value {
-      background-color: #59aa1a; }
+      background-color: #fff; }
     html.theme--documenter-dark .progress::-moz-progress-bar {
-      background-color: #59aa1a; }
+      background-color: #fff; }
     html.theme--documenter-dark .progress::-ms-fill {
-      background-color: #59aa1a;
+      background-color: #fff;
       border: none; }
     html.theme--documenter-dark .progress.is-white::-webkit-progress-value {
       background-color: white; }
@@ -2415,7 +2415,7 @@ html.theme--documenter-dark {
       animation-name: moveIndeterminate;
       animation-timing-function: linear;
       background-color: #dbdbdb;
-      background-image: linear-gradient(to right, #59aa1a 30%, #dbdbdb 30%);
+      background-image: linear-gradient(to right, #fff 30%, #dbdbdb 30%);
       background-position: top left;
       background-repeat: no-repeat;
       background-size: 150% 150%; }
@@ -2508,7 +2508,7 @@ html.theme--documenter-dark {
         html.theme--documenter-dark .table th.is-selected strong {
           color: currentColor; }
     html.theme--documenter-dark .table th {
-      color: #3f498e; }
+      color: #fff; }
       html.theme--documenter-dark .table th:not([align]) {
         text-align: left; }
     html.theme--documenter-dark .table tr.is-selected {
@@ -2526,13 +2526,13 @@ html.theme--documenter-dark {
       html.theme--documenter-dark .table thead td,
       html.theme--documenter-dark .table thead th {
         border-width: 0 0 2px;
-        color: #3f498e; }
+        color: #fff; }
     html.theme--documenter-dark .table tfoot {
       background-color: transparent; }
       html.theme--documenter-dark .table tfoot td,
       html.theme--documenter-dark .table tfoot th {
         border-width: 2px 0 0;
-        color: #3f498e; }
+        color: #fff; }
     html.theme--documenter-dark .table tbody {
       background-color: transparent; }
       html.theme--documenter-dark .table tbody tr:last-child td,
@@ -2603,7 +2603,7 @@ html.theme--documenter-dark {
     align-items: center;
     background-color: whitesmoke;
     border-radius: 4px;
-    color: #59aa1a;
+    color: #fff;
     display: inline-flex;
     font-size: 0.75rem;
     height: 2em;
@@ -3608,7 +3608,7 @@ html.theme--documenter-dark {
       html.theme--documenter-dark .breadcrumb li:first-child a {
         padding-left: 0; }
       html.theme--documenter-dark .breadcrumb li.is-active a {
-        color: #3f498e;
+        color: #fff;
         cursor: default;
         pointer-events: none; }
       html.theme--documenter-dark .breadcrumb li + li::before {
@@ -3647,7 +3647,7 @@ html.theme--documenter-dark {
   html.theme--documenter-dark .card {
     background-color: white;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    color: #59aa1a;
+    color: #fff;
     max-width: 100%;
     position: relative; }
   html.theme--documenter-dark .card-header {
@@ -3657,7 +3657,7 @@ html.theme--documenter-dark {
     display: flex; }
   html.theme--documenter-dark .card-header-title {
     align-items: center;
-    color: #3f498e;
+    color: #fff;
     display: flex;
     flex-grow: 1;
     font-weight: 700;
@@ -3821,7 +3821,7 @@ html.theme--documenter-dark {
     display: block;
     padding: 0.5em 1em; }
     html.theme--documenter-dark .list-item:not(a) {
-      color: #59aa1a; }
+      color: #fff; }
     html.theme--documenter-dark .list-item:first-child {
       border-top-left-radius: 4px;
       border-top-right-radius: 4px; }
@@ -3889,12 +3889,12 @@ html.theme--documenter-dark {
     line-height: 1.25; }
     html.theme--documenter-dark .menu-list a {
       border-radius: 2px;
-      color: #59aa1a;
+      color: #fff;
       display: block;
       padding: 0.5em 0.75em; }
       html.theme--documenter-dark .menu-list a:hover {
         background-color: whitesmoke;
-        color: #3f498e; }
+        color: #fff; }
       html.theme--documenter-dark .menu-list a.is-active {
         background-color: #2e63b8;
         color: #fff; }
@@ -4008,9 +4008,9 @@ html.theme--documenter-dark {
         color: #9b0c04; }
   html.theme--documenter-dark .message-header {
     align-items: center;
-    background-color: #59aa1a;
+    background-color: #fff;
     border-radius: 4px 4px 0 0;
-    color: #fff;
+    color: rgba(0, 0, 0, 0.7);
     display: flex;
     font-weight: 700;
     justify-content: space-between;
@@ -4030,7 +4030,7 @@ html.theme--documenter-dark {
     border-radius: 4px;
     border-style: solid;
     border-width: 0 0 0 4px;
-    color: #59aa1a;
+    color: #fff;
     padding: 1em 1.25em; }
     html.theme--documenter-dark .message-body code,
     html.theme--documenter-dark .message-body pre {
@@ -4089,7 +4089,7 @@ html.theme--documenter-dark {
     border-top-left-radius: 6px;
     border-top-right-radius: 6px; }
   html.theme--documenter-dark .modal-card-title {
-    color: #3f498e;
+    color: #fff;
     flex-grow: 1;
     flex-shrink: 0;
     font-size: 1.5rem;
@@ -5046,7 +5046,7 @@ html.theme--documenter-dark {
   html.theme--documenter-dark .panel-heading {
     background-color: whitesmoke;
     border-radius: 4px 4px 0 0;
-    color: #3f498e;
+    color: #fff;
     font-size: 1.25em;
     font-weight: 300;
     line-height: 1.25;
@@ -5064,12 +5064,12 @@ html.theme--documenter-dark {
         border-bottom-color: #4a4a4a;
         color: #363636; }
   html.theme--documenter-dark .panel-list a {
-    color: #59aa1a; }
+    color: #fff; }
     html.theme--documenter-dark .panel-list a:hover {
       color: #2e63b8; }
   html.theme--documenter-dark .panel-block {
     align-items: center;
-    color: #3f498e;
+    color: #fff;
     display: flex;
     justify-content: flex-start;
     padding: 0.5em 0.75em; }
@@ -5119,15 +5119,15 @@ html.theme--documenter-dark {
       border-bottom-color: #dbdbdb;
       border-bottom-style: solid;
       border-bottom-width: 1px;
-      color: #59aa1a;
+      color: #fff;
       display: flex;
       justify-content: center;
       margin-bottom: -1px;
       padding: 0.5em 1em;
       vertical-align: top; }
       html.theme--documenter-dark .tabs a:hover {
-        border-bottom-color: #3f498e;
-        color: #3f498e; }
+        border-bottom-color: #fff;
+        color: #fff; }
     html.theme--documenter-dark .tabs li {
       display: block; }
       html.theme--documenter-dark .tabs li.is-active a {
@@ -6916,7 +6916,7 @@ html.theme--documenter-dark {
     background-color: #fafafa;
     padding: 3rem 1.5rem 6rem; }
   html.theme--documenter-dark h1 .docs-heading-anchor, html.theme--documenter-dark h1 .docs-heading-anchor:hover, html.theme--documenter-dark h1 .docs-heading-anchor:visited, html.theme--documenter-dark h2 .docs-heading-anchor, html.theme--documenter-dark h2 .docs-heading-anchor:hover, html.theme--documenter-dark h2 .docs-heading-anchor:visited, html.theme--documenter-dark h3 .docs-heading-anchor, html.theme--documenter-dark h3 .docs-heading-anchor:hover, html.theme--documenter-dark h3 .docs-heading-anchor:visited, html.theme--documenter-dark h4 .docs-heading-anchor, html.theme--documenter-dark h4 .docs-heading-anchor:hover, html.theme--documenter-dark h4 .docs-heading-anchor:visited, html.theme--documenter-dark h5 .docs-heading-anchor, html.theme--documenter-dark h5 .docs-heading-anchor:hover, html.theme--documenter-dark h5 .docs-heading-anchor:visited, html.theme--documenter-dark h6 .docs-heading-anchor, html.theme--documenter-dark h6 .docs-heading-anchor:hover, html.theme--documenter-dark h6 .docs-heading-anchor:visited {
-    color: #3f498e; }
+    color: #fff; }
   html.theme--documenter-dark h1 .docs-heading-anchor-permalink, html.theme--documenter-dark h2 .docs-heading-anchor-permalink, html.theme--documenter-dark h3 .docs-heading-anchor-permalink, html.theme--documenter-dark h4 .docs-heading-anchor-permalink, html.theme--documenter-dark h5 .docs-heading-anchor-permalink, html.theme--documenter-dark h6 .docs-heading-anchor-permalink {
     visibility: hidden;
     vertical-align: middle;
@@ -6961,7 +6961,7 @@ html.theme--documenter-dark {
       margin-right: 0.75em;
       content: "\f06a"; }
   html.theme--documenter-dark .admonition-body {
-    color: #59aa1a;
+    color: #fff;
     padding: 1em 1.25em; }
     html.theme--documenter-dark .admonition-body pre {
       background-color: whitesmoke; }
@@ -7011,7 +7011,7 @@ html.theme--documenter-dark {
   html.theme--documenter-dark .content a code {
     color: #2e63b8; }
   html.theme--documenter-dark .content h1 code, html.theme--documenter-dark .content h2 code, html.theme--documenter-dark .content h3 code, html.theme--documenter-dark .content h4 code, html.theme--documenter-dark .content h5 code, html.theme--documenter-dark .content h6 code {
-    color: #3f498e; }
+    color: #fff; }
   html.theme--documenter-dark .content table {
     display: block;
     width: initial;
@@ -7023,7 +7023,7 @@ html.theme--documenter-dark {
     cursor: default;
     pointer-events: none; }
     html.theme--documenter-dark .breadcrumb a.is-disabled, html.theme--documenter-dark .breadcrumb a.is-disabled:hover {
-      color: #3f498e; }
+      color: #fff; }
   html.theme--documenter-dark .hljs {
     background: initial !important;
     padding: initial !important; }
@@ -7054,7 +7054,7 @@ html.theme--documenter-dark {
         width: 100%;
         margin: 0; } }
   html.theme--documenter-dark #documenter .docs-main header.docs-navbar {
-    background-color: #0799eb;
+    background-color: #222024;
     border-bottom: 1px solid #dbdbdb;
     z-index: 2;
     min-height: 4rem;
@@ -7090,7 +7090,7 @@ html.theme--documenter-dark {
         -webkit-transition-duration: 0.3s;
         /* Safari */ }
         html.theme--documenter-dark #documenter .docs-main header.docs-navbar.headroom--not-top {
-          box-shadow: 0.5em 0rem 1em #000;
+          box-shadow: 0.2rem 0rem 0.4rem #bbb;
           transition-duration: 0.7s;
           -webkit-transition-duration: 0.7s;
           /* Safari */ }
@@ -7137,7 +7137,7 @@ html.theme--documenter-dark {
     /* Setting up a nicer theme style for the scrollbar */ }
     html.theme--documenter-dark #documenter .docs-sidebar.visible {
       left: 0;
-      box-shadow: 1em 0rem 2em #000; }
+      box-shadow: 0.4rem 0rem 0.8rem #bbb; }
       @media screen and (min-width: 1056px) {
         html.theme--documenter-dark #documenter .docs-sidebar.visible {
           box-shadow: none; } }
@@ -7213,7 +7213,7 @@ html.theme--documenter-dark {
           background: #644e99; }
       html.theme--documenter-dark #documenter .docs-sidebar ul.docs-menu a.tocitem:hover, html.theme--documenter-dark #documenter .docs-sidebar ul.docs-menu label.tocitem:hover {
         color: #fff;
-        background-color: darken-color(#644e99, 2); }
+        background-color: #413263; }
       html.theme--documenter-dark #documenter .docs-sidebar ul.docs-menu li.is-active {
         border-top: 1px solid #dbdbdb;
         border-bottom: 1px solid #dbdbdb;
@@ -7222,7 +7222,7 @@ html.theme--documenter-dark {
           background-color: #fff;
           color: #202020; }
         html.theme--documenter-dark #documenter .docs-sidebar ul.docs-menu li.is-active ul.internal .tocitem:hover {
-          background-color: lighten-color(#644e99, 5);
+          background-color: #d4cde6;
           color: #202020; }
       html.theme--documenter-dark #documenter .docs-sidebar ul.docs-menu > li.is-active:first-child {
         border-top: none; }
@@ -7280,7 +7280,7 @@ html.theme--documenter-dark {
     html.theme--documenter-dark #documenter .docs-main #documenter-search-results .docs-highlight {
       background-color: yellow; }
   html.theme--documenter-dark {
-    background-color: #0799eb;
+    background-color: #222024;
     font-size: 16px;
     min-width: 300px;
     overflow-x: auto;
@@ -7289,7 +7289,7 @@ html.theme--documenter-dark {
     text-size-adjust: 100%; }
   html.theme--documenter-dark #documenter .docs-sidebar {
     border-right: none;
-    box-shadow: 0.6em 0rem 1em #000; }
+    box-shadow: 0.24rem 0rem 0.4rem #bbb; }
     html.theme--documenter-dark #documenter .docs-sidebar form.docs-search > input {
       color: #fff;
       background-color: #52407e;
