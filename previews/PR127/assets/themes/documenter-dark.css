@@ -7002,14 +7002,14 @@ html.theme--documenter-dark {
     color: #fbfbfb;
     padding: 1em 1.25em; }
     html.theme--documenter-dark .admonition-body pre {
-      background-color: whitesmoke; }
+      background-color: #251d39; }
     html.theme--documenter-dark .admonition-body code {
       background-color: #251d39; }
   html.theme--documenter-dark .docstring {
     margin-bottom: 1em;
     background-color: transparent;
     border: 1px solid #dbdbdb;
-    box-shadow: 2px 2px 3px rgba(10, 10, 10, 0.1);
+    box-shadow: #444444;
     max-width: 100%; }
     html.theme--documenter-dark .docstring > header {
       display: flex;
