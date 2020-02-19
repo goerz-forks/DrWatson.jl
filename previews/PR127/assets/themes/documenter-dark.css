@@ -7009,7 +7009,7 @@ html.theme--documenter-dark {
     margin-bottom: 1em;
     background-color: transparent;
     border: 1px solid #dbdbdb;
-    box-shadow: #444444;
+    box-shadow: 3px 3px 4px #444444;
     max-width: 100%; }
     html.theme--documenter-dark .docstring > header {
       display: flex;
