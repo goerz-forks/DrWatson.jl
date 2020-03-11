@@ -331,10 +331,10 @@ a {
   a strong {
     color: currentColor; }
   a:hover {
-    color: #0b4446; }
+    color: #116669; }
 
 code {
-  background-color: #ebe7f3;
+  background-color: #efedf6;
   color: #000000;
   font-size: 0.875em;
   font-weight: normal;
@@ -371,7 +371,7 @@ fieldset {
 
 pre {
   -webkit-overflow-scrolling: touch;
-  background-color: #ebe7f3;
+  background-color: #efedf6;
   color: #202020;
   font-size: 0.875em;
   overflow-x: auto;
@@ -1208,7 +1208,7 @@ a.box:active {
     margin-right: calc(-0.375em - 1px); }
   .button:hover, .button.is-hovered {
     border-color: #b5b5b5;
-    color: #0b4446; }
+    color: #116669; }
   .button:focus, .button.is-focused {
     border-color: #2e63b8;
     color: #363636; }
@@ -3687,7 +3687,7 @@ a.tag:hover, .docstring > section > a.docs-sourcelink:hover {
     justify-content: center;
     padding: 0 0.75em; }
     .breadcrumb a:hover {
-      color: #0b4446; }
+      color: #116669; }
   .breadcrumb li {
     align-items: center;
     display: flex; }
@@ -5115,7 +5115,7 @@ a.navbar-item,
   .pagination-next:hover,
   .pagination-link:hover {
     border-color: #b5b5b5;
-    color: #0b4446; }
+    color: #116669; }
   .pagination-previous:focus,
   .pagination-next:focus,
   .pagination-link:focus {
@@ -7197,9 +7197,9 @@ h1:hover .docs-heading-anchor-permalink, h2:hover .docs-heading-anchor-permalink
   color: #202020;
   padding: 1em 1.25em; }
   .admonition-body pre {
-    background-color: #ebe7f3; }
+    background-color: #efedf6; }
   .admonition-body code {
-    background-color: #ebe7f3; }
+    background-color: #efedf6; }
 
 .docstring {
   margin-bottom: 1em;
@@ -7468,7 +7468,7 @@ html {
         background: #634e97; }
     #documenter .docs-sidebar ul.docs-menu a.tocitem:hover, #documenter .docs-sidebar ul.docs-menu label.tocitem:hover {
       color: #fff;
-      background-color: #403262; }
+      background-color: #48396f; }
     #documenter .docs-sidebar ul.docs-menu li.is-active {
       border-top: 1px solid #dbdbdb;
       border-bottom: 1px solid #dbdbdb;
